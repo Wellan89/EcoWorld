@@ -72,22 +72,18 @@ bool RakNetManager::init()
 #endif
 
 	// On démarre RakNet en mode serveur dès le début : on peut ainsi être utilisé comme serveur ou client :
-#ifdef _DEBUG
 	u16 i = 0;
 	StartupResult result;
 	do
 	{
+		// Démarre RakNet avec différents ports consécutifs s'il n'a pas pu être démarré avec un port bien précis
+		// (permet de lancer EcoWorld plusieurs fois en mode réseau sur la même machine)
 		const u16 port = DEFAULT_PORT + i; ++i;
 		result = peer->Startup(MAX_CLIENTS, &SocketDescriptor(port, 0), 1);
 
 		LOG_RAKNET("Started result : " << result << " (Port : " << port << ")");
 
-	} while (result != RAKNET_STARTED && i < 4);	// Démarre RakNet avec différents ports consécutifs s'il n'a pas pu être démarré avec un port bien précis (mode débogage seulement : permet de lancer EcoWorld plusieurs fois en mode réseau sur la même machine)
-#else
-	// Démarre RakNet avec le port spécifié
-	const StartupResult result = peer->Startup(MAX_CLIENTS, &SocketDescriptor(DEFAULT_PORT, 0), 1);
-	LOG_RAKNET("Started result : " << result << " (Port : " << DEFAULT_PORT << ")");
-#endif
+	} while (result != RAKNET_STARTED && i <= 8);	// 8 ports consécutifs testés au maximum
 
 	return (result != RAKNET_STARTED);	// Vérifie que l'instance de RakNet a bien pu démarrer
 }
