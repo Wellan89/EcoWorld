@@ -23,7 +23,6 @@
 
 *.opensdf
 *.sdf
-*.sln
 *.suo*
 *.ogg
 *.wav
@@ -43,7 +42,7 @@
 *.res
 *.idb
 *.ico
-*.vcxproj*
+*.vcxproj.user
 *.ewg
 *.dll
 /EcoWorld/Game Configuration DEBUG.xml

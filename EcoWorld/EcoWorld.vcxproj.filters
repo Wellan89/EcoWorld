@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="EcoWorldSystem">
+      <UniqueIdentifier>{c0fce9a1-b76d-4159-825f-d17d9f044691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions">
+      <UniqueIdentifier>{6e79be27-7609-4954-8d1e-1e0f47780b5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\Arbres">
+      <UniqueIdentifier>{83defedf-fe2c-483c-a375-e1f22ab39839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\Terrains">
+      <UniqueIdentifier>{aa6f4257-4ecd-48b4-845d-2483510873ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\Terrains\TMyke Terrain">
+      <UniqueIdentifier>{5a5476fa-9ca4-4bbb-b6b9-4ff41d3befaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\Terrains\Copland Terrain">
+      <UniqueIdentifier>{fccefa7b-5bc3-4fc9-8a9e-8a0182f1b40d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\Terrains\N3xtD Terrain">
+      <UniqueIdentifier>{6f96e255-f241-4e7e-84a3-fec3a3673b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\Memory Manager">
+      <UniqueIdentifier>{1d4dd448-1b0c-4f54-90bc-57c55f76ebde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\Spark Engine">
+      <UniqueIdentifier>{2748bd43-96bc-4348-a3d9-5933434a5d5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\XEffects">
+      <UniqueIdentifier>{a605645d-49b5-4e7d-8206-e1a925a60cb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{73d9b585-5371-4219-89c8-3ce5affc8605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\GUI">
+      <UniqueIdentifier>{cefc301d-fbf3-4c60-9f52-4a1503e51178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\PostProcess">
+      <UniqueIdentifier>{1c39f813-f852-47e6-b05b-2aca15b0e8f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CBatimentSceneNode.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CSunSceneNode.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EcoWorldRenderer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EcoWorldTerrainManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GameConfiguration.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="IrrKlangManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="RakNetManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SparkManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Batiment.cpp">
+      <Filter>EcoWorldSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EcoWorldInfos.cpp">
+      <Filter>EcoWorldSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EcoWorldModifiers.cpp">
+      <Filter>EcoWorldSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EcoWorldSystem.cpp">
+      <Filter>EcoWorldSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Objectives.cpp">
+      <Filter>EcoWorldSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="WeatherManager.cpp">
+      <Filter>EcoWorldSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="irrKlangSceneNode.cpp">
+      <Filter>Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="RealisticWater.cpp">
+      <Filter>Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="RTSCamera.cpp">
+      <Filter>Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="CBillboardGroupSceneNode.cpp">
+      <Filter>Extensions\Arbres</Filter>
+    </ClCompile>
+    <ClCompile Include="CTreeGenerator.cpp">
+      <Filter>Extensions\Arbres</Filter>
+    </ClCompile>
+    <ClCompile Include="CTreeSceneNode.cpp">
+      <Filter>Extensions\Arbres</Filter>
+    </ClCompile>
+    <ClCompile Include="CHeight.cpp">
+      <Filter>Extensions\Terrains\TMyke Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="CQuad.cpp">
+      <Filter>Extensions\Terrains\TMyke Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="CTerrainNode_Tmyke.cpp">
+      <Filter>Extensions\Terrains\TMyke Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="CTerrain_Copland.cpp">
+      <Filter>Extensions\Terrains\Copland Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainHeight.cpp">
+      <Filter>Extensions\Terrains\N3xtD Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainNode_N3xtD.cpp">
+      <Filter>Extensions\Terrains\N3xtD Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Outils\File.cpp">
+      <Filter>Extensions\Memory Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Outils\MemoryManager.cpp">
+      <Filter>Extensions\Memory Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Spark\SPK_All.cpp">
+      <Filter>Extensions\Spark Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Spark\SPK_IRR_ALL.cpp">
+      <Filter>Extensions\Spark Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="XEffects\EffectHandler.cpp">
+      <Filter>Extensions\XEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUICenteredTitleWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIInformationsWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIMenuWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIMiniMapWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIMonthTableWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUINotesWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIObjectivesModifier.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIObjectivesWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIReductableWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIResizableWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIRessourcesWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUISortTable.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUITexturedModalScreen.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CLoadingScreen.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIManager.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIFileSelector.cpp">
+      <Filter>Extensions\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIModalScreen.cpp">
+      <Filter>Extensions\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUITable.cpp">
+      <Filter>Extensions\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUITextBox.cpp">
+      <Filter>Extensions\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIWindow.cpp">
+      <Filter>Extensions\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUITexturedSkin.cpp">
+      <Filter>Extensions\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="BatimentSelector.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EcoWorldPacketLogger.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CTextSceneNodeCustom.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUICameraAnimatorWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CSmokeRendererSceneNode.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CEcoWorldSkyDomeSceneNode.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIOptionsMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIMessageBox.cpp">
+      <Filter>Extensions\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUIPostProcessOptions.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CPostProcessManager.cpp">
+      <Filter>Extensions\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="CShaderMaterial.cpp">
+      <Filter>Extensions\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="CShaderPreprocessor.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CBatimentSceneNode.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CMultipleTriangleSelector.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CSunSceneNode.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="EcoWorldRenderer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="EcoWorldTerrainManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="GameConfiguration.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Interfaces.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="IrrKlangFileFactory.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="IrrKlangManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="RakNetManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="SparkManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="TODO.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Batiment.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Batiments.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EcoWorldInfos.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EcoWorldModifiers.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EcoWorldSystem.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Objectives.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Ressources.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="WeatherManager.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Weathers.h">
+      <Filter>EcoWorldSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlangSceneNode.h">
+      <Filter>Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="RealisticWater.h">
+      <Filter>Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="RTSCamera.h">
+      <Filter>Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="CBillboardGroupSceneNode.h">
+      <Filter>Extensions\Arbres</Filter>
+    </ClInclude>
+    <ClInclude Include="CTreeGenerator.h">
+      <Filter>Extensions\Arbres</Filter>
+    </ClInclude>
+    <ClInclude Include="CTreeSceneNode.h">
+      <Filter>Extensions\Arbres</Filter>
+    </ClInclude>
+    <ClInclude Include="STreeMesh.h">
+      <Filter>Extensions\Arbres</Filter>
+    </ClInclude>
+    <ClInclude Include="CHeight.h">
+      <Filter>Extensions\Terrains\TMyke Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="CList.h">
+      <Filter>Extensions\Terrains\TMyke Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="CQuad.h">
+      <Filter>Extensions\Terrains\TMyke Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="CTerrainNode_Tmyke.h">
+      <Filter>Extensions\Terrains\TMyke Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="CTerrain_Copland.h">
+      <Filter>Extensions\Terrains\Copland Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainHeight.h">
+      <Filter>Extensions\Terrains\N3xtD Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainNode_N3xtD.h">
+      <Filter>Extensions\Terrains\N3xtD Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Outils\DebugNew.h">
+      <Filter>Extensions\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Outils\DebugNewOff.h">
+      <Filter>Extensions\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Outils\File.h">
+      <Filter>Extensions\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Outils\MemoryManager.h">
+      <Filter>Extensions\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Spark\SPK.h">
+      <Filter>Extensions\Spark Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Spark\SPK_IRR.h">
+      <Filter>Extensions\Spark Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="XEffects\EffectCB.h">
+      <Filter>Extensions\XEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUICenteredTitleWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIInformationsWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIMenuWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIMiniMapWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIMonthTableWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUINotesWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIObjectivesModifier.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIObjectivesWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIReductableWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIResizableWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIRessourcesWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUISortTable.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUITexturedModalScreen.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CLoadingScreen.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIManager.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIFileSelector.h">
+      <Filter>Extensions\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIModalScreen.h">
+      <Filter>Extensions\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUITable.h">
+      <Filter>Extensions\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUITextBox.h">
+      <Filter>Extensions\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIWindow.h">
+      <Filter>Extensions\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUITexturedSkin.h">
+      <Filter>Extensions\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="BatimentSelector.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="EcoWorldPacketLogger.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CTextSceneNodeCustom.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUICameraAnimatorWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CSmokeRendererSceneNode.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CEcoWorldSkyDomeSceneNode.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CHeightTriangleSelector.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIOptionsMenu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIMessageBox.h">
+      <Filter>Extensions\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CGUIPostProcessOptions.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CScreenQuad.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CPostProcessManager.h">
+      <Filter>Extensions\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="CShaderMaterial.h">
+      <Filter>Extensions\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="CShaderPreprocessor.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="XEffects\EffectHandler.h">
+      <Filter>Extensions\XEffects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ressources.rc">
+      <Filter>Fichiers de ressources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

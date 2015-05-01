@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Kid version)|Win32">
+      <Configuration>Release (Kid version)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Kid version)|x64">
+      <Configuration>Release (Kid version)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AD05C4A8-A8DD-4568-842C-7E42FF24F561}</ProjectGuid>
+    <RootNamespace>EcoWorldSaveConverter</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">
+    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">
+    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">
+    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName) (Kid version)</TargetName>
+    <OutDir>$(SolutionDir)Release\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">
+    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName) (Kid version)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;NDEBUG_COMPATIBILITY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Strict</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;NDEBUG_COMPATIBILITY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Strict</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;NDEBUG_COMPATIBILITY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Strict</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;NDEBUG_COMPATIBILITY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Strict</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\EcoWorld\Batiment.cpp" />
+    <ClCompile Include="..\EcoWorld\BatimentSelector.cpp" />
+    <ClCompile Include="..\EcoWorld\CBatimentSceneNode.cpp" />
+    <ClCompile Include="..\EcoWorld\CBillboardGroupSceneNode.cpp" />
+    <ClCompile Include="..\EcoWorld\CEcoWorldSkyDomeSceneNode.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUICameraAnimatorWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUICenteredTitleWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIFileSelector.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIInformationsWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIMenuWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIMessageBox.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIMiniMapWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIModalScreen.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIMonthTableWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUINotesWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIObjectivesModifier.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIObjectivesWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIOptionsMenu.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIPostProcessOptions.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIReductableWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIResizableWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIRessourcesWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUISortTable.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUITable.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUITextBox.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUITexturedModalScreen.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUITexturedSkin.cpp" />
+    <ClCompile Include="..\EcoWorld\CGUIWindow.cpp" />
+    <ClCompile Include="..\EcoWorld\CHeight.cpp" />
+    <ClCompile Include="..\EcoWorld\CLoadingScreen.cpp" />
+    <ClCompile Include="..\EcoWorld\CPostProcessManager.cpp" />
+    <ClCompile Include="..\EcoWorld\CQuad.cpp" />
+    <ClCompile Include="..\EcoWorld\CShaderMaterial.cpp" />
+    <ClCompile Include="..\EcoWorld\CShaderPreprocessor.cpp" />
+    <ClCompile Include="..\EcoWorld\CSmokeRendererSceneNode.cpp" />
+    <ClCompile Include="..\EcoWorld\CSunSceneNode.cpp" />
+    <ClCompile Include="..\EcoWorld\CTerrainNode_Tmyke.cpp" />
+    <ClCompile Include="..\EcoWorld\CTerrain_Copland.cpp" />
+    <ClCompile Include="..\EcoWorld\CTextSceneNodeCustom.cpp" />
+    <ClCompile Include="..\EcoWorld\CTreeGenerator.cpp" />
+    <ClCompile Include="..\EcoWorld\CTreeSceneNode.cpp" />
+    <ClCompile Include="..\EcoWorld\EcoWorldInfos.cpp" />
+    <ClCompile Include="..\EcoWorld\EcoWorldModifiers.cpp" />
+    <ClCompile Include="..\EcoWorld\EcoWorldRenderer.cpp" />
+    <ClCompile Include="..\EcoWorld\EcoWorldSystem.cpp" />
+    <ClCompile Include="..\EcoWorld\EcoWorldTerrainManager.cpp" />
+    <ClCompile Include="..\EcoWorld\Game.cpp" />
+    <ClCompile Include="..\EcoWorld\GameConfiguration.cpp" />
+    <ClCompile Include="..\EcoWorld\GUIManager.cpp" />
+    <ClCompile Include="..\EcoWorld\Helpers.cpp" />
+    <ClCompile Include="..\EcoWorld\Objectives.cpp" />
+    <ClCompile Include="..\EcoWorld\Outils\File.cpp" />
+    <ClCompile Include="..\EcoWorld\Outils\MemoryManager.cpp" />
+    <ClCompile Include="..\EcoWorld\RealisticWater.cpp" />
+    <ClCompile Include="..\EcoWorld\RTSCamera.cpp" />
+    <ClCompile Include="..\EcoWorld\TerrainHeight.cpp" />
+    <ClCompile Include="..\EcoWorld\TerrainNode_N3xtD.cpp" />
+    <ClCompile Include="..\EcoWorld\WeatherManager.cpp" />
+    <ClCompile Include="..\EcoWorld\XEffects\EffectHandler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SaveConverter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\EcoWorld\Batiment.h" />
+    <ClInclude Include="..\EcoWorld\Batiments.h" />
+    <ClInclude Include="..\EcoWorld\BatimentSelector.h" />
+    <ClInclude Include="..\EcoWorld\CBatimentSceneNode.h" />
+    <ClInclude Include="..\EcoWorld\CBillboardGroupSceneNode.h" />
+    <ClInclude Include="..\EcoWorld\CEcoWorldSkyDomeSceneNode.h" />
+    <ClInclude Include="..\EcoWorld\CGUICameraAnimatorWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUICenteredTitleWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUIFileSelector.h" />
+    <ClInclude Include="..\EcoWorld\CGUIInformationsWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUIMenuWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUIMessageBox.h" />
+    <ClInclude Include="..\EcoWorld\CGUIMiniMapWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUIModalScreen.h" />
+    <ClInclude Include="..\EcoWorld\CGUIMonthTableWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUINotesWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUIObjectivesModifier.h" />
+    <ClInclude Include="..\EcoWorld\CGUIObjectivesWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUIOptionsMenu.h" />
+    <ClInclude Include="..\EcoWorld\CGUIPostProcessOptions.h" />
+    <ClInclude Include="..\EcoWorld\CGUIReductableWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUIResizableWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUIRessourcesWindow.h" />
+    <ClInclude Include="..\EcoWorld\CGUISortTable.h" />
+    <ClInclude Include="..\EcoWorld\CGUITable.h" />
+    <ClInclude Include="..\EcoWorld\CGUITextBox.h" />
+    <ClInclude Include="..\EcoWorld\CGUITexturedModalScreen.h" />
+    <ClInclude Include="..\EcoWorld\CGUITexturedSkin.h" />
+    <ClInclude Include="..\EcoWorld\CGUIWindow.h" />
+    <ClInclude Include="..\EcoWorld\CHeight.h" />
+    <ClInclude Include="..\EcoWorld\CList.h" />
+    <ClInclude Include="..\EcoWorld\CLoadingScreen.h" />
+    <ClInclude Include="..\EcoWorld\CMultipleTriangleSelector.h" />
+    <ClInclude Include="..\EcoWorld\CPostProcessManager.h" />
+    <ClInclude Include="..\EcoWorld\CQuad.h" />
+    <ClInclude Include="..\EcoWorld\CScreenQuad.h" />
+    <ClInclude Include="..\EcoWorld\CShaderMaterial.h" />
+    <ClInclude Include="..\EcoWorld\CShaderPreprocessor.h" />
+    <ClInclude Include="..\EcoWorld\CSmokeRendererSceneNode.h" />
+    <ClInclude Include="..\EcoWorld\CSunSceneNode.h" />
+    <ClInclude Include="..\EcoWorld\CTerrainNode_tmyke.h" />
+    <ClInclude Include="..\EcoWorld\CTerrain_Copland.h" />
+    <ClInclude Include="..\EcoWorld\CTextSceneNodeCustom.h" />
+    <ClInclude Include="..\EcoWorld\CTreeGenerator.h" />
+    <ClInclude Include="..\EcoWorld\CTreeSceneNode.h" />
+    <ClInclude Include="..\EcoWorld\EcoWorldInfos.h" />
+    <ClInclude Include="..\EcoWorld\EcoWorldModifiers.h" />
+    <ClInclude Include="..\EcoWorld\EcoWorldRenderer.h" />
+    <ClInclude Include="..\EcoWorld\EcoWorldSystem.h" />
+    <ClInclude Include="..\EcoWorld\EcoWorldTerrainManager.h" />
+    <ClInclude Include="..\EcoWorld\Game.h" />
+    <ClInclude Include="..\EcoWorld\GameConfiguration.h" />
+    <ClInclude Include="..\EcoWorld\global.h" />
+    <ClInclude Include="..\EcoWorld\GUIManager.h" />
+    <ClInclude Include="..\EcoWorld\Helpers.h" />
+    <ClInclude Include="..\EcoWorld\Interfaces.h" />
+    <ClInclude Include="..\EcoWorld\IPostProcess.h" />
+    <ClInclude Include="..\EcoWorld\Objectives.h" />
+    <ClInclude Include="..\EcoWorld\Outils\DebugNew.h" />
+    <ClInclude Include="..\EcoWorld\Outils\DebugNewOff.h" />
+    <ClInclude Include="..\EcoWorld\Outils\File.h" />
+    <ClInclude Include="..\EcoWorld\Outils\MemoryManager.h" />
+    <ClInclude Include="..\EcoWorld\RealisticWater.h" />
+    <ClInclude Include="..\EcoWorld\Ressources.h" />
+    <ClInclude Include="..\EcoWorld\RTSCamera.h" />
+    <ClInclude Include="..\EcoWorld\STreeMesh.h" />
+    <ClInclude Include="..\EcoWorld\TerrainHeight.h" />
+    <ClInclude Include="..\EcoWorld\TerrainNode_N3xtD.h" />
+    <ClInclude Include="..\EcoWorld\TODO.h" />
+    <ClInclude Include="..\EcoWorld\Utils.h" />
+    <ClInclude Include="..\EcoWorld\WeatherManager.h" />
+    <ClInclude Include="..\EcoWorld\Weathers.h" />
+    <ClInclude Include="..\EcoWorld\XEffects\EffectCB.h" />
+    <ClInclude Include="..\EcoWorld\XEffects\EffectHandler.h" />
+    <ClInclude Include="SaveConverter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ressources.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="From EcoWorld">
+      <UniqueIdentifier>{a8b1398d-adba-4c1c-ae63-6f022d1d5497}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveConverter.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\Batiment.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\EcoWorldInfos.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\EcoWorldModifiers.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\EcoWorldSystem.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\Helpers.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\Objectives.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\WeatherManager.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\GameConfiguration.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CLoadingScreen.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\EcoWorldRenderer.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\EcoWorldTerrainManager.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\Game.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\GUIManager.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\RealisticWater.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\RTSCamera.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\TerrainHeight.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\TerrainNode_N3xtD.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\BatimentSelector.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CBatimentSceneNode.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CBillboardGroupSceneNode.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CEcoWorldSkyDomeSceneNode.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUICameraAnimatorWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUICenteredTitleWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIFileSelector.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIInformationsWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIMenuWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIMessageBox.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIMiniMapWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIModalScreen.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIMonthTableWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUINotesWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIObjectivesModifier.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIObjectivesWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIOptionsMenu.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIReductableWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIResizableWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIRessourcesWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUISortTable.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUITable.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUITextBox.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUITexturedModalScreen.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUITexturedSkin.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIWindow.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CHeight.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CQuad.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CSmokeRendererSceneNode.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CSunSceneNode.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CTerrain_Copland.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CTerrainNode_Tmyke.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CTextSceneNodeCustom.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CTreeGenerator.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CTreeSceneNode.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\XEffects\EffectHandler.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\Outils\File.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\Outils\MemoryManager.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CGUIPostProcessOptions.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CPostProcessManager.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CShaderMaterial.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EcoWorld\CShaderPreprocessor.cpp">
+      <Filter>From EcoWorld</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SaveConverter.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\global.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Batiment.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Batiments.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\EcoWorldInfos.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\EcoWorldModifiers.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\EcoWorldSystem.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Helpers.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Interfaces.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Objectives.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Ressources.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Utils.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\WeatherManager.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Weathers.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\GameConfiguration.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CLoadingScreen.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\EcoWorldRenderer.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\EcoWorldTerrainManager.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Game.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\GUIManager.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\RealisticWater.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\RTSCamera.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\STreeMesh.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\TerrainHeight.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\TerrainNode_N3xtD.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\TODO.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\BatimentSelector.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CBatimentSceneNode.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CBillboardGroupSceneNode.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CEcoWorldSkyDomeSceneNode.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUICameraAnimatorWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUICenteredTitleWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIFileSelector.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIInformationsWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIMenuWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIMessageBox.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIMiniMapWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIModalScreen.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIMonthTableWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUINotesWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIObjectivesModifier.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIObjectivesWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIOptionsMenu.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIReductableWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIResizableWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIRessourcesWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUISortTable.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUITable.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUITextBox.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUITexturedModalScreen.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUITexturedSkin.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIWindow.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CHeight.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CList.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CMultipleTriangleSelector.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CQuad.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CSmokeRendererSceneNode.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CSunSceneNode.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CTerrain_Copland.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CTerrainNode_tmyke.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CTextSceneNodeCustom.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CTreeGenerator.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CTreeSceneNode.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\XEffects\EffectCB.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Outils\DebugNew.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Outils\DebugNewOff.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Outils\File.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\Outils\MemoryManager.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\IPostProcess.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CGUIPostProcessOptions.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CPostProcessManager.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CShaderMaterial.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CScreenQuad.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\CShaderPreprocessor.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EcoWorld\XEffects\EffectHandler.h">
+      <Filter>From EcoWorld</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ressources.rc">
+      <Filter>Fichiers de ressources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

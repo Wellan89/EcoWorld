@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Compatibility mode)|Win32">
+      <Configuration>Release (Compatibility mode)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Compatibility mode)|x64">
+      <Configuration>Release (Compatibility mode)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Kid version)|Win32">
+      <Configuration>Release (Kid version)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Kid version)|x64">
+      <Configuration>Release (Kid version)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4AC0FF86-7475-4CD2-959A-1249E8234FB7}</ProjectGuid>
+    <RootNamespace>EcoWorld</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">$(SolutionDir)Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">$(SolutionDir)Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Source;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win64-visualstudio;F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x64;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\lib\Win64-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet_PC-4.020\Lib;$(LibraryPath)</LibraryPath>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">$(ProjectName) (Kid version)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">$(ProjectName) (Kid version) (64 bits)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">$(ProjectName) (Compatibility mode)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">$(ProjectName) (Compatibility mode) (64 bits)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">
+    <OutDir>$(SolutionDir)\Release</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">
+    <OutDir>$(SolutionDir)\Release</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName) (64 bits)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName) (64 bits)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>IRRKLANG_DELAYED_DLL_LOADING;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <PreprocessToFile>false</PreprocessToFile>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x040c</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <NullTerminateStrings>true</NullTerminateStrings>
+    </ResourceCompile>
+    <Link>
+      <ShowProgress>NotSet</ShowProgress>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>irrKlang.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>IRRKLANG_DELAYED_DLL_LOADING;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <PreprocessToFile>false</PreprocessToFile>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x040c</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <NullTerminateStrings>true</NullTerminateStrings>
+    </ResourceCompile>
+    <Link>
+      <ShowProgress>NotSet</ShowProgress>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>irrKlang.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>IRRKLANG_DELAYED_DLL_LOADING;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x040c</Culture>
+      <NullTerminateStrings>true</NullTerminateStrings>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <DelayLoadDLLs>irrKlang.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>IRRKLANG_DELAYED_DLL_LOADING;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x040c</Culture>
+      <NullTerminateStrings>true</NullTerminateStrings>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <DelayLoadDLLs>irrKlang.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>KID_VERSION;IRRKLANG_DELAYED_DLL_LOADING;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x040c</Culture>
+      <NullTerminateStrings>true</NullTerminateStrings>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <DelayLoadDLLs>irrKlang.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>KID_VERSION;IRRKLANG_DELAYED_DLL_LOADING;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x040c</Culture>
+      <NullTerminateStrings>true</NullTerminateStrings>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <DelayLoadDLLs>irrKlang.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG_COMPATIBILITY;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x040c</Culture>
+      <NullTerminateStrings>true</NullTerminateStrings>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG_COMPATIBILITY;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x040c</Culture>
+      <NullTerminateStrings>true</NullTerminateStrings>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BatimentSelector.cpp" />
+    <ClCompile Include="CBatimentSceneNode.cpp" />
+    <ClCompile Include="CEcoWorldSkyDomeSceneNode.cpp" />
+    <ClCompile Include="CGUICameraAnimatorWindow.cpp" />
+    <ClCompile Include="CGUIMessageBox.cpp" />
+    <ClCompile Include="CGUIPostProcessOptions.cpp" />
+    <ClCompile Include="CShaderPreprocessor.cpp" />
+    <ClCompile Include="CSmokeRendererSceneNode.cpp" />
+    <ClCompile Include="CSunSceneNode.cpp" />
+    <ClCompile Include="CTextSceneNodeCustom.cpp" />
+    <ClCompile Include="EcoWorldPacketLogger.cpp" />
+    <ClCompile Include="EcoWorldRenderer.cpp" />
+    <ClCompile Include="EcoWorldTerrainManager.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameConfiguration.cpp" />
+    <ClCompile Include="CGUIOptionsMenu.cpp" />
+    <ClCompile Include="Helpers.cpp" />
+    <ClCompile Include="IrrKlangManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="CPostProcessManager.cpp" />
+    <ClCompile Include="RakNetManager.cpp" />
+    <ClCompile Include="CShaderMaterial.cpp" />
+    <ClCompile Include="SparkManager.cpp" />
+    <ClCompile Include="Batiment.cpp" />
+    <ClCompile Include="EcoWorldInfos.cpp" />
+    <ClCompile Include="EcoWorldModifiers.cpp" />
+    <ClCompile Include="EcoWorldSystem.cpp" />
+    <ClCompile Include="Objectives.cpp" />
+    <ClCompile Include="WeatherManager.cpp" />
+    <ClCompile Include="irrKlangSceneNode.cpp" />
+    <ClCompile Include="RealisticWater.cpp" />
+    <ClCompile Include="RTSCamera.cpp" />
+    <ClCompile Include="CBillboardGroupSceneNode.cpp" />
+    <ClCompile Include="CTreeGenerator.cpp" />
+    <ClCompile Include="CTreeSceneNode.cpp" />
+    <ClCompile Include="CHeight.cpp" />
+    <ClCompile Include="CQuad.cpp" />
+    <ClCompile Include="CTerrainNode_Tmyke.cpp" />
+    <ClCompile Include="CTerrain_Copland.cpp" />
+    <ClCompile Include="TerrainHeight.cpp" />
+    <ClCompile Include="TerrainNode_N3xtD.cpp" />
+    <ClCompile Include="CGUIFileSelector.cpp" />
+    <ClCompile Include="CGUIModalScreen.cpp" />
+    <ClCompile Include="CGUITable.cpp" />
+    <ClCompile Include="CGUITextBox.cpp" />
+    <ClCompile Include="CGUITexturedSkin.cpp" />
+    <ClCompile Include="CGUIWindow.cpp" />
+    <ClCompile Include="Outils\File.cpp" />
+    <ClCompile Include="Outils\MemoryManager.cpp" />
+    <ClCompile Include="Spark\SPK_All.cpp" />
+    <ClCompile Include="Spark\SPK_IRR_ALL.cpp" />
+    <ClCompile Include="XEffects\EffectHandler.cpp" />
+    <ClCompile Include="CGUICenteredTitleWindow.cpp" />
+    <ClCompile Include="CGUIInformationsWindow.cpp" />
+    <ClCompile Include="CGUIMenuWindow.cpp" />
+    <ClCompile Include="CGUIMiniMapWindow.cpp" />
+    <ClCompile Include="CGUIMonthTableWindow.cpp" />
+    <ClCompile Include="CGUINotesWindow.cpp" />
+    <ClCompile Include="CGUIObjectivesModifier.cpp" />
+    <ClCompile Include="CGUIObjectivesWindow.cpp" />
+    <ClCompile Include="CGUIReductableWindow.cpp" />
+    <ClCompile Include="CGUIResizableWindow.cpp" />
+    <ClCompile Include="CGUIRessourcesWindow.cpp" />
+    <ClCompile Include="CGUISortTable.cpp" />
+    <ClCompile Include="CGUITexturedModalScreen.cpp" />
+    <ClCompile Include="CLoadingScreen.cpp" />
+    <ClCompile Include="GUIManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BatimentSelector.h" />
+    <ClInclude Include="CBatimentSceneNode.h" />
+    <ClInclude Include="CEcoWorldSkyDomeSceneNode.h" />
+    <ClInclude Include="CGUICameraAnimatorWindow.h" />
+    <ClInclude Include="CGUIMessageBox.h" />
+    <ClInclude Include="CGUIPostProcessOptions.h" />
+    <ClInclude Include="CHeightTriangleSelector.h" />
+    <ClInclude Include="CMultipleTriangleSelector.h" />
+    <ClInclude Include="CShaderPreprocessor.h" />
+    <ClInclude Include="CSmokeRendererSceneNode.h" />
+    <ClInclude Include="CSunSceneNode.h" />
+    <ClInclude Include="CTextSceneNodeCustom.h" />
+    <ClInclude Include="EcoWorldPacketLogger.h" />
+    <ClInclude Include="EcoWorldRenderer.h" />
+    <ClInclude Include="EcoWorldTerrainManager.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameConfiguration.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="CGUIOptionsMenu.h" />
+    <ClInclude Include="Helpers.h" />
+    <ClInclude Include="Interfaces.h" />
+    <ClInclude Include="IrrKlangFileFactory.h" />
+    <ClInclude Include="IrrKlangManager.h" />
+    <ClInclude Include="CPostProcessManager.h" />
+    <ClInclude Include="RakNetManager.h" />
+    <ClInclude Include="CScreenQuad.h" />
+    <ClInclude Include="CShaderMaterial.h" />
+    <ClInclude Include="SparkManager.h" />
+    <ClInclude Include="TODO.h" />
+    <ClInclude Include="Batiment.h" />
+    <ClInclude Include="Batiments.h" />
+    <ClInclude Include="EcoWorldInfos.h" />
+    <ClInclude Include="EcoWorldModifiers.h" />
+    <ClInclude Include="EcoWorldSystem.h" />
+    <ClInclude Include="Objectives.h" />
+    <ClInclude Include="Ressources.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="WeatherManager.h" />
+    <ClInclude Include="Weathers.h" />
+    <ClInclude Include="irrKlangSceneNode.h" />
+    <ClInclude Include="RealisticWater.h" />
+    <ClInclude Include="RTSCamera.h" />
+    <ClInclude Include="CBillboardGroupSceneNode.h" />
+    <ClInclude Include="CTreeGenerator.h" />
+    <ClInclude Include="CTreeSceneNode.h" />
+    <ClInclude Include="STreeMesh.h" />
+    <ClInclude Include="CHeight.h" />
+    <ClInclude Include="CList.h" />
+    <ClInclude Include="CQuad.h" />
+    <ClInclude Include="CTerrainNode_Tmyke.h" />
+    <ClInclude Include="CTerrain_Copland.h" />
+    <ClInclude Include="TerrainHeight.h" />
+    <ClInclude Include="TerrainNode_N3xtD.h" />
+    <ClInclude Include="CGUIFileSelector.h" />
+    <ClInclude Include="CGUIModalScreen.h" />
+    <ClInclude Include="CGUITable.h" />
+    <ClInclude Include="CGUITextBox.h" />
+    <ClInclude Include="CGUITexturedSkin.h" />
+    <ClInclude Include="CGUIWindow.h" />
+    <ClInclude Include="Outils\DebugNew.h" />
+    <ClInclude Include="Outils\DebugNewOff.h" />
+    <ClInclude Include="Outils\File.h" />
+    <ClInclude Include="Outils\MemoryManager.h" />
+    <ClInclude Include="Spark\SPK.h" />
+    <ClInclude Include="Spark\SPK_IRR.h" />
+    <ClInclude Include="XEffects\EffectCB.h" />
+    <ClInclude Include="XEffects\EffectHandler.h" />
+    <ClInclude Include="CGUICenteredTitleWindow.h" />
+    <ClInclude Include="CGUIInformationsWindow.h" />
+    <ClInclude Include="CGUIMenuWindow.h" />
+    <ClInclude Include="CGUIMiniMapWindow.h" />
+    <ClInclude Include="CGUIMonthTableWindow.h" />
+    <ClInclude Include="CGUINotesWindow.h" />
+    <ClInclude Include="CGUIObjectivesModifier.h" />
+    <ClInclude Include="CGUIObjectivesWindow.h" />
+    <ClInclude Include="CGUIReductableWindow.h" />
+    <ClInclude Include="CGUIResizableWindow.h" />
+    <ClInclude Include="CGUIRessourcesWindow.h" />
+    <ClInclude Include="CGUISortTable.h" />
+    <ClInclude Include="CGUITexturedModalScreen.h" />
+    <ClInclude Include="CLoadingScreen.h" />
+    <ClInclude Include="GUIManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ressources.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
