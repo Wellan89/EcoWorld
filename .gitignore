@@ -1,0 +1,49 @@
+﻿
+/Ancien et non utilisé/*
+/Anciennes versions/*
+/Captures/*
+/Ciel/*
+/Clip d'introduction/*
+/Curseurs/*
+/Code metrics/*
+/Debug/*
+/Ecrans de chargement/*
+/Feuilles de données Excel/*
+/Font/*
+/GUI Skins/*
+/Icones/*
+/Musiques/*
+/Normal Maps/*
+/Par Romain DARCEL/*
+/Paramêtres Thomas/*
+/Release/*
+/Sons/*
+/Terrains/*
+/Titre et Logo Ecoworld/*
+
+*.opensdf
+*.sdf
+*.sln
+*.suo*
+*.ogg
+*.wav
+*.zip
+*.cur
+*.pdb
+*.lnk
+*.ewt
+*.png
+*.jpg
+*.bmp
+*.obj
+*.sbr
+*.lastbuildstate
+*.log
+*.tlog
+*.res
+*.idb
+*.ico
+*.vcxproj*
+*.ewg
+*.dll
+/EcoWorld/Game Configuration DEBUG.xml

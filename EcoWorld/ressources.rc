@@ -1,0 +1,82 @@
+// Inclusion des headers minimaux pour ce fichier de ressources :
+#define GLOBAL_NO_INCLUDES	// Désactive l'inclusion d'autres headers dans le header global.h
+#include "global.h"			// Pour la version réelle d'EcoWorld, ainsi que l'utilisation ou non des ressources créées par Romain DARCEL
+#include <winver.h>			// Pour les constantes VS_xxx
+
+
+
+// Icône de l'application, chargée automatiquement par la version modifiée d'Irrlicht SVN 1.8.0 :
+#ifdef CAN_USE_ROMAIN_DARCEL_RESSOURCES
+1 ICON "EcoWorld2.ico"	// Utilise l'icône créée par Romain DARCEL en icône principale
+#else
+1 ICON "EcoWorld.ico"
+#endif
+
+// Curseur de l'application, chargé automatiquement par la version modifiée d'Irrlicht SVN 1.8.0 :
+2 CURSOR "cursor.cur"
+
+
+
+// Version et informations sur l'application :
+
+// Les informations de version pour un assembly se composent des quatre valeurs suivantes :
+//	Version principale
+//	Version secondaire 
+//	Numéro de build
+//	Révision
+
+// Débute le bloc de version :
+VS_VERSION_INFO VERSIONINFO
+
+FILEVERSION    	ECOWORLD_VERSION_NB		// Version du jeu
+/*
+FILEFLAGSMASK  	VS_FFI_FILEFLAGSMASK	// Tous les champs de FILEFLAGS sont remplis
+#ifdef _DEBUG
+FILEFLAGS      	VS_FF_DEBUG				// Informations de débogage incluses
+#else
+FILEFLAGS      	VS_FF_PRERELEASE		// Version en cours de développement
+#endif
+*/
+FILEOS         	VOS_NT_WINDOWS32		// Windows NT 32-bits
+FILETYPE       	VFT_APP					// Application
+
+BEGIN
+	BLOCK "StringFileInfo"				// Informations sur l'application sous forme de chaînes de caractères :
+	BEGIN
+		BLOCK "040C04E4"				// Français ; Caractères Multi-octets
+		BEGIN
+			VALUE "CompanyName",      "GENTY Vincent et BERTRAND Thomas"			// Société détenant les droits de cette application
+			VALUE "FileDescription",  "EcoWorld : Jeu de construction écologique"	// Description de l'application
+			VALUE "FileVersion",      ECOWORLD_VERSION								// Version de l'application
+#ifdef KID_VERSION
+			VALUE "InternalName",     "EcoWorld (Kid version)"						// Nom du module représenté par cette application (si aucun : le nom de l'application sans son extension)
+			VALUE "OriginalFilename", "EcoWorld (Kid version).exe"					// Nom d'origine de l'application
+			VALUE "ProductName",      "EcoWorld (Kid version)"						// Nom du produit
+#elif defined(ECOWORLD_X64)
+			VALUE "InternalName",     "EcoWorld (64 bits)"							// Nom du module représenté par cette application (si aucun : le nom de l'application sans son extension)
+			VALUE "OriginalFilename", "EcoWorld (64 bits).exe"						// Nom d'origine de l'application
+			VALUE "ProductName",      "EcoWorld (64 bits)"							// Nom du produit
+#elif defined(NDEBUG_COMPATIBILITY)
+			VALUE "InternalName",     "EcoWorld (Compatibility mode)"				// Nom du module représenté par cette application (si aucun : le nom de l'application sans son extension)
+			VALUE "OriginalFilename", "EcoWorld (Compatibility mode).exe"			// Nom d'origine de l'application
+			VALUE "ProductName",      "EcoWorld (Compatibility mode)"				// Nom du produit
+#else
+			VALUE "InternalName",     "EcoWorld"									// Nom du module représenté par cette application (si aucun : le nom de l'application sans son extension)
+			VALUE "OriginalFilename", "EcoWorld.exe"								// Nom d'origine de l'application
+			VALUE "ProductName",      "EcoWorld"									// Nom du produit
+#endif
+			VALUE "ProductVersion",   ECOWORLD_VERSION								// Version du produit
+		END
+	END
+
+	BLOCK "VarFileInfo"
+	BEGIN
+		/* The following line should only be modified for localized versions.     */
+		/* It consists of any number of WORD,WORD pairs, with each pair           */
+		/* describing a language,codepage combination supported by the file.      */
+		/*                                                                        */
+		/* For example, a file might have values "0x409,1252" indicating that it  */
+		/* supports English language (0x409) in the Windows ANSI codepage (1252). */
+		VALUE "Translation", 0x040C, 1252	// Français ; Caractères Multi-octets
+	END
+END
