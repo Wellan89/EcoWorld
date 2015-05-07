@@ -48,7 +48,7 @@ global.h : Définitions générales de l'application
 
 
 #ifndef NO_EXTERNAL_LIBRAIRIES	// Ce define permet d'éviter l'inclusion de librairies externes autres que celle d'Irrlicht dans le projet
-#if !defined(NDEBUG_COMPATIBILITY) && !defined(ECOWORLD_X64)	// On désactive IrrKlang pour EcoWorld en mode compatibilité et en mode 64 bits car la libraire d'IrrKlang n'est compilé qu'en mode 32 bits dans une DLL externe
+#if !defined(NDEBUG_COMPATIBILITY)		// On désactive IrrKlang pour EcoWorld en mode compatibilité
 #define USE_IRRKLANG	// Permet d'utiliser IrrKlang (Librairie permettant de jouer des sons et des musiques ; irrKlang.dll nécéssaire ; Configuration du projet indentique)
 #endif
 #define USE_SPARK		// Permet d'utiliser Spark (Librairie d'émmetteurs de particules ; Aucune DLL nécéssaire ; Configuration du projet indentique (sources à inclure au projet))

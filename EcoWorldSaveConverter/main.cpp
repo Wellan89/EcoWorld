@@ -11,7 +11,7 @@
 #ifdef _DEBUG
 #pragma comment(lib, "IrrDebugStatic.lib")				// Librairie de débogage d'Irrlicht
 #else
-#pragma comment(lib, "Irrlicht.lib")					// Librairie de compatibilité d'Irrlicht
+#pragma comment(lib, "IrrReleaseStatic.lib")			// Librairie de compatibilité d'Irrlicht
 #endif
 
 #pragma comment(linker, "/NODEFAULTLIB:LIBCI")	// Cette librairie pose problème lorsqu'Irrlicht est compilé manuellement (problème entre VC++ et DirectX 9.0c) : on l'exclue ici

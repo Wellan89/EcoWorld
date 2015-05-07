@@ -7,8 +7,6 @@
 #include "Batiments.h"
 #include "CGUISortTable.h"
 
-using namespace boost;
-
 
 
 
@@ -18,9 +16,9 @@ using namespace boost;
 #ifdef _DEBUG
 #pragma comment(lib, "IrrDebugStatic.lib")				// Librairie de débogage d'Irrlicht
 #elif defined(NDEBUG_COMPATIBILITY)
-#pragma comment(lib, "Irrlicht.lib")					// Librairie de compatibilité d'Irrlicht
+#pragma comment(lib, "IrrReleaseStatic.lib")			// Librairie de compatibilité d'Irrlicht
 #else
-#pragma comment(lib, "IrrReleaseFastFPUStatic.lib")		// Librairie optimisée d'Irrlicht
+#pragma comment(lib, "IrrReleaseStaticFastFPU.lib")		// Librairie optimisée d'Irrlicht
 #endif
 
 #pragma comment(linker, "/NODEFAULTLIB:LIBCI")	// Cette librairie pose problème lorsqu'Irrlicht est compilé manuellement (problème entre VC++ et DirectX 9.0c) : on l'exclue ici
@@ -45,14 +43,22 @@ using namespace boost;
 #ifdef USE_RAKNET
 // Ici, on utilise la version statique de RakNet : aucune dll nécessaire
 #pragma comment(lib, "ws2_32.lib")
+#ifndef _WIN64
 #ifdef _DEBUG
-#pragma comment(lib, "RakNetLibStaticDebug.lib")			// Librairie de débogage de RakNet
+#pragma comment(lib, "RakNetLibStaticDebug_x86.lib")			// Librairie de débogage de RakNet (32 bits)
 #elif defined(NDEBUG_COMPATIBILITY)
-#pragma comment(lib, "RakNetLibStatic (Compatibility).lib")	// Librairie de compatibilité de RakNet
-#elif defined(ECOWORLD_X64)
-#pragma comment(lib, "RakNetLibStatic X64.lib")				// Librairie 64 bits optimisée de RakNet
+#pragma comment(lib, "RakNetLibStatic_x86 (Compatibility).lib")	// Librairie de compatibilité de RakNet (32 bits)
 #else
-#pragma comment(lib, "RakNetLibStatic.lib")					// Librairie optimisée de RakNet
+#pragma comment(lib, "RakNetLibStatic_x86.lib")					// Librairie optimisée de RakNet (32 bits)
+#endif
+#else
+#ifdef _DEBUG
+#pragma comment(lib, "RakNetLibStaticDebug_x64.lib")			// Librairie de débogage de RakNet (64 bits)
+#elif defined(NDEBUG_COMPATIBILITY)
+#pragma comment(lib, "RakNetLibStatic_x64 (Compatibility).lib")	// Librairie de compatibilité de RakNet (64 bits)
+#else
+#pragma comment(lib, "RakNetLibStatic_x64.lib")					// Librairie optimisée de RakNet (64 bits)
+#endif
 #endif
 #endif
 #endif
@@ -272,17 +278,17 @@ void createDirectories()
 }
 void createDirectory(const char* directoryPath)
 {
-	const filesystem3::path p(directoryPath);
+	const boost::filesystem::path p(directoryPath);
 
 	// Le code d'erreur qui indiquera si une erreur s'est produite lors de la création du dossier
-	system::error_code errorCode;
+	boost::system::error_code errorCode;
 
-	if (filesystem3::create_directory(p, errorCode))
+	if (boost::filesystem::create_directory(p, errorCode))
 	{
 		// Dossier créé
 		LOG("Created directory : " << p.string().c_str(), ELL_INFORMATION);
 	}
-	else if (!filesystem3::is_directory(p))
+	else if (!boost::filesystem::is_directory(p))
 	{
 		// Dossier non créé et non existant pour une raison inconnue
 		LOG("Could not create directory : " << p.string().c_str() << endl
@@ -302,10 +308,10 @@ inline void removeFileIfUnused(const filesystem3::path& p)
 		return;
 
 	// Le code d'erreur qui indiquera si une erreur s'est produite (mais ce code ne sera jamais utilisé, il évite seulement que les fonctions de Boost lancent des exceptions)
-	system::error_code errorCode;
+	boost::system::error_code errorCode;
 
 	// Vérifie que le fichier spécifié est vide, puis le supprime
-	if (filesystem3::is_empty(p, errorCode))
-		filesystem3::remove(p, errorCode);
+	if (boost::filesystem::is_empty(p, errorCode))
+		boost::filesystem::remove(p, errorCode);
 }
 #endif

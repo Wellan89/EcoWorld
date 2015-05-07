@@ -93,46 +93,57 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">$(SolutionDir)Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">$(SolutionDir)Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\Programmation\Projets\C++\EcoWorld\EcoWorld;F:\Programmation\Projets\C++\EcoWorld\EcoWorld\Spark;F:\Programmation\Librairies\Boost\boost_1_58_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-32bit\include;F:\Programmation\Librairies\RakNet\RakNet-master\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\Programmation\Projets\C++\EcoWorld\EcoWorld;F:\Programmation\Projets\C++\EcoWorld\EcoWorld\Spark;F:\Programmation\Librairies\Boost\boost_1_58_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-64bit\include;F:\Programmation\Librairies\RakNet\RakNet-master\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\Programmation\Projets\C++\EcoWorld\EcoWorld;F:\Programmation\Projets\C++\EcoWorld\EcoWorld\Spark;F:\Programmation\Librairies\Boost\boost_1_58_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-32bit\include;F:\Programmation\Librairies\RakNet\RakNet-master\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\Programmation\Projets\C++\EcoWorld\EcoWorld;F:\Programmation\Projets\C++\EcoWorld\EcoWorld\Spark;F:\Programmation\Librairies\Boost\boost_1_58_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-64bit\include;F:\Programmation\Librairies\RakNet\RakNet-master\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">F:\Programmation\Projets\C++\EcoWorld\EcoWorld;F:\Programmation\Projets\C++\EcoWorld\EcoWorld\Spark;F:\Programmation\Librairies\Boost\boost_1_58_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-32bit\include;F:\Programmation\Librairies\RakNet\RakNet-master\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">F:\Programmation\Projets\C++\EcoWorld\EcoWorld;F:\Programmation\Projets\C++\EcoWorld\EcoWorld\Spark;F:\Programmation\Librairies\Boost\boost_1_58_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-64bit\include;F:\Programmation\Librairies\RakNet\RakNet-master\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">F:\Programmation\Projets\C++\EcoWorld\EcoWorld\Spark;F:\Programmation\Librairies\Boost\boost_1_58_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-32bit\include;F:\Programmation\Librairies\RakNet\RakNet-master\Source;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">F:\Programmation\Projets\C++\EcoWorld\EcoWorld\Spark;F:\Programmation\Librairies\Boost\boost_1_58_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-64bit\include;F:\Programmation\Librairies\RakNet\RakNet-master\Source;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_58_0\stage\lib\x86;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet-master\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-32bit\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win64-visualstudio;F:\Programmation\Librairies\Boost\boost_1_58_0\stage\lib\x64;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64;F:\Programmation\Librairies\RakNet\RakNet-master\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-64bit\lib\Winx64-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_58_0\stage\lib\x86;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet-master\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-32bit\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win64-visualstudio;F:\Programmation\Librairies\Boost\boost_1_58_0\stage\lib\x64;C:\Program Files %28x86%29\Microsoft DirectX SDK (June 2010)\Lib\x64;F:\Programmation\Librairies\RakNet\RakNet-master\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-64bit\lib\Winx64-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_58_0\stage\lib\x86;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet-master\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-32bit\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win64-visualstudio;F:\Programmation\Librairies\Boost\boost_1_58_0\stage\lib\x64;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64;F:\Programmation\Librairies\RakNet\RakNet-master\Lib;F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.5.0-64bit\lib\Winx64-visualStudio;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;F:\Programmation\Librairies\Boost\boost_1_58_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;F:\Programmation\Librairies\RakNet\RakNet-master\Lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win64-visualstudio;F:\Programmation\Librairies\Boost\boost_1_58_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64;F:\Programmation\Librairies\RakNet\RakNet-master\Lib;$(LibraryPath)</LibraryPath>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">$(ProjectName) (Kid version)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">$(ProjectName) (Kid version) (64 bits)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|Win32'">$(ProjectName) (Compatibility mode)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">$(ProjectName) (Compatibility mode) (64 bits)</TargetName>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">
-    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Compatibility mode)|x64'">
+    <OutDir>$(SolutionDir)Release</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">
-    <IncludePath>F:\Programmation\Librairies\Irrlicht\IrrKlang\irrKlang-1.4.0\irrKlang-1.4.0\include;F:\Programmation\Librairies\Boost\boost_1_47_0\;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\include;..\EcoWorld;$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">
-    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
-    <TargetName>$(ProjectName) (Kid version)</TargetName>
     <OutDir>$(SolutionDir)Release\</OutDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">
-    <LibraryPath>F:\Programmation\Librairies\Boost\boost_1_47_0\stage\lib;C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (February 2005)\Lib\x86;F:\Programmation\Librairies\Irrlicht\Irrlicht\Irrlicht\Irrlicht Modified for EcoWorld\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
-    <TargetName>$(ProjectName) (Kid version)</TargetName>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName) (64 bits)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName) (64 bits)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -144,6 +155,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -159,6 +171,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -167,89 +180,97 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Full</Optimization>
+      <Optimization>MinSpace</Optimization>
       <FunctionLevelLinking>false</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;NDEBUG_COMPATIBILITY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FloatingPointModel>Strict</FloatingPointModel>
+      <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Console</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Full</Optimization>
+      <Optimization>MinSpace</Optimization>
       <FunctionLevelLinking>false</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;NDEBUG_COMPATIBILITY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FloatingPointModel>Strict</FloatingPointModel>
+      <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Console</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Full</Optimization>
+      <Optimization>MinSpace</Optimization>
       <FunctionLevelLinking>false</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;NDEBUG_COMPATIBILITY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FloatingPointModel>Strict</FloatingPointModel>
+      <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Console</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Kid version)|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Full</Optimization>
+      <Optimization>MinSpace</Optimization>
       <FunctionLevelLinking>false</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PreprocessorDefinitions>NO_EXTERNAL_LIBRAIRIES;NDEBUG_COMPATIBILITY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FloatingPointModel>Strict</FloatingPointModel>
+      <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Console</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
