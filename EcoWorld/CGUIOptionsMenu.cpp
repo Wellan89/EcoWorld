@@ -259,16 +259,12 @@ void CGUIOptionsMenu::createMenu()
 	{
 		// Constantes utilisées pour trier l'ordre d'affichage des résolutions dans la liste :
 		// La taille en pixels de la résolution choisie doit vérifier : MIN_RESOLUTION_WIDTH <= largeur <= MAX_RESOLUTION_WIDTH et : MIN_RESOLUTION_HEIGHT <= hauteur <= MAX_RESOLUTION_HEIGHT
-		// Et sa profondeur de couleur en bits doit vérifier : MIN_COLOR_DEPHT <= bits <= MAX_COLOR_DEPHT
-		// Si toutes ces conditions sont vérifiées, cette résolution apparaîtra au début de la liste, sinon elle ne sera ajoutée qu'à la fin
-#define MIN_RESOLUTION_WIDTH	800
-#define MIN_RESOLUTION_HEIGHT	600
+		// Si cette condition est vérifiée, cette résolution apparaîtra au début de la liste, sinon elle ne sera ajoutée qu'à la fin.
+#define MIN_RESOLUTION_WIDTH	1024
+#define MIN_RESOLUTION_HEIGHT	768
 
 #define MAX_RESOLUTION_WIDTH	1920
 #define MAX_RESOLUTION_HEIGHT	1080
-
-#define MIN_COLOR_DEPHT			16
-#define MAX_COLOR_DEPHT			32
 
 		int activeResIndex = -1;
 		video::IVideoModeList* const listeModesVideo = game->device->getVideoModeList();
@@ -279,44 +275,52 @@ void CGUIOptionsMenu::createMenu()
 			const core::dimension2du currentRes = listeModesVideo->getVideoModeResolution(i);
 			const int currentColorDepht = listeModesVideo->getVideoModeDepth(i);
 
-			// Les résolutions comprises entre minRes et maxRes et qui ont une profondeur de couleur comprise entre minColorDepht et maxColorDepht
-			// apparaissent en premier dans la liste
+			// Les résolutions comprises entre minRes et maxRes apparaissent en premier dans la liste
 			if (currentRes.Width >= MIN_RESOLUTION_WIDTH && currentRes.Width <= MAX_RESOLUTION_WIDTH
-				&& currentRes.Height >= MIN_RESOLUTION_HEIGHT && currentRes.Height <= MAX_RESOLUTION_HEIGHT
-				&& currentColorDepht >= MIN_COLOR_DEPHT && currentColorDepht <= MAX_COLOR_DEPHT)
+				&& currentRes.Height >= MIN_RESOLUTION_HEIGHT && currentRes.Height <= MAX_RESOLUTION_HEIGHT)
 			{
-				swprintf_SS(L"%u x %u : %d bits",
-					currentRes.Width, currentRes.Height, currentColorDepht);
+				swprintf_SS(L"%u x %u", currentRes.Width, currentRes.Height);
 
 				// Note : codage de la résolution et de la profondeur de couleur :
-				// Profondeur max :	64 bits
-				// Hauteur max :	4096 pixels
-				// => Largeur max :	4294967295 / (4096 * 64) = 16383 pixels (car UINT_MAX = 4294967295)
-				const u32 index = resolutionComboBox->addItem(textW_SS, (currentRes.Width * 4096 + currentRes.Height) * 64 + currentColorDepht);
+				// Hauteur max :	16384 pixels
+				// => Largeur max :	4294967295 / 4096 = 262143 pixels (car UINT_MAX = 4294967295)
+				const u32 data = currentRes.Width * 16384 + currentRes.Height;
 
-				// Si la résolution qu'on vient d'ajouter est la résolution actuelle du device
-				if (currentRes == gameConfig.deviceParams.WindowSize)
-					activeResIndex = (int)index; // On note son index
+				// Vérifie qu'on n'a pas déjà ajouté cette résolution :
+				// elle peut apparaitre plusieurs fois avec des profondeurs de bits différentes
+				if (resolutionComboBox->getIndexForItemData(data) == -1)
+				{
+					const u32 index = resolutionComboBox->addItem(textW_SS, data);
+
+					// Si la résolution qu'on vient d'ajouter est la résolution actuelle du device
+					if (currentRes == gameConfig.deviceParams.WindowSize)
+						activeResIndex = (int)index; // On note son index
+				}
 			}
 		}
-		// Ajoute les résolutions non comprises entre minRes et maxRes ou qui n'ont pas une profondeur de couleur comprise entre minColorDepht et maxColorDepht en dernier
+		// Ajoute les résolutions non comprises entre minRes et maxRes en dernier
 		for (i = 0; i < videoModeCount; ++i)
 		{
 			const core::dimension2du currentRes = listeModesVideo->getVideoModeResolution(i);
 			const int currentColorDepht = listeModesVideo->getVideoModeDepth(i);
 
 			if (currentRes.Width < MIN_RESOLUTION_WIDTH || currentRes.Width > MAX_RESOLUTION_WIDTH
-				|| currentRes.Height < MIN_RESOLUTION_HEIGHT || currentRes.Height > MAX_RESOLUTION_HEIGHT
-				|| currentColorDepht < MIN_COLOR_DEPHT || currentColorDepht > MAX_COLOR_DEPHT)
+				|| currentRes.Height < MIN_RESOLUTION_HEIGHT || currentRes.Height > MAX_RESOLUTION_HEIGHT)
 			{
-				swprintf_SS(L"%u x %u : %d bits",
-					currentRes.Width, currentRes.Height, currentColorDepht);
+				swprintf_SS(L"%u x %u", currentRes.Width, currentRes.Height);
 
-				const u32 index = resolutionComboBox->addItem(textW_SS, (currentRes.Width * 4096 + currentRes.Height) * 64 + currentColorDepht);
+				const u32 data = currentRes.Width * 16384 + currentRes.Height;
 
-				// Si la résolution qu'on vient d'ajouter est la résolution actuelle du device
-				if (currentRes == gameConfig.deviceParams.WindowSize && currentColorDepht == gameConfig.deviceParams.Bits)
-					activeResIndex = (int)index; // On note son index
+				// Vérifie qu'on n'a pas déjà ajouté cette résolution :
+				// elle peut apparaitre plusieurs fois avec des profondeurs de bits différentes
+				if (resolutionComboBox->getIndexForItemData(data) == -1)
+				{
+					const u32 index = resolutionComboBox->addItem(textW_SS, data);
+
+					// Si la résolution qu'on vient d'ajouter est la résolution actuelle du device
+					if (currentRes == gameConfig.deviceParams.WindowSize)
+						activeResIndex = (int)index; // On note son index
+				}
 			}
 		}
 
@@ -324,11 +328,10 @@ void CGUIOptionsMenu::createMenu()
 			resolutionComboBox->setSelected(activeResIndex);
 		else						// Sinon, on ajoute la résolution actuelle en dernier et on la sélectionne
 		{
-			swprintf_SS(L"%u x %u : %d bits",
-				gameConfig.deviceParams.WindowSize.Width, gameConfig.deviceParams.WindowSize.Height, gameConfig.deviceParams.Bits);
+			swprintf_SS(L"%u x %u", gameConfig.deviceParams.WindowSize.Width, gameConfig.deviceParams.WindowSize.Height);
 
 			resolutionComboBox->setSelected(
-				(int)resolutionComboBox->addItem(textW_SS, (gameConfig.deviceParams.WindowSize.Width * 4096 + gameConfig.deviceParams.WindowSize.Height) * 64 + gameConfig.deviceParams.Bits));
+				(int)resolutionComboBox->addItem(textW_SS, gameConfig.deviceParams.WindowSize.Width * 16384 + gameConfig.deviceParams.WindowSize.Height));
 		}
 	}
 
@@ -383,7 +386,7 @@ void CGUIOptionsMenu::createMenu()
 	case GameConfiguration::ETQ_HIGH:		texturesQualityComboBox->setSelected(3);									break;
 	default: {	swprintf_SS(L"Inconnu (%d)", (int)gameConfig.texturesQuality);
 				texturesQualityComboBox->setSelected(
-				texturesQualityComboBox->addItem(textW_SS, (int)gameConfig.texturesQuality)); }							break;
+					texturesQualityComboBox->addItem(textW_SS, (int)gameConfig.texturesQuality)); }						break;
 	}
 
 	Environment->addStaticText(L"Filtrage des textures :",					getAbsoluteRectangle(positionTexteX,							minY + (ecartY + tailleY) * indexY,			positionTexteX + tailleTexteX,														minY + ecartY * indexY + tailleY * (indexY + 1), parentTabRect),
@@ -392,12 +395,26 @@ void CGUIOptionsMenu::createMenu()
 		Environment->addComboBox(												getAbsoluteRectangle(positionValeurX,							minY + (ecartY + tailleY) * indexY,			positionValeurX + tailleValeurX,													minY + ecartY * indexY + tailleY * (indexY + 1), parentTabRect),
 		generalTab); ++indexY;
 	texturesFilterComboBox->setToolTipText(L"Modifiez ici le type de filtrage des textures");
-	texturesFilterComboBox->addItem(L"Aucun", (int)GameConfiguration::ETQ_VERY_LOW);
-	texturesFilterComboBox->addItem(L"Bilinéaire", (int)GameConfiguration::ETQ_LOW);
-	texturesFilterComboBox->addItem(L"Trilinéaire", (int)GameConfiguration::ETQ_MEDIUM);
-	texturesFilterComboBox->addItem(L"Anisotropique", (int)GameConfiguration::ETQ_HIGH);
+	texturesFilterComboBox->addItem(L"Aucun", 0);
+	texturesFilterComboBox->addItem(L"Bilinéaire", 0);
+	texturesFilterComboBox->addItem(L"Trilinéaire", 0);
+	texturesFilterComboBox->addItem(L"Anisotropique (2x)", 2);
+	texturesFilterComboBox->addItem(L"Anisotropique (4x)", 4);
+	texturesFilterComboBox->addItem(L"Anisotropique (8x)", 8);
+	texturesFilterComboBox->addItem(L"Anisotropique (16x)", 16);
 	if (gameConfig.anisotropicFilter > 0)
-		texturesFilterComboBox->setSelected(3);
+	{
+		switch (gameConfig.anisotropicFilter)
+		{
+		case 2:		texturesFilterComboBox->setSelected(3);	break;
+		case 4:		texturesFilterComboBox->setSelected(4);	break;
+		case 8:		texturesFilterComboBox->setSelected(5);	break;
+		case 16:	texturesFilterComboBox->setSelected(6);	break;
+		default: {	swprintf_SS(L"Anisotropique (%dx)", (int)gameConfig.anisotropicFilter);
+					texturesFilterComboBox->setSelected(
+						texturesFilterComboBox->addItem(textW_SS, gameConfig.anisotropicFilter)); }		break;
+		}
+	}
 	else if (gameConfig.trilinearFilterEnabled)
 		texturesFilterComboBox->setSelected(2);
 	else if (gameConfig.bilinearFilterEnabled)
@@ -688,14 +705,14 @@ void CGUIOptionsMenu::updateFromGameConfig(const GameConfiguration& gameCfg)
 	if (resolutionComboBox)
 	{
 		const core::dimension2du& activeRes = gameCfg.deviceParams.WindowSize;
-		const int activeResData = (activeRes.Width * 4096 + activeRes.Height) * 64 + gameCfg.deviceParams.Bits;
+		const int activeResData = activeRes.Width * 16384 + activeRes.Height;
 		const int activeResIndex = resolutionComboBox->getIndexForItemData(activeResData);
 
 		if (activeResIndex != -1)
 			resolutionComboBox->setSelected(activeResIndex);
 		else
 		{
-			swprintf_SS(L"%d x %d : %d bits", activeRes.Width, activeRes.Height, gameCfg.deviceParams.Bits);
+			swprintf_SS(L"%d x %d", activeRes.Width, activeRes.Height);
 
 			resolutionComboBox->setSelected(resolutionComboBox->addItem(textW_SS, activeResData));
 		}
@@ -737,7 +754,19 @@ void CGUIOptionsMenu::updateFromGameConfig(const GameConfiguration& gameCfg)
 	}
 
 	if (gameCfg.anisotropicFilter > 0)
-		texturesFilterComboBox->setSelected(3);
+	{
+		const int itemIndex = texturesFilterComboBox->getIndexForItemData(gameCfg.anisotropicFilter);
+
+		if (itemIndex != -1)
+			texturesFilterComboBox->setSelected(itemIndex);
+		else
+		{
+			swprintf_SS(L"Anisotropique (%dx)", (int)gameCfg.anisotropicFilter);
+
+			texturesFilterComboBox->setSelected(
+				texturesFilterComboBox->addItem(textW_SS, gameCfg.anisotropicFilter));
+		}
+	}
 	else if (gameCfg.trilinearFilterEnabled)
 		texturesFilterComboBox->setSelected(2);
 	else if (gameCfg.bilinearFilterEnabled)
@@ -905,14 +934,11 @@ void CGUIOptionsMenu::applySelectedOptions(bool canShowConfirmationWindow)
 		const int selected = resolutionComboBox->getSelected();
 		if (selected != -1)
 		{
-			const u32 itemData = resolutionComboBox->getItemData(selected);
-			const u32 resData = itemData / 64;
-			const core::dimension2du newResolution(resData / 4096, resData % 4096);
-			const u32 newColorDepht = itemData % 64;
+			const u32 resData = resolutionComboBox->getItemData(selected);
+			const core::dimension2du newResolution(resData / 16384, resData % 16384);
 
-			haveToRestart |= ((deviceParams.WindowSize != newResolution) || (deviceParams.Bits != newColorDepht));
+			haveToRestart |= (deviceParams.WindowSize != newResolution);
 			deviceParams.WindowSize = newResolution;
-			deviceParams.Bits = newColorDepht;
 		}
 	}
 
@@ -956,12 +982,6 @@ void CGUIOptionsMenu::applySelectedOptions(bool canShowConfirmationWindow)
 		const int filterType = texturesFilterComboBox->getSelected();
 		switch (filterType)
 		{
-		case 3:		// Anisotropique
-			haveToChangeGameConfigMaterial |= (gameConfig.anisotropicFilter != 255 || !gameConfig.trilinearFilterEnabled || !gameConfig.bilinearFilterEnabled);
-			gameConfig.anisotropicFilter = 255;
-			gameConfig.trilinearFilterEnabled = true;
-			gameConfig.bilinearFilterEnabled = true;
-			break;
 		case 2:		// Trilinéaire
 			haveToChangeGameConfigMaterial |= (gameConfig.anisotropicFilter != 0 || !gameConfig.trilinearFilterEnabled || !gameConfig.bilinearFilterEnabled);
 			gameConfig.anisotropicFilter = 0;
@@ -974,11 +994,20 @@ void CGUIOptionsMenu::applySelectedOptions(bool canShowConfirmationWindow)
 			gameConfig.trilinearFilterEnabled = false;
 			gameConfig.bilinearFilterEnabled = true;
 			break;
-		default:	// case 0 : Aucun
+		case 0:		// Aucun
 			haveToChangeGameConfigMaterial |= (gameConfig.anisotropicFilter != 0 || gameConfig.trilinearFilterEnabled || gameConfig.bilinearFilterEnabled);
 			gameConfig.anisotropicFilter = 0;
 			gameConfig.trilinearFilterEnabled = false;
 			gameConfig.bilinearFilterEnabled = false;
+			break;
+		default:	// Anisotropique
+			{
+				const u32 anisotropicLevel = texturesFilterComboBox->getItemData(filterType);
+				haveToChangeGameConfigMaterial |= (gameConfig.anisotropicFilter != anisotropicLevel || !gameConfig.trilinearFilterEnabled || !gameConfig.bilinearFilterEnabled);
+				gameConfig.anisotropicFilter = anisotropicLevel;
+				gameConfig.trilinearFilterEnabled = true;
+				gameConfig.bilinearFilterEnabled = true;
+			}
 			break;
 		}
 	}
