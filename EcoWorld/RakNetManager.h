@@ -379,10 +379,10 @@ protected:
 
 	// Les prochains temps auquels certains messages périodique seront renvoyés (permet d'envoyer certains messages régulièrement, et non à chaque frame)
 #define SEND_MSG_PERIOD_SEARCH_GAMES_PING		500	// Envoie le message de ping de recherche de parties toutes les 500 ms
-	TimeMS nextTimeSendMsg_searchGamesPing;			// Ping de recherche de parties
+	RakNet::Time nextTimeSendMsg_searchGamesPing;			// Ping de recherche de parties
 
 #define SEND_MSG_PERIOD_SYNCHRONIZE_GAME_TIME	50	// Envoie le message de synchronisation de temps du jeu toutes les 50 ms
-	TimeMS nextTimeSendMsg_synchronizeGameTime;		// Message de synchronisation du temps de jeu
+	RakNet::Time nextTimeSendMsg_synchronizeGameTime;		// Message de synchronisation du temps de jeu
 
 
 

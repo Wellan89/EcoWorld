@@ -8,8 +8,10 @@ TODO.h : Liste des tâches à faire, ne pas inclure
 /*
 BUGS Connus :
 
+- BUG : Les versions 64 bits compilent mais plantent !
+- Problème : les tests ne se lancent pas en mode DEBUG
+
 - BUG : Crash du jeu lors du défilement de la fenêtre d'informations avec la molette de la souris : Bug de la fonction DispatchMessage dans CIrrDeviceWin32::run() !
-- BUG : Les versions 64 bits compilent mais ne fonctionnent pas !
 
 - BUG : Lors du chargement d'une partie (sûrement aussi lors des parties normales), la sélection de bâtiments ne sélectionne pas les bons nodes
 - BUG lié : Lors de la sélection d'un bâtiment grâce à son tour de construction,

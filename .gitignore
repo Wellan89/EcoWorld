@@ -46,3 +46,5 @@
 *.ewg
 *.dll
 /EcoWorld/Game Configuration DEBUG.xml
+*.dgml
+*.ipch

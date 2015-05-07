@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EcoWorld", "EcoWorld\EcoWor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EcoWorldSaveConverter", "EcoWorldSaveConverter\EcoWorldSaveConverter.vcxproj", "{AD05C4A8-A8DD-4568-842C-7E42FF24F561}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EcoWorldTests", "EcoWorldTests\EcoWorldTests.vcxproj", "{5CF1B433-69A3-437D-B2AA-DB3813D134C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -51,6 +53,18 @@ Global
 		{AD05C4A8-A8DD-4568-842C-7E42FF24F561}.Release|Win32.Build.0 = Release|Win32
 		{AD05C4A8-A8DD-4568-842C-7E42FF24F561}.Release|x64.ActiveCfg = Release|x64
 		{AD05C4A8-A8DD-4568-842C-7E42FF24F561}.Release|x64.Build.0 = Release|x64
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Debug|Win32.Build.0 = Debug|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Debug|x64.ActiveCfg = Debug|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Release (Compatibility)|Win32.ActiveCfg = Release|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Release (Compatibility)|Win32.Build.0 = Release|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Release (Compatibility)|x64.ActiveCfg = Release|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Release (Kid version)|Win32.ActiveCfg = Release|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Release (Kid version)|Win32.Build.0 = Release|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Release (Kid version)|x64.ActiveCfg = Release|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Release|Win32.ActiveCfg = Release|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Release|Win32.Build.0 = Release|Win32
+		{5CF1B433-69A3-437D-B2AA-DB3813D134C9}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
