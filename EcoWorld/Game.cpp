@@ -2314,8 +2314,12 @@ bool Game::onEchap(bool pressed)
 		}
 		else if (currentScene == ECS_OPTIONS_MENU)		// Dans le menu options
 		{
-			// On simule un appui sur le bouton pour retourner au menu principal
-			if (guiManager->guiElements.optionsMenuGUI.optionsMenu->retourBouton)
+			// Si la fenêtre de confirmation des options est affichée,
+			// on simule un appui sur son bouton Non,
+			// sinon on simule un appui sur le bouton pour retourner au menu principal.
+			if (guiManager->guiElements.optionsMenuGUI.optionsMenu->confirmationWindow)
+				guiManager->guiElements.optionsMenuGUI.optionsMenu->confirmationWindow->simulateNoButtonPress();
+			else if (guiManager->guiElements.optionsMenuGUI.optionsMenu->retourBouton)
 			{
 				SEvent event;
 				event.EventType = EET_GUI_EVENT;
@@ -2385,8 +2389,12 @@ bool Game::onEchap(bool pressed)
 		}
 		else if (currentScene == ECS_OPTIONS_MENU)		// Dans le menu options
 		{
-			// On affiche un appui sur le bouton pour retourner au menu principal
-			if (guiManager->guiElements.optionsMenuGUI.optionsMenu->retourBouton)
+			// Si la fenêtre de confirmation des options est affichée,
+			// on affiche un appui sur son bouton Non,
+			// sinon on affiche un appui sur le bouton pour retourner au menu principal.
+			if (guiManager->guiElements.optionsMenuGUI.optionsMenu->confirmationWindow)
+				guiManager->guiElements.optionsMenuGUI.optionsMenu->confirmationWindow->setNoButtonPressed(true);
+			else if (guiManager->guiElements.optionsMenuGUI.optionsMenu->retourBouton)
 				guiManager->guiElements.optionsMenuGUI.optionsMenu->retourBouton->setPressed(true);
 		}
 		else if (currentScene == ECS_NEW_GAME_MENU)		// Dans le menu de création de nouvelle partie
@@ -2435,8 +2443,12 @@ bool Game::onEnter(bool pressed)
 		}
 		else if (currentScene == ECS_OPTIONS_MENU)		// Dans le menu options
 		{
-			// On simule un appui sur le bouton pour appliquer les options
-			if (guiManager->guiElements.optionsMenuGUI.optionsMenu->appliquerBouton)
+			// Si la fenêtre de confirmation des options est affichée,
+			// on simule un appui sur son bouton Oui,
+			// sinon on simule un appui sur le bouton pour appliquer les options.
+			if (guiManager->guiElements.optionsMenuGUI.optionsMenu->confirmationWindow)
+				guiManager->guiElements.optionsMenuGUI.optionsMenu->confirmationWindow->simulateYesButtonPress();
+			else if (guiManager->guiElements.optionsMenuGUI.optionsMenu->appliquerBouton)
 			{
 				SEvent event;
 				event.EventType = EET_GUI_EVENT;
@@ -2506,8 +2518,12 @@ bool Game::onEnter(bool pressed)
 		}
 		else if (currentScene == ECS_OPTIONS_MENU)		// Dans le menu options
 		{
-			// On affiche un appui sur le bouton pour appliquer les options
-			if (guiManager->guiElements.optionsMenuGUI.optionsMenu->appliquerBouton)
+			// Si la fenêtre de confirmation des options est affichée,
+			// on affiche un appui sur son bouton Oui,
+			// sinon on affiche un appui sur le bouton pour appliquer les options.
+			if (guiManager->guiElements.optionsMenuGUI.optionsMenu->confirmationWindow)
+				guiManager->guiElements.optionsMenuGUI.optionsMenu->confirmationWindow->setYesButtonPressed(true);
+			else if (guiManager->guiElements.optionsMenuGUI.optionsMenu->appliquerBouton)
 				guiManager->guiElements.optionsMenuGUI.optionsMenu->appliquerBouton->setPressed(true);
 		}
 		else if (currentScene == ECS_NEW_GAME_MENU)		// Dans le menu de création de nouvelle partie

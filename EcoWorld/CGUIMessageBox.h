@@ -69,6 +69,41 @@ class CGUITexturedModalScreen;
 
 		IGUIStaticText* getStaticText()	{ return StaticText; }
 
+		void setYesButtonPressed(bool pressed)
+		{
+			if (YesButton)
+				YesButton->setPressed(pressed);
+		}
+		void simulateYesButtonPress()
+		{
+			if (!YesButton)
+				return;
+
+			SEvent event;
+			event.EventType = EET_GUI_EVENT;
+			event.GUIEvent.Caller = YesButton;
+			event.GUIEvent.Element = NULL;
+			event.GUIEvent.EventType = EGET_BUTTON_CLICKED;
+			OnEvent(event);
+		}
+		void setNoButtonPressed(bool pressed)
+		{
+			if (NoButton)
+				NoButton->setPressed(pressed);
+		}
+		void simulateNoButtonPress()
+		{
+			if (!NoButton)
+				return;
+
+			SEvent event;
+			event.EventType = EET_GUI_EVENT;
+			event.GUIEvent.Caller = NoButton;
+			event.GUIEvent.Element = NULL;
+			event.GUIEvent.EventType = EGET_BUTTON_CLICKED;
+			OnEvent(event);
+		}
+
 		// Gère automatiquement l'ajout d'une fenêtre de message à la GUI du jeu
 		static CGUIMessageBox* addMessageBox(IGUIEnvironment* environment, const wchar_t* caption, const wchar_t* text, s32 flags, IGUIElement* parent, bool addTexturedModalScreen)
 		{

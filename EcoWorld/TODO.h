@@ -7,8 +7,7 @@ TODO.h : Liste des tâches à faire, ne pas inclure
 
 /*
 BUGS Connus :
--placer les plus grandes res au début ; ne pas les sélectionner lors de la création du menu options
-- BUG : Echap dans le menu options avec la fenêtre de confirmation, puis retour dans le menu options
+
 - BUG : Les versions 64 bits compilent mais plantent !
 - Problème : les tests ne se lancent pas en mode DEBUG
 

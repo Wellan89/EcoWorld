@@ -236,17 +236,6 @@ void CGUIOptionsMenu::createMenu()
 	driverTypeComboBox->setToolTipText(L"Choisissez ici le type de driver qui sera utilisé pour le rendu 3D");
 	driverTypeComboBox->addItem(L"OpenGL", video::EDT_OPENGL);
 	driverTypeComboBox->addItem(L"Direct3D 9.0c", video::EDT_DIRECT3D9);
-	switch (gameConfig.deviceParams.DriverType)
-	{
-	case video::EDT_OPENGL:			driverTypeComboBox->setSelected(0);														break;
-	case video::EDT_DIRECT3D9:		driverTypeComboBox->setSelected(1);														break;
-	case video::EDT_DIRECT3D8:		driverTypeComboBox->setSelected(
-										driverTypeComboBox->addItem(L"Direct3D 8.1", video::EDT_DIRECT3D8));				break;
-	case video::EDT_BURNINGSVIDEO:	driverTypeComboBox->setSelected(
-										driverTypeComboBox->addItem(L"Burning's Video", video::EDT_BURNINGSVIDEO));			break;
-	case video::EDT_SOFTWARE:		driverTypeComboBox->setSelected(
-										driverTypeComboBox->addItem(L"Irrlicht Software Renderer", video::EDT_SOFTWARE));	break;
-	}
 
 	Environment->addStaticText(L"Résolution :",			getAbsoluteRectangle(positionTexteX,												minY + (ecartY + tailleY) * indexY,			positionTexteX + tailleTexteX,														minY + ecartY * indexY + tailleY * (indexY + 1), parentTabRect),
 		false, true, generalTab);
@@ -255,83 +244,26 @@ void CGUIOptionsMenu::createMenu()
 		generalTab); ++indexY;
 	resolutionComboBox->setToolTipText(L"Choisissez ici la résolution de l'affichage 3D ainsi que la fidélité dans le rendu des couleurs");
 
-	// Charge les résolutions
+	// Charge les résolutions, de la plus grande à la plus petite dans la liste déroulante
 	{
-		// Constantes utilisées pour trier l'ordre d'affichage des résolutions dans la liste :
-		// La taille en pixels de la résolution choisie doit vérifier : MIN_RESOLUTION_WIDTH <= largeur <= MAX_RESOLUTION_WIDTH et : MIN_RESOLUTION_HEIGHT <= hauteur <= MAX_RESOLUTION_HEIGHT
-		// Si cette condition est vérifiée, cette résolution apparaîtra au début de la liste, sinon elle ne sera ajoutée qu'à la fin.
-#define MIN_RESOLUTION_WIDTH	1024
-#define MIN_RESOLUTION_HEIGHT	768
-
-#define MAX_RESOLUTION_WIDTH	1920
-#define MAX_RESOLUTION_HEIGHT	1080
-
-		int activeResIndex = -1;
 		video::IVideoModeList* const listeModesVideo = game->device->getVideoModeList();
 		const int videoModeCount = listeModesVideo->getVideoModeCount();
-		int i;	// Variable d'itération
-		for (i = 0; i < videoModeCount; ++i)
+		for (int i = videoModeCount - 1; i >= 0; --i)
 		{
 			const core::dimension2du currentRes = listeModesVideo->getVideoModeResolution(i);
 			const int currentColorDepht = listeModesVideo->getVideoModeDepth(i);
 
-			// Les résolutions comprises entre minRes et maxRes apparaissent en premier dans la liste
-			if (currentRes.Width >= MIN_RESOLUTION_WIDTH && currentRes.Width <= MAX_RESOLUTION_WIDTH
-				&& currentRes.Height >= MIN_RESOLUTION_HEIGHT && currentRes.Height <= MAX_RESOLUTION_HEIGHT)
-			{
-				swprintf_SS(L"%u x %u", currentRes.Width, currentRes.Height);
+			swprintf_SS(L"%u x %u", currentRes.Width, currentRes.Height);
 
-				// Note : codage de la résolution et de la profondeur de couleur :
-				// Hauteur max :	16384 pixels
-				// => Largeur max :	4294967295 / 4096 = 262143 pixels (car UINT_MAX = 4294967295)
-				const u32 data = currentRes.Width * 16384 + currentRes.Height;
+			// Note : codage de la résolution et de la profondeur de couleur :
+			// Hauteur max :	16384 pixels
+			// => Largeur max :	4294967295 / 16384 = 262143 pixels (car UINT_MAX = 4294967295)
+			const u32 data = currentRes.Width * 16384 + currentRes.Height;
 
-				// Vérifie qu'on n'a pas déjà ajouté cette résolution :
-				// elle peut apparaitre plusieurs fois avec des profondeurs de bits différentes
-				if (resolutionComboBox->getIndexForItemData(data) == -1)
-				{
-					const u32 index = resolutionComboBox->addItem(textW_SS, data);
-
-					// Si la résolution qu'on vient d'ajouter est la résolution actuelle du device
-					if (currentRes == gameConfig.deviceParams.WindowSize)
-						activeResIndex = (int)index; // On note son index
-				}
-			}
-		}
-		// Ajoute les résolutions non comprises entre minRes et maxRes en dernier
-		for (i = 0; i < videoModeCount; ++i)
-		{
-			const core::dimension2du currentRes = listeModesVideo->getVideoModeResolution(i);
-			const int currentColorDepht = listeModesVideo->getVideoModeDepth(i);
-
-			if (currentRes.Width < MIN_RESOLUTION_WIDTH || currentRes.Width > MAX_RESOLUTION_WIDTH
-				|| currentRes.Height < MIN_RESOLUTION_HEIGHT || currentRes.Height > MAX_RESOLUTION_HEIGHT)
-			{
-				swprintf_SS(L"%u x %u", currentRes.Width, currentRes.Height);
-
-				const u32 data = currentRes.Width * 16384 + currentRes.Height;
-
-				// Vérifie qu'on n'a pas déjà ajouté cette résolution :
-				// elle peut apparaitre plusieurs fois avec des profondeurs de bits différentes
-				if (resolutionComboBox->getIndexForItemData(data) == -1)
-				{
-					const u32 index = resolutionComboBox->addItem(textW_SS, data);
-
-					// Si la résolution qu'on vient d'ajouter est la résolution actuelle du device
-					if (currentRes == gameConfig.deviceParams.WindowSize)
-						activeResIndex = (int)index; // On note son index
-				}
-			}
-		}
-
-		if (activeResIndex >= 0)	// Si on a trouvé la résolution actuelle, on la sélectionne
-			resolutionComboBox->setSelected(activeResIndex);
-		else						// Sinon, on ajoute la résolution actuelle en dernier et on la sélectionne
-		{
-			swprintf_SS(L"%u x %u", gameConfig.deviceParams.WindowSize.Width, gameConfig.deviceParams.WindowSize.Height);
-
-			resolutionComboBox->setSelected(
-				(int)resolutionComboBox->addItem(textW_SS, gameConfig.deviceParams.WindowSize.Width * 16384 + gameConfig.deviceParams.WindowSize.Height));
+			// Vérifie qu'on n'a pas déjà ajouté cette résolution :
+			// elle peut apparaitre plusieurs fois avec des profondeurs de bits différentes
+			if (resolutionComboBox->getIndexForItemData(data) == -1)
+				resolutionComboBox->addItem(textW_SS, data);
 		}
 	}
 
@@ -345,16 +277,6 @@ void CGUIOptionsMenu::createMenu()
 	antialiasingComboBox->addItem(L"2x", 2);
 	antialiasingComboBox->addItem(L"4x", 4);
 	antialiasingComboBox->addItem(L"8x", 8);
-	switch (gameConfig.deviceParams.AntiAlias)
-	{
-	case 0:		antialiasingComboBox->setSelected(0);													break;
-	case 2:		antialiasingComboBox->setSelected(1);													break;
-	case 4:		antialiasingComboBox->setSelected(2);													break;
-	case 8:		antialiasingComboBox->setSelected(3);													break;
-	default: {	swprintf_SS(L"Inconnu (%d)", gameConfig.deviceParams.AntiAlias);
-				antialiasingComboBox->setSelected(
-					antialiasingComboBox->addItem(textW_SS, gameConfig.deviceParams.AntiAlias)); }		break;
-	}
 
 	fullScreenCheckBox =
 		Environment->addCheckBox(gameConfig.deviceParams.Fullscreen,			getAbsoluteRectangle(positionTexteX,							minY + (ecartY + tailleY) * indexY,			positionValeurX + tailleValeurX,													minY + ecartY * indexY + tailleY * (indexY + 1), parentTabRect),
@@ -378,16 +300,6 @@ void CGUIOptionsMenu::createMenu()
 	texturesQualityComboBox->addItem(L"Basse", (int)GameConfiguration::ETQ_LOW);
 	texturesQualityComboBox->addItem(L"Moyenne", (int)GameConfiguration::ETQ_MEDIUM);
 	texturesQualityComboBox->addItem(L"Haute", (int)GameConfiguration::ETQ_HIGH);
-	switch (gameConfig.texturesQuality)
-	{
-	case GameConfiguration::ETQ_VERY_LOW:	texturesQualityComboBox->setSelected(0);									break;
-	case GameConfiguration::ETQ_LOW:		texturesQualityComboBox->setSelected(1);									break;
-	case GameConfiguration::ETQ_MEDIUM:		texturesQualityComboBox->setSelected(2);									break;
-	case GameConfiguration::ETQ_HIGH:		texturesQualityComboBox->setSelected(3);									break;
-	default: {	swprintf_SS(L"Inconnu (%d)", (int)gameConfig.texturesQuality);
-				texturesQualityComboBox->setSelected(
-					texturesQualityComboBox->addItem(textW_SS, (int)gameConfig.texturesQuality)); }						break;
-	}
 
 	Environment->addStaticText(L"Filtrage des textures :",					getAbsoluteRectangle(positionTexteX,							minY + (ecartY + tailleY) * indexY,			positionTexteX + tailleTexteX,														minY + ecartY * indexY + tailleY * (indexY + 1), parentTabRect),
 		false, true, generalTab);
@@ -402,25 +314,6 @@ void CGUIOptionsMenu::createMenu()
 	texturesFilterComboBox->addItem(L"Anisotropique (4x)", 4);
 	texturesFilterComboBox->addItem(L"Anisotropique (8x)", 8);
 	texturesFilterComboBox->addItem(L"Anisotropique (16x)", 16);
-	if (gameConfig.anisotropicFilter > 0)
-	{
-		switch (gameConfig.anisotropicFilter)
-		{
-		case 2:		texturesFilterComboBox->setSelected(3);	break;
-		case 4:		texturesFilterComboBox->setSelected(4);	break;
-		case 8:		texturesFilterComboBox->setSelected(5);	break;
-		case 16:	texturesFilterComboBox->setSelected(6);	break;
-		default: {	swprintf_SS(L"Anisotropique (%dx)", (int)gameConfig.anisotropicFilter);
-					texturesFilterComboBox->setSelected(
-						texturesFilterComboBox->addItem(textW_SS, gameConfig.anisotropicFilter)); }		break;
-		}
-	}
-	else if (gameConfig.trilinearFilterEnabled)
-		texturesFilterComboBox->setSelected(2);
-	else if (gameConfig.bilinearFilterEnabled)
-		texturesFilterComboBox->setSelected(1);
-	else
-		texturesFilterComboBox->setSelected(0);
 
 	// Désactivé car peu utilisé en réalité
 	//powerOf2TexturesCheckBox =
@@ -459,8 +352,8 @@ void CGUIOptionsMenu::createMenu()
 	gammaScrollBar->setToolTipText(L"Déplacez le curseur pour régler le niveau de correction gamma de votre moniteur");
 	{
 		const int gammaValue = (int)(((gameConfig.gamma.red + gameConfig.gamma.green+ gameConfig.gamma.blue) / 3.0f) * 10.0f);
-		gammaScrollBar->setMin(gammaValue >= 5 ? 5 : gammaValue);
-		gammaScrollBar->setMax(gammaValue <= 35 ? 35 : gammaValue);
+		gammaScrollBar->setMin(min(gammaValue, 5));
+		gammaScrollBar->setMax(max(gammaValue, 35));
 		gammaScrollBar->setSmallStep(1);
 		gammaScrollBar->setLargeStep(5);
 	}
@@ -479,17 +372,6 @@ void CGUIOptionsMenu::createMenu()
 	autoSaveFrequencyComboBox->addItem(L"Toutes les 15 minutes", 900);
 	autoSaveFrequencyComboBox->addItem(L"Toutes les 30 minutes", 1800);
 	autoSaveFrequencyComboBox->addItem(L"Toutes les heures", 3600);
-	switch (gameConfig.autoSaveFrequency)
-	{
-	case 0:			autoSaveFrequencyComboBox->setSelected(0);														break;
-	case 300:		autoSaveFrequencyComboBox->setSelected(1);														break;
-	case 900:		autoSaveFrequencyComboBox->setSelected(2);														break;
-	case 1800:		autoSaveFrequencyComboBox->setSelected(3);														break;
-	case 3600:		autoSaveFrequencyComboBox->setSelected(4);														break;
-	default: {		swprintf_SS(L"Toutes les %u secondes", gameConfig.autoSaveFrequency);
-					autoSaveFrequencyComboBox->setSelected(
-							autoSaveFrequencyComboBox->addItem(textW_SS, gameConfig.autoSaveFrequency)); }			break;
-	}
 
 
 
@@ -550,20 +432,9 @@ void CGUIOptionsMenu::createMenu()
 	waterShaderQualityComboBox->addItem(L"Basse", 256);
 	waterShaderQualityComboBox->addItem(L"Moyenne", 512);
 	waterShaderQualityComboBox->addItem(L"Haute", 1024);
-	const u32 rttSizeData = (gameConfig.waterShaderRenderTargetSize.Width + gameConfig.waterShaderRenderTargetSize.Height) / 2;
-	switch (rttSizeData)
-	{
-	case 128:	waterShaderQualityComboBox->setSelected(0);							break;
-	case 256:	waterShaderQualityComboBox->setSelected(1);							break;
-	case 512:	waterShaderQualityComboBox->setSelected(2);							break;
-	case 1024:	waterShaderQualityComboBox->setSelected(3);							break;
-	default: {	swprintf_SS(L"Inconnu (%u)", rttSizeData);
-				waterShaderQualityComboBox->setSelected(
-					waterShaderQualityComboBox->addItem(textW_SS, rttSizeData)); }	break;
-	}
 
 #ifdef _DEBUG
-	// TODO : Pour le moment, ombres de XEffects seulement disponibles en mode DEBUG
+	// TODO : Pour le moment, les ombres de XEffects sont seulement disponibles en mode DEBUG
 	++indexY;
 
 	xEffectsShadowsEnabledCheckBox =

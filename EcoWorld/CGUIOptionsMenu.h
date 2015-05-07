@@ -116,7 +116,6 @@ protected:
 	IGUIStaticText* soundVolumeTexte;			// Le texte au dessus de la barre pour régler le volume des sons
 	IGUIScrollBar* soundVolumeScrollBar;		// La barre pour régler le volume des sons
 	
-	CGUIMessageBox* confirmationWindow;			// La fenêtre qui s'affiche pour demander à l'utilisateur de confirmer les nouveaux paramêtres appliqués (NULL si cette fenêtre n'est pas affichée)
 	u32 confirmationWindowShowRealTimeMs;		// Le temps réel en milisecondes à laquelle la fenêtre de confirmation a été affichée
 
 public:	// Les boutons de ce menu sont rendus publics, car ils sont parfois utilisés par la classe Game
@@ -124,6 +123,8 @@ public:	// Les boutons de ce menu sont rendus publics, car ils sont parfois util
 	IGUIButton* defautBouton;					// Le bouton pour remettre les options par défaut
 	IGUIButton* retablirBouton;					// Le bouton pour rétablir les options actuelles dans ce menu
 	IGUIButton* retourBouton;					// Le bouton pour revenir au menu principal
+
+	CGUIMessageBox* confirmationWindow;			// La fenêtre qui s'affiche pour demander à l'utilisateur de confirmer les nouveaux paramêtres appliqués (NULL si cette fenêtre n'est pas affichée)
 
 //public:
 	// Fonctions inline :
