@@ -475,7 +475,7 @@ void RakNetManager::sendMessages_SearchingGames()
 
 	// Envoie le message de Ping à toutes les machines du réseau (adresse de Broadcast) et par le port par défaut
 	// pour connaître les machines qui hébergent des parties sur ce réseau local
-	const TimeMS currentTime = GetTime();
+	const RakNet::Time currentTime = GetTime();
 	if (currentTime >= nextTimeSendMsg_searchGamesPing)
 	{
 		peer->Ping("255.255.255.255", DEFAULT_PORT, true);
@@ -498,7 +498,7 @@ void RakNetManager::sendMessages_PlayingGameHost()
 		return;
 
 	// Envoie régulièrement le temps total du jeu vers tous les clients pour s'assurer qu'ils soient bien synchronisés :
-	const TimeMS currentTime = GetTime();
+	const RakNet::Time currentTime = GetTime();
 	if (currentTime >= nextTimeSendMsg_synchronizeGameTime)
 	{
 		BitStream* const bs = createBitStreamWriter();

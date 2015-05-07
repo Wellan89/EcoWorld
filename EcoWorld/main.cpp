@@ -147,7 +147,7 @@ int main(int argc, char* argv[])
 
 	// Grand bloc try catch englobant la partie principale du programme pour informer l'utilisateur des erreurs
 	int returnValue = EXIT_SUCCESS;
-#ifndef _DEBUG
+#ifdef NDEBUG_COMPATIBILITY
 	try
 #endif
 	{
@@ -214,7 +214,7 @@ int main(int argc, char* argv[])
 		// Enregistre la configuration finale du jeu
 		gameState.saveGameConfigToFile();
 	}
-#ifndef _DEBUG
+#ifdef NDEBUG_COMPATIBILITY
 	catch (const std::exception& e)	// Exception standard
 	{
 		// Affiche l'erreur dans le logger

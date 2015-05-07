@@ -83,24 +83,22 @@ void IrrKlangManager::init(bool mainMenuLoading, CLoadingScreen* loadingScreen, 
 		// pour qu'elle soit récupérée par le bloc catch, le compilateur doit avoir l'option /EHa activée (attention : l'activation de cette option désactive dertaines optimisations du compilateur sur les blocs catch : voir http://msdn.microsoft.com/en-us/library/1deeycx5.aspx)
 		// Pour plus d'informations, voir : http://members.gamedev.net/sicrane/articles/exception.html
 		// TODO : Explorer une solution intermédiaire permettant de convertir les exceptions SEH en exceptions C++ : voir http://msdn.microsoft.com/en-us/library/5z4bw5h5.aspx
-		try
-		{
+		//try
+		//{
 			irrKlangDllLoaded = SUCCEEDED(__HrLoadAllImportsForDll("irrKlang.dll"));
-
-			// Indique à l'utilisateur si le chargement de la DLL a réussi
-			if (irrKlangDllLoaded)
-			{
-				// Réussite du chargement de la DLL :
-				LOG("IkMgr: Loading irrKlang.dll : Succeed !", ELL_INFORMATION);
-			}
-		}
-		catch (...)
-		{
-			irrKlangDllLoaded = false;
-		}
+		//}
+		//catch (...)
+		//{
+		//	irrKlangDllLoaded = false;
+		//}
 
 		// Avertit l'utilisateur si le chargement de la DLL a échoué
-		if (!irrKlangDllLoaded)
+		if (irrKlangDllLoaded)
+		{
+			// Réussite du chargement de la DLL :
+			LOG("IkMgr: Loading irrKlang.dll : Succeed !", ELL_INFORMATION);
+		}
+		else
 		{
 			// Echec du chargement de la DLL :
 			LOG("IkMgr: Loading irrKlang.dll : Failed !", ELL_ERROR);
