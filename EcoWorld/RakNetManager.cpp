@@ -362,7 +362,7 @@ void RakNetManager::receivePacket_SearchingGames(Packet* packet)
 	default:
 #ifdef _DEBUG
 		// Ce message peut aussi être une fausse alerte : lors du faible laps de temps où on est connecté au serveur de jeu,
-		// on peut aussi recevoir les informations destinées au client actuels (par exemple : les données de construction d'un bâtiment)
+		// on peut aussi recevoir les informations destinées aux clients actuels (par exemple : les données de construction d'un bâtiment)
 		if (packetID != ID_SYNCHRONISE_GAME_TIME)
 			LOG_DEBUG("RakNetManager::receivePacket_SearchingGames(" << packet << ") : L'ID d'un paquet est inconnu :\r\n    packetID = " << (int)packetID << " (" << UserIDTOString(packetID) << ")", ELL_WARNING);
 #endif

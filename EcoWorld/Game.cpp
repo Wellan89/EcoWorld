@@ -68,7 +68,7 @@ void Game::run()
 	if (!init())			// D'abord, avec les options de configuration normales
 	{
 		++nbTests;
-		LOG(endl << "AVERTISSEMENT : La création du device a échouée avec les options de configuration normales : Nouvel essai avec les options de configuration précédentes" << endl, ELL_ERROR);DEBUG_TIMER
+		LOG(endl << "AVERTISSEMENT : La création du device a échoué avec les options de configuration normales : Nouvel essai avec les options de configuration précédentes" << endl, ELL_ERROR);DEBUG_TIMER
 		
 		// Désactive la fenêtre de confirmation des paramêtres du menu options
 		gameState.showOptionsConfirmationWindow = false;
@@ -89,14 +89,14 @@ void Game::run()
 		if (!init())		// Ensuite, avec les anciennes options de configuration
 		{
 			++nbTests;
-			LOG(endl << "ERREUR : La création du device a échouée avec les anciennes options de configuration : Nouvel essai avec les options de configuration par défaut" << endl, ELL_ERROR);DEBUG_TIMER
+			LOG(endl << "ERREUR : La création du device a échoué avec les anciennes options de configuration : Nouvel essai avec les options de configuration par défaut" << endl, ELL_ERROR);DEBUG_TIMER
 
 			// Conserve l'état actuel de l'audio (car il a été modifié suivant les options actuelles avant le redémarrage de Game, et n'est pas responsable de l'échec du redémarrage)
 			gameConfig.resetDefaultValues(true);DEBUG_TIMER
 
 			if (!init())	// Et enfin, avec les options de configuration par défaut
 			{
-				LOG(endl << "ERREUR FATALE : La création du device a échouée avec les options de configuration par défaut : Fin de l'application !" << endl, ELL_ERROR);DEBUG_TIMER
+				LOG(endl << "ERREUR FATALE : La création du device a échoué avec les options de configuration par défaut : Fin de l'application !" << endl, ELL_ERROR);DEBUG_TIMER
 
 				// Tout a échoué : on quitte définitivement
 				return;
