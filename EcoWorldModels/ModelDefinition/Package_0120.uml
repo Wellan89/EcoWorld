@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8249ecaa-1b81-44ce-9d1e-56000c6b4432"
+  name="EcoWorld" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="db5b6e3e-a454-4dc2-b9e4-3a7e96a949c9"
+        LastKnownName="Plugins"
+        LastKnownLocation="Package_0107.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2f2f97de-f7f5-45b9-80ef-1a4b652304ca"
+        LastKnownName="Game Core"
+        LastKnownLocation="Package2_0041.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7331f90b-e131-4cbc-8707-73920fcdd407"
+        LastKnownName="EcoWorld System"
+        LastKnownLocation="Package_0044.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0d58336a-682d-4170-a38d-4e789b190da3"
+        LastKnownName="GUI Manager"
+        LastKnownLocation="Package_0047.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="85a4f1b3-a8b4-47b4-a1d8-8ee7883ffd41"
+        LastKnownName="Renderer"
+        LastKnownLocation="Package1_0044.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1c4808db-ee5b-414a-ad4f-b4eb4c0f4705"
+        LastKnownName="Scene Manager"
+        LastKnownLocation="Package_0045.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="0d0ed91d-0206-4a86-8c64-e7a1565e6e4a"
+        name="Renderable"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="34ec1b59-4b78-46dd-b80d-9ce89b951e1a"
+            name="Animate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2e74c06d-bb97-400d-b23c-87c92825ad78"
+            name="OnEvent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4602f9d0-08e4-440d-b8d5-0e71c34252f8"
+            name="Render"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

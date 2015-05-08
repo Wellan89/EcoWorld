@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="f7fd15c0-4ca4-4356-80d0-ec056fe06531" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="13f21294-b5e0-42f4-9080-26d5068e7243" name="Game Core" />
+    <layer Id="0b0d19b1-c869-4d9f-9399-cd17ff30353b" name="EcoWorld System" />
+    <layer Id="9fec32c3-86ae-4afc-8889-adfec006b5fc" name="Irrlicht" />
+    <layer Id="0933ed05-358b-425c-8940-56651f2441d7" name="IrrKlang" />
+    <layer Id="66c14e0c-7e19-4429-bea4-bf654149e16b" name="RakNet" />
+    <layer Id="ae382d5f-5231-4671-b08d-2aeb22d0785f" name="Spark" />
+    <layer Id="fa89d95e-d2c6-40d6-960a-5d515ca34938" name="Scene Manager" />
+    <layer Id="6e21a5cc-c6d5-4837-a324-47719e5ab304" name="GUI Manager" />
+    <layer Id="40435092-2d35-40c8-b4b2-45573aad36fa" name="Renderer" />
+    <layer Id="ed845e66-0dc9-4fae-9e53-b3893e394742" name="Plugin Manager" />
+    <layer Id="aaa8dcc6-6463-4ab2-88fd-259ff006474a" name="Shaders">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b11ff660-91be-477e-8332-c8c620bf20dd" direction="Forward">
+          <layerMoniker Id="ed845e66-0dc9-4fae-9e53-b3893e394742" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+  </layers>
+</layerModel>

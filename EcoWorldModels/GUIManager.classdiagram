@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="2224578f-438f-497a-a6a9-47343386b730" name="GUIManager" linkedPackageId="8b83f9c8-3bdf-4c4a-a5e6-b2d28026439f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="818d93d0-b2d9-46c6-8364-422c40082661">
+      <profileInstance Id="31df5931-6dcb-4448-91f4-3f5652a6a6b7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="cd97af1d-b44e-4baf-b6fb-9153a1454ca1">
+      <profileInstance Id="3ddabe80-f625-4cf5-842a-98f3287a1e3d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="9605da94-8a2d-4b6b-8321-2c8c3d41053c" name="GUI Manager">
+        <elementDefinition Id="c790aaae-31ed-4b66-8add-db260f55665d" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="5603957c-5bbf-4dbb-9d13-2ddbd8d10523" name="GUIManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="a359763b-1d02-4ca1-ad17-4536e8e3a6bc" />
+              <targetEnds>
+                <association Id="665ece53-179a-4aeb-9737-df4d889d3ad6" isDerived="false" sourceEndRoleName="GUIManager" targetEndRoleName="LoadingScreen" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="5d7d5bb1-9826-4a1d-92d4-2f011527f214" LastKnownName="LoadingScreen" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="966b26eb-2bc7-4f19-ac66-8b3a77f8ba41" name="GUIManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="6c84a379-0aaf-41c8-8a6b-21f78d235d37" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="f6b53fe4-9617-400b-9903-1bedfc513bb9" name="LoadingScreen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="3a0fcecf-1393-4ca1-9aff-87df351a0597" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6f789be8-a744-47de-925c-3c8767374d19" />
+                </association>
+                <association Id="77c0dce3-9a00-4ee0-924e-5e34fc809934" isDerived="false" sourceEndRoleName="GUIManager" targetEndRoleName="MainMenu" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="60624b70-cfb8-450f-ba0a-f3735c6598cf" LastKnownName="MainMenu" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1a6dc993-1dbb-4f4d-af69-04997ca64060" name="GUIManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="143b0131-c133-4dbd-beaa-d6d3946adb6b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c44f7dd7-f6c9-4aff-a6cd-4d5c739c6459" name="MainMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="f0eb4a54-9a66-4d4c-940b-2a136321f56c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="a62f557b-99d5-494c-bf36-0729d8b75c99" />
+                </association>
+                <association Id="d51c57c4-01ad-4696-841e-7242a3744682" isDerived="false" sourceEndRoleName="GUIManager" targetEndRoleName="GameInterface" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="e2956648-b277-48d2-8e3c-ef4f919cb373" LastKnownName="GameInterface" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a121ac48-a745-431c-899b-c6a8277887c2" name="GUIManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="a2b7d4d2-97da-4f7f-9dc3-83794aaf84c8" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="df10fc5d-8f6a-44e2-9ae2-2aa084bf9615" name="GameInterface" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="a1276d41-2620-44e7-8970-b1a586858e46" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6c97bffc-3c88-46ac-95ba-15b442c5247f" />
+                </association>
+              </targetEnds>
+              <ownedOperationsInternal>
+                <operation Id="60c806b0-4b2d-4b16-afb1-d4e64b3c84e8" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="43964477-fb74-41fd-af72-4628210e121a" />
+                </operation>
+                <operation Id="486caafb-53d8-4f20-9660-d14de45bbf72" name="OnEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="33ff353e-c094-482c-8ec9-d6f28ab3d416" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a9188df1-05c6-42a8-9544-0facc933f44f" name="GUIMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d7ab065a-d4f5-4141-8b5c-b0b2223578b6" />
+              <generalsInternal>
+                <generalization Id="1f3f8a4b-37a2-482e-89af-685c0e2e46c5" isSubstitutable="false">
+                  <classMoniker Id="60624b70-cfb8-450f-ba0a-f3735c6598cf" LastKnownName="MainMenu" />
+                  <elementDefinition Id="8a78d8e4-5568-4f12-9381-45c6fe5ea251" />
+                </generalization>
+                <generalization Id="2d081e18-1122-437b-8725-b6f881dbe322" isSubstitutable="false">
+                  <classMoniker Id="b341f0bf-bb17-4b25-bb6f-8d8ebe74e253" LastKnownName="NewGameMenu" />
+                  <elementDefinition Id="a932d54c-8e07-4bff-9b4d-e30ea964d1d4" />
+                </generalization>
+                <generalization Id="925c6dd7-b62c-48e6-9299-3651a9886d26" isSubstitutable="false">
+                  <classMoniker Id="33883f0b-db21-4c74-a672-0393c4f6bd21" LastKnownName="LoadGameMenu" />
+                  <elementDefinition Id="6eb9c6a9-4150-48e3-93aa-5193bfb67856" />
+                </generalization>
+                <generalization Id="083397ae-2fc6-476a-ac2c-b7c256256ec5" isSubstitutable="false">
+                  <classMoniker Id="45e8a35c-e49e-4410-9a44-2c981e8158e7" LastKnownName="MultiplayerMenu" />
+                  <elementDefinition Id="281a4db4-db30-4d0a-84dc-1e7444fe7120" />
+                </generalization>
+                <generalization Id="8105f1be-d6f5-4390-85a3-3a46f4b9eb9d" isSubstitutable="false">
+                  <classMoniker Id="94f58072-837d-4e62-a894-0025999fa007" LastKnownName="OptionsMenu" />
+                  <elementDefinition Id="7fe3d6cf-1110-409c-9093-a58bd16d41cb" />
+                </generalization>
+                <generalization Id="6bc7ebfd-fca0-42a2-aadf-aa066c5d7595" isSubstitutable="false">
+                  <classMoniker Id="e2956648-b277-48d2-8e3c-ef4f919cb373" LastKnownName="GameInterface" />
+                  <elementDefinition Id="81ca6bcc-fb6f-4237-a883-11ccd0bd7658" />
+                </generalization>
+              </generalsInternal>
+              <ownedOperationsInternal>
+                <operation Id="03039046-f0c3-4930-9a0e-d3229ac0453e" name="SetVisible" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="fedecde8-d219-4605-9828-0deb8f29402a" />
+                </operation>
+                <operation Id="03602c1f-7f42-4dfb-8e72-2393d59f3812" name="OnEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="801486e5-18cd-4b84-ae17-9ce0180e038c" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="60624b70-cfb8-450f-ba0a-f3735c6598cf" name="MainMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="f9cfd3a2-3259-4ced-8c91-19d968da9389" />
+              <targetEnds>
+                <association Id="9591cc1e-0e94-46e2-8eea-35e749c20dc8" isDerived="false" sourceEndRoleName="MainMenu" targetEndRoleName="NewGameMenu" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="b341f0bf-bb17-4b25-bb6f-8d8ebe74e253" LastKnownName="NewGameMenu" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ef084fab-1aa0-43c6-9da0-94aab5abec61" name="MainMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="eda6b7a4-5a26-4a4f-965b-5f64953bd677" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="233ff773-4c8c-49e0-aba7-2b97656d98d5" name="NewGameMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="b5ae20c0-3219-44ca-8212-768bbeeace75" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="8e29f11d-5cc8-4976-a9d8-f026a7da23f7" />
+                </association>
+                <association Id="0d6d4cf7-3adc-450a-844a-95b73b57a11e" isDerived="false" sourceEndRoleName="MainMenu" targetEndRoleName="LoadGameMenu" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="33883f0b-db21-4c74-a672-0393c4f6bd21" LastKnownName="LoadGameMenu" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ce6acb8e-8979-444e-836e-3a527986625c" name="MainMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="148d42a7-06ef-47e3-96c7-9a3fdb7da4e7" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="292824bf-8e78-4e6b-920f-32094ffe4826" name="LoadGameMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="b81c8f5d-8e8e-4d70-b8d9-9673991b4f12" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="41181494-6411-44a3-9e75-885a6b7b8bd0" />
+                </association>
+                <association Id="f85ba35c-d79e-4a08-950e-de8c257e1dc2" isDerived="false" sourceEndRoleName="MainMenu" targetEndRoleName="MultiplayerMenu" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="45e8a35c-e49e-4410-9a44-2c981e8158e7" LastKnownName="MultiplayerMenu" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="08070031-bc1e-4ea3-9cad-02d1e96b163d" name="MainMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="7a2c2437-513b-47ca-9a36-57a08335d9e8" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="345d0d11-7168-458b-a1f4-df7213bcc1da" name="MultiplayerMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="c6158a05-f724-4004-a181-b2ca638e25e5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="a68a79ef-6f99-4db9-ad7e-00e49dac614e" />
+                </association>
+                <association Id="f32bc80b-d088-4dea-9410-3e2ca913fc35" isDerived="false" sourceEndRoleName="MainMenu" targetEndRoleName="OptionsMenu" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="94f58072-837d-4e62-a894-0025999fa007" LastKnownName="OptionsMenu" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="37b38b5d-3f7a-4b6c-8c38-c32ffedfadc9" name="MainMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="8632ea96-8716-4e5f-853a-2cf47118002d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5dca2b0a-bb1c-4e39-a90d-f425e51c48d4" name="OptionsMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="2af5aab8-f600-4310-8d8f-2d920c42fb15" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="4fd9541e-9e3b-4184-b324-bf6614f2cdcf" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="b341f0bf-bb17-4b25-bb6f-8d8ebe74e253" name="NewGameMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="aed37a59-b895-4678-9409-f76593377631" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="33883f0b-db21-4c74-a672-0393c4f6bd21" name="LoadGameMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="62d8aad7-68fa-41d4-9a3e-6e8d3b0efa26" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="45e8a35c-e49e-4410-9a44-2c981e8158e7" name="MultiplayerMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="6369d2c4-6735-4c78-b6c2-72a5f1f5c6c7" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="94f58072-837d-4e62-a894-0025999fa007" name="OptionsMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="e449208c-4cd6-4a3d-a7d0-cb753c5c24e0" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="5d7d5bb1-9826-4a1d-92d4-2f011527f214" name="LoadingScreen" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="89f1a9a8-4845-49cf-ad46-aa1a82c7bdb5" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="e2956648-b277-48d2-8e3c-ef4f919cb373" name="GameInterface" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="26cdcc4c-bbd4-465b-a4a2-7b54b81790bf" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="8b83f9c8-3bdf-4c4a-a5e6-b2d28026439f" name="EcoWorldModels">
+    <elementDefinition Id="8afb82f3-dbcc-4311-8162-2c341419be93" />
+  </package>
+</logicalClassDesignerModel>

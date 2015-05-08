@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8afb82f3-dbcc-4311-8162-2c341419be93"
+  name="EcoWorldModels" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="794808ae-14cd-49b6-bc45-85cf7a26f976"
+        name="Behaviour"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="9f35e5a4-47a4-4a65-982f-858c5cf5ccf8"
+            name="Initial"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="61876523-85ad-4517-a761-0df00995553d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a0f65ee6-eb17-419c-be8e-7d3620518376"
+                  LastKnownName="Jeu non lancé"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="a0f65ee6-eb17-419c-be8e-7d3620518376"
+            name="Jeu non lancé"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a85226d2-339d-424a-ad26-78e9116d578a"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="e357a152-c863-4d98-9daa-ee4a41333167"
+                  LastKnownName="Final"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="4fa38aef-0e79-4b11-81c4-583ad104b5ca"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e3e080d4-5973-447c-a650-1a437dd76a67"
+                  LastKnownName="Chargement Menu"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="e357a152-c863-4d98-9daa-ee4a41333167"
+            name="Final"
+            isLeaf="false" />
+          <opaqueAction
+            Id="0520d72a-abe1-40af-8155-456b0addb2e8"
+            name="Menu principal"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1201e6d1-5991-4c3a-ac64-468c150c83fb"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a0f65ee6-eb17-419c-be8e-7d3620518376"
+                  LastKnownName="Jeu non lancé"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="a5ee6b7a-6e12-4ed8-a52a-49c57713fe57"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="588e8edc-efd3-406f-ae82-14d528b6bfe1"
+                  LastKnownName="Menu Nouveau Jeu"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f95d2b0c-d767-4286-b06f-c7673ae68743"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b3566d1b-5895-4d19-8dfd-c8bda79bdea7"
+                  LastKnownName="Menu Charger Partie"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="cb3fa674-7b1e-4f05-8492-3e0892c29757"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f50a61fe-7d32-4115-9c8a-0ca9f59e3e3f"
+                  LastKnownName="Menu Multijoueurs"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="58fbf4a4-ee7c-446d-b8eb-71d2043af26a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b3b1024d-685f-49d2-a68a-b0f88189aa98"
+                  LastKnownName="Menu Options"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="b3b1024d-685f-49d2-a68a-b0f88189aa98"
+            name="Menu Options"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c2099af7-26b4-4fe7-9c08-3b441edd1e0c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0520d72a-abe1-40af-8155-456b0addb2e8"
+                  LastKnownName="Menu principal"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="588e8edc-efd3-406f-ae82-14d528b6bfe1"
+            name="Menu Nouveau Jeu"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="02c3e860-7c6b-4cc3-a92e-6ac1b2498fe8"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="709a0dce-809a-4e09-9061-903b231bf001"
+                  LastKnownName="Chargement Jeu"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="b3566d1b-5895-4d19-8dfd-c8bda79bdea7"
+            name="Menu Charger Partie"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a8e50dfd-df8b-479e-b833-a0a72f6e7f44"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="709a0dce-809a-4e09-9061-903b231bf001"
+                  LastKnownName="Chargement Jeu"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="f50a61fe-7d32-4115-9c8a-0ca9f59e3e3f"
+            name="Menu Multijoueurs"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ceb16ba4-2d06-431c-892f-4a07e0ea7425"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="709a0dce-809a-4e09-9061-903b231bf001"
+                  LastKnownName="Chargement Jeu"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e3e080d4-5973-447c-a650-1a437dd76a67"
+            name="Chargement Menu"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1f878738-0b26-40e5-8888-1312c1229077"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0520d72a-abe1-40af-8155-456b0addb2e8"
+                  LastKnownName="Menu principal"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="709a0dce-809a-4e09-9061-903b231bf001"
+            name="Chargement Jeu"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="88b30e82-e1f8-4335-b4ba-2fc307ac227a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="def29319-2cfb-42ec-a080-ef8ab6b1ef94"
+                  LastKnownName="Jeu"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="def29319-2cfb-42ec-a080-ef8ab6b1ef94"
+            name="Jeu"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2e0f553e-440e-4683-8332-71ff3c9c3fc5"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a0f65ee6-eb17-419c-be8e-7d3620518376"
+                  LastKnownName="Jeu non lancé"
+                  LastKnownLocation="EcoWorldModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b9734706-49b7-4339-9a62-32268e7cf9e2"
+        LastKnownName="Irrlicht"
+        LastKnownLocation="Package_0041.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="56562f16-9853-4772-83a9-c117568364bd"
+        LastKnownName="Spark"
+        LastKnownLocation="Package1_0041.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ba6c4bf7-3581-45a9-b90d-3da58182b6ee"
+        LastKnownName="IrrKlang"
+        LastKnownLocation="Package_0042.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6f18f5c5-35ca-41d2-a712-32b6b798f10d"
+        LastKnownName="RakNet"
+        LastKnownLocation="Package1_0042.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c790aaae-31ed-4b66-8add-db260f55665d"
+        LastKnownName="GUI Manager"
+        LastKnownLocation="Package_0105.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f2e20766-fd73-434b-ac48-72f64eee2e66"
+        LastKnownName="Scene Manager"
+        LastKnownLocation="Package_0106.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8249ecaa-1b81-44ce-9d1e-56000c6b4432"
+        LastKnownName="EcoWorld"
+        LastKnownLocation="Package_0120.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

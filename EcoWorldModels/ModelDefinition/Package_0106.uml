@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f2e20766-fd73-434b-ac48-72f64eee2e66"
+  name="Scene Manager" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="15ecd763-41b2-477c-85c7-8bb5c970f2b7"
+        name="SceneManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="35b4a599-4c93-4c72-a635-e131641d2814"
+            isDerived="false"
+            sourceEndRoleName="SceneManager"
+            targetEndRoleName="GameConfiguration"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f3b99be4-5839-4eb6-8a77-619c467e5bde"
+              LastKnownName="GameConfiguration"
+              LastKnownLocation="Package_0106.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd9f020a-62f7-4c6d-b306-c6573dce04b6"
+                  name="SceneManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7b63993c-3484-4f4b-9148-d6eb52d3546d"
+                  name="GameConfiguration"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="12a36b30-be78-4292-af3e-5aba94093965"
+            isDerived="false"
+            sourceEndRoleName="SceneManager"
+            targetEndRoleName="GameScene"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2e6205e5-5fec-4cf0-bf07-96bafdbb28e1"
+              LastKnownName="GameScene"
+              LastKnownLocation="Package_0106.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b0d0de7-1ea6-45ad-9d78-46cbba4f62ac"
+                  name="SceneManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="13b177af-e846-48ff-b083-a4b4adb35bad"
+                  name="GameScene"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5868957e-1edc-4234-92f0-353e73abd776"
+            isDerived="false"
+            sourceEndRoleName="SceneManager"
+            targetEndRoleName="MainMenuScene"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b4dc92ad-34d7-40d3-874f-d082a2189b14"
+              LastKnownName="MainMenuScene"
+              LastKnownLocation="Package_0106.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="170c7ed4-074b-4e0a-9447-b139398ba5cc"
+                  name="SceneManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c1a8e5b8-bed1-4230-8279-57e1a3462688"
+                  name="MainMenuScene"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="108c4420-7061-4f89-b863-faabfdee96d0"
+            isDerived="false"
+            sourceEndRoleName="SceneManager"
+            targetEndRoleName="LoadingScene"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8cde01b4-7897-4dfb-afee-ad532c946bba"
+              LastKnownName="LoadingScene"
+              LastKnownLocation="Package_0106.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2687675e-7420-49e2-a9c2-ecad763933df"
+                  name="SceneManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2886afe1-ad6c-4946-a555-952f9806537e"
+                  name="LoadingScene"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="78d76ba0-3022-432d-89b5-e235a598e02d"
+            name="CurrentScene"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f5f8b5b6-41ed-4420-8874-15a623f68a73"
+            name="ChangeScene"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="12923a84-676e-49dd-8141-b72a869c1c51"
+            name="OnEvent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f3b99be4-5839-4eb6-8a77-619c467e5bde"
+        name="GameConfiguration"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2e6205e5-5fec-4cf0-bf07-96bafdbb28e1"
+        name="GameScene"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b4dc92ad-34d7-40d3-874f-d082a2189b14"
+        name="MainMenuScene"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="381bc79d-6377-4682-90f0-4d75399036b6"
+        name="Scene"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="f72b8e59-a518-4b83-8db7-0f2121fb2fa9"
+            isSubstitutable="false">
+            <classMoniker
+              Id="2e6205e5-5fec-4cf0-bf07-96bafdbb28e1"
+              LastKnownName="GameScene"
+              LastKnownLocation="Package_0106.uml" />
+          </generalization>
+          <generalization
+            Id="31e5a459-d2b2-48be-8caf-353e5ff4fcfd"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b4dc92ad-34d7-40d3-874f-d082a2189b14"
+              LastKnownName="MainMenuScene"
+              LastKnownLocation="Package_0106.uml" />
+          </generalization>
+          <generalization
+            Id="dd5f663b-f114-49cd-b65e-7d2270017013"
+            isSubstitutable="false">
+            <classMoniker
+              Id="8cde01b4-7897-4dfb-afee-ad532c946bba"
+              LastKnownName="LoadingScene"
+              LastKnownLocation="Package_0106.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="da36e8d5-ba83-4628-b59d-beefcc6508cd"
+            name="Create"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="69ce824a-b50b-45d7-80b1-6f9dac87ccaf"
+            name="Preload"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8ca70528-5b89-4cf5-9804-279cfc69ee74"
+            name="Animate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="442cbb72-1609-49d9-871b-20a55a5d6683"
+            name="OnEvent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8cde01b4-7897-4dfb-afee-ad532c946bba"
+        name="LoadingScene"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

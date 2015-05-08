@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="e98c4029-3209-4055-8cee-a47c403dd919" name="MainClasses" linkedPackageId="2e4afc62-c93d-481f-9f98-216275660224" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="be12804b-63ff-45e9-b71a-b9a066e69d1b">
+      <profileInstance Id="e7b66ad8-23bd-49d4-acc6-0c1e4b1a18ea" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2cb589e7-f3ff-47bc-bb00-e55b734d7868">
+      <profileInstance Id="10306113-bf5b-412a-bcc7-f4c8bd526814" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="c3225587-2be9-46ad-b8a7-e23fc164415a" name="Irrlicht">
+        <elementDefinition Id="b9734706-49b7-4339-9a62-32268e7cf9e2" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="8315ad6b-4b9f-41da-838c-a5c68ade4b0c" name="Spark">
+        <elementDefinition Id="56562f16-9853-4772-83a9-c117568364bd" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="2e0b01e6-3e01-4d0c-886b-52964bcc3454" name="IrrKlang">
+        <elementDefinition Id="ba6c4bf7-3581-45a9-b90d-3da58182b6ee" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="72150686-6e15-4f80-9adf-8083136c35d4" name="RakNet">
+        <elementDefinition Id="6f18f5c5-35ca-41d2-a712-32b6b798f10d" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="6966f3c2-5956-4ee2-ba0e-00fa828a04ab" name="EcoWorld">
+        <elementDefinition Id="8249ecaa-1b81-44ce-9d1e-56000c6b4432" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <package Id="2c040757-c77b-4bd7-a21f-6a6515fa3495" name="Plugins">
+              <elementDefinition Id="db5b6e3e-a454-4dc2-b9e4-3a7e96a949c9" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="10ca26c7-e630-4478-8ec4-23213f86a703" name="PluginManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="7c13ca85-11b9-459f-a263-fbdfca66e251" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="f3b8d404-f7b0-4575-9937-434b1c5b906e">
+                        <interfaceMoniker Id="1bd96115-bacd-442b-b7e1-79f9661ceb60" LastKnownName="Renderable" />
+                        <elementDefinition Id="51fadb12-e44b-4d6a-9539-0be2b8138faa" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                    <ownedOperationsInternal>
+                      <operation Id="6021a459-fdc7-44a7-8cd2-f7e50b5bdab8" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="f0afd854-71c9-4c4d-a730-9ae323718515" />
+                      </operation>
+                      <operation Id="c98e44fe-dded-446b-8461-34c590ccc775" name="OnEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="c837755b-5dba-456d-919b-8756bbcf5949" />
+                      </operation>
+                      <operation Id="0400afa4-c347-48a2-93eb-39fff63b5044" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="0279507f-97e6-425a-82e6-9750c9004037" />
+                      </operation>
+                    </ownedOperationsInternal>
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="6bdce3cc-95f0-4bbd-ad5f-e5cceaa0b7c2" name="Game Core">
+              <elementDefinition Id="2f2f97de-f7f5-45b9-80ef-1a4b652304ca" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="b10b78a7-3337-489b-896a-42ea4d17cfcf" name="GameCore" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="2d7ee8d5-fa80-4546-ac3a-da1aaea817cc" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="fe805357-bb3f-4540-b95d-6423b7fb5640">
+                        <interfaceMoniker Id="1bd96115-bacd-442b-b7e1-79f9661ceb60" LastKnownName="Renderable" />
+                        <elementDefinition Id="d41e114c-4787-4f98-8c01-95549ec38982" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                    <ownedOperationsInternal>
+                      <operation Id="1e8e1167-9865-4424-8058-7c1d977f896e" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="b2436234-d598-4410-892a-768405761969" />
+                      </operation>
+                      <operation Id="756da9c7-b287-4e5d-bc13-5176f2539d68" name="OnEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="37a27158-abc9-4a6b-806c-990d71037d95" />
+                      </operation>
+                      <operation Id="7e5e0f3a-f631-478e-90a5-0f67bf87dfe3" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="7f3d0967-73cc-4d0a-bebb-89cad5475d46" />
+                      </operation>
+                    </ownedOperationsInternal>
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="9e4602f6-dfeb-458d-bf8e-2e4269c27d9a" name="EcoWorld System">
+              <elementDefinition Id="7331f90b-e131-4cbc-8707-73920fcdd407" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="66860e49-c03a-4e10-bff6-5fdb9cac5eec" name="EcoWorldSystem" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="6d40c099-524f-426a-9362-2ae77c2dbeba" />
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="e973ae83-5488-437a-8dd4-58209056364c" name="GUI Manager">
+              <elementDefinition Id="0d58336a-682d-4170-a38d-4e789b190da3" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="3359376e-040b-47ee-a72a-1a54e0592ddd" name="GUIManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="f94284a7-d09f-4305-ae71-5e5188d0a97c" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="7ebf28d8-f256-4551-a8d2-cca2ede283cc">
+                        <interfaceMoniker Id="1bd96115-bacd-442b-b7e1-79f9661ceb60" LastKnownName="Renderable" />
+                        <elementDefinition Id="96a8ce9e-a27e-42c1-bfe8-4a16dbdbb849" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                    <ownedOperationsInternal>
+                      <operation Id="6431beb8-d730-494a-ac8d-fc36c2646054" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="97aea260-f3dc-4579-9734-3c0a8858c256" />
+                      </operation>
+                      <operation Id="513239c6-ce07-4fc6-bd99-719257713003" name="OnEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="7103a2bd-1e3f-4d74-bdb6-0022cd661b5c" />
+                      </operation>
+                      <operation Id="662527d9-cc1a-436f-90c8-1e4efaf5acef" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="e452eca4-51ac-4c24-876a-04fc11821f36" />
+                      </operation>
+                    </ownedOperationsInternal>
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="d389fdb5-7a62-43fc-a076-c93e9846ebd4" name="Renderer">
+              <elementDefinition Id="85a4f1b3-a8b4-47b4-a1d8-8ee7883ffd41" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="252ca820-0921-42ec-92ab-e755caf66a53" name="Renderer" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="f23c32f7-e527-4d24-9b22-24cb2cadd417" />
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="e4994958-f2d2-4f97-a759-217eb317273e" name="Scene Manager">
+              <elementDefinition Id="1c4808db-ee5b-414a-ad4f-b4eb4c0f4705" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="40668bbc-aa30-4520-a2a9-8500c1f739a3" name="SceneManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="3a3539e8-35bb-4936-9aee-7f4d3d013149" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="5c2f731f-d01d-43e7-b1a4-dbe36044e3e9">
+                        <interfaceMoniker Id="1bd96115-bacd-442b-b7e1-79f9661ceb60" LastKnownName="Renderable" />
+                        <elementDefinition Id="57d5dbb1-9542-404b-b1d5-bc918ab0fc68" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                    <ownedOperationsInternal>
+                      <operation Id="8ebad630-7292-4c4b-8cbb-8958d7b07de2" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="39ae9a61-75cd-4787-9d7c-bbadb4e05b4b" />
+                      </operation>
+                      <operation Id="5098ca62-c059-4308-8366-5d602ed98490" name="OnEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="da135e04-3a89-4006-871a-4a9b246e828f" />
+                      </operation>
+                      <operation Id="88ae2bf0-c987-40cf-b281-6346b40d41f9" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="3e190a66-b382-4346-b722-b0d01ddb2c03" />
+                      </operation>
+                    </ownedOperationsInternal>
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="1bd96115-bacd-442b-b7e1-79f9661ceb60" name="Renderable" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="0d0ed91d-0206-4a86-8c64-e7a1565e6e4a" />
+              <ownedOperations>
+                <operation Id="d910a7ea-7b83-4fb3-9730-881e9552d05f" name="Animate" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="34ec1b59-4b78-46dd-b80d-9ce89b951e1a" />
+                </operation>
+                <operation Id="4f185033-57f2-4e7e-ae91-c6c0687986ba" name="OnEvent" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2e74c06d-bb97-400d-b23c-87c92825ad78" />
+                </operation>
+                <operation Id="e723b755-7b17-4351-80e8-0038e9f28f91" name="Render" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4602f9d0-08e4-440d-b8d5-0e71c34252f8" />
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="2e4afc62-c93d-481f-9f98-216275660224" name="EcoWorldModels">
+    <elementDefinition Id="8afb82f3-dbcc-4311-8162-2c341419be93" />
+  </package>
+</logicalClassDesignerModel>

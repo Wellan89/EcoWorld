@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="ad5d935c-b3f4-4b54-9290-2c2bfc3b684c" name="Behaviour" linkedPackageId="bf7572ca-84d2-4da0-afbe-8bfa4bd63d1f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b9348469-e051-49ae-8bad-1c6a8092b7c1">
+      <profileInstance Id="6014aed6-dfd5-49de-8cef-a1635595bcdf" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="b19cc01a-dc2c-4977-a671-862de5aca46c">
+      <profileInstance Id="102588bc-8acf-440a-8639-032778f1ca96" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="7d1f6d1e-4acb-4057-bbd8-1d82859056ef" name="Behaviour" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="794808ae-14cd-49b6-bc45-85cf7a26f976" />
+        <nodes>
+          <initialNode Id="e08f9caa-f00e-47dd-9c7c-9e1c13575201" name="Initial" isLeaf="false">
+            <elementDefinition Id="9f35e5a4-47a4-4a65-982f-858c5cf5ccf8" />
+            <flowNodeTargets>
+              <controlFlow Id="e7495517-dc3d-4812-8e41-7bba70d2e588" isLeaf="false">
+                <opaqueActionMoniker Id="70f60cd2-8fca-4139-a1a5-2c96479dfc30" LastKnownName="Jeu non lancé" />
+                <elementDefinition Id="61876523-85ad-4517-a761-0df00995553d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="70f60cd2-8fca-4139-a1a5-2c96479dfc30" name="Jeu non lancé" isLeaf="false">
+            <elementDefinition Id="a0f65ee6-eb17-419c-be8e-7d3620518376" />
+            <flowNodeTargets>
+              <controlFlow Id="e889129c-3e53-4586-99a2-18c809911f4c" isLeaf="false">
+                <activityFinalNodeMoniker Id="996c0ea9-0dd4-49a0-8a64-1cdf958f1766" LastKnownName="Final" />
+                <elementDefinition Id="a85226d2-339d-424a-ad26-78e9116d578a" />
+              </controlFlow>
+              <controlFlow Id="842531c5-bd15-46f4-9ff2-f7db4ff5391f" isLeaf="false">
+                <opaqueActionMoniker Id="f8407d5b-1003-4cd0-bea0-c6ba8095a9ab" LastKnownName="Chargement Menu" />
+                <elementDefinition Id="4fa38aef-0e79-4b11-81c4-583ad104b5ca" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="996c0ea9-0dd4-49a0-8a64-1cdf958f1766" name="Final" isLeaf="false">
+            <elementDefinition Id="e357a152-c863-4d98-9daa-ee4a41333167" />
+          </activityFinalNode>
+          <opaqueAction Id="051ee668-7b10-4448-8aaa-7f869f9f807f" name="Menu principal" isLeaf="false">
+            <elementDefinition Id="0520d72a-abe1-40af-8155-456b0addb2e8" />
+            <flowNodeTargets>
+              <controlFlow Id="393e2f4f-a0e0-4d01-ab32-f864ce3192f8" isLeaf="false">
+                <opaqueActionMoniker Id="70f60cd2-8fca-4139-a1a5-2c96479dfc30" LastKnownName="Jeu non lancé" />
+                <elementDefinition Id="1201e6d1-5991-4c3a-ac64-468c150c83fb" />
+              </controlFlow>
+              <controlFlow Id="12511819-4f6a-4991-8c7a-47b259a81fd6" isLeaf="false">
+                <opaqueActionMoniker Id="65dee4e2-8080-421e-bbd0-1346b3df2d2c" LastKnownName="Menu Nouveau Jeu" />
+                <elementDefinition Id="a5ee6b7a-6e12-4ed8-a52a-49c57713fe57" />
+              </controlFlow>
+              <controlFlow Id="8f51425e-f194-4db6-a5c2-02128697ed50" isLeaf="false">
+                <opaqueActionMoniker Id="e2f44678-f021-41cd-b894-eddf4663ebe6" LastKnownName="Menu Charger Partie" />
+                <elementDefinition Id="f95d2b0c-d767-4286-b06f-c7673ae68743" />
+              </controlFlow>
+              <controlFlow Id="15797873-9367-4832-80e1-5cea6483d9f7" isLeaf="false">
+                <opaqueActionMoniker Id="d75aed27-4e03-4d01-ad9b-6add984c8834" LastKnownName="Menu Multijoueurs" />
+                <elementDefinition Id="cb3fa674-7b1e-4f05-8492-3e0892c29757" />
+              </controlFlow>
+              <controlFlow Id="87a4731d-1849-4a07-a88e-64a8b07cfc12" isLeaf="false">
+                <opaqueActionMoniker Id="204a2bde-f11a-4eb6-ae19-9d1b4a718ba8" LastKnownName="Menu Options" />
+                <elementDefinition Id="58fbf4a4-ee7c-446d-b8eb-71d2043af26a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="204a2bde-f11a-4eb6-ae19-9d1b4a718ba8" name="Menu Options" isLeaf="false">
+            <elementDefinition Id="b3b1024d-685f-49d2-a68a-b0f88189aa98" />
+            <flowNodeTargets>
+              <controlFlow Id="4e761b34-8c88-46c8-919f-7d0a405e7f34" isLeaf="false">
+                <opaqueActionMoniker Id="051ee668-7b10-4448-8aaa-7f869f9f807f" LastKnownName="Menu principal" />
+                <elementDefinition Id="c2099af7-26b4-4fe7-9c08-3b441edd1e0c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="65dee4e2-8080-421e-bbd0-1346b3df2d2c" name="Menu Nouveau Jeu" isLeaf="false">
+            <elementDefinition Id="588e8edc-efd3-406f-ae82-14d528b6bfe1" />
+            <flowNodeTargets>
+              <controlFlow Id="8dad97d7-dbbd-44a8-b45a-b27db5ff09a9" isLeaf="false">
+                <opaqueActionMoniker Id="d83cf313-ecba-4b79-83b8-419fb4bba138" LastKnownName="Chargement Jeu" />
+                <elementDefinition Id="02c3e860-7c6b-4cc3-a92e-6ac1b2498fe8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="e2f44678-f021-41cd-b894-eddf4663ebe6" name="Menu Charger Partie" isLeaf="false">
+            <elementDefinition Id="b3566d1b-5895-4d19-8dfd-c8bda79bdea7" />
+            <flowNodeTargets>
+              <controlFlow Id="c2dd1bdb-9ece-44db-982b-c0168e417e18" isLeaf="false">
+                <opaqueActionMoniker Id="d83cf313-ecba-4b79-83b8-419fb4bba138" LastKnownName="Chargement Jeu" />
+                <elementDefinition Id="a8e50dfd-df8b-479e-b833-a0a72f6e7f44" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d75aed27-4e03-4d01-ad9b-6add984c8834" name="Menu Multijoueurs" isLeaf="false">
+            <elementDefinition Id="f50a61fe-7d32-4115-9c8a-0ca9f59e3e3f" />
+            <flowNodeTargets>
+              <controlFlow Id="ae8ec5ee-413d-4fb4-b268-afcb4024d889" isLeaf="false">
+                <opaqueActionMoniker Id="d83cf313-ecba-4b79-83b8-419fb4bba138" LastKnownName="Chargement Jeu" />
+                <elementDefinition Id="ceb16ba4-2d06-431c-892f-4a07e0ea7425" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f8407d5b-1003-4cd0-bea0-c6ba8095a9ab" name="Chargement Menu" isLeaf="false">
+            <elementDefinition Id="e3e080d4-5973-447c-a650-1a437dd76a67" />
+            <flowNodeTargets>
+              <controlFlow Id="4872f942-5ae6-4371-9198-76013da6dd19" isLeaf="false">
+                <opaqueActionMoniker Id="051ee668-7b10-4448-8aaa-7f869f9f807f" LastKnownName="Menu principal" />
+                <elementDefinition Id="1f878738-0b26-40e5-8888-1312c1229077" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d83cf313-ecba-4b79-83b8-419fb4bba138" name="Chargement Jeu" isLeaf="false">
+            <elementDefinition Id="709a0dce-809a-4e09-9061-903b231bf001" />
+            <flowNodeTargets>
+              <controlFlow Id="2a3ac875-b31b-4474-bde0-e229c0b3df70" isLeaf="false">
+                <opaqueActionMoniker Id="85ed1376-dce5-41c0-b5ed-41c2680aa8f5" LastKnownName="Jeu" />
+                <elementDefinition Id="88b30e82-e1f8-4335-b4ba-2fc307ac227a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="85ed1376-dce5-41c0-b5ed-41c2680aa8f5" name="Jeu" isLeaf="false">
+            <elementDefinition Id="def29319-2cfb-42ec-a080-ef8ab6b1ef94" />
+            <flowNodeTargets>
+              <controlFlow Id="268fa626-ce01-413c-8ea0-a017c90ab263" isLeaf="false">
+                <opaqueActionMoniker Id="70f60cd2-8fca-4139-a1a5-2c96479dfc30" LastKnownName="Jeu non lancé" />
+                <elementDefinition Id="2e0f553e-440e-4683-8332-71ff3c9c3fc5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="bf7572ca-84d2-4da0-afbe-8bfa4bd63d1f" name="EcoWorldModels">
+    <elementDefinition Id="8afb82f3-dbcc-4311-8162-2c341419be93" />
+  </package>
+</activityRootModel>
