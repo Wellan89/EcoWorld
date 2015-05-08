@@ -118,7 +118,7 @@ void Game::run()
 			showErrorMessageBox(L"Echec du démarrage", L"Impossible de démarrer EcoWorld avec les paramêtres sélectionnés :\r\nEcoWorld utilise actuellement les paramêtres par défaut !");
 
 		// Désactive la fenêtre de confirmation des paramêtres du menu options si un message d'erreur a été affiché :
-		// évite que les deux modal screen ne se chevauchent, empêchant ainsi toute intéraction avec l'utilisateur
+		// évite que les deux modal screen ne se chevauchent, empêchant ainsi toute interaction avec l'utilisateur
 		gameState.showOptionsConfirmationWindow = false;
 	}
 
@@ -292,7 +292,14 @@ bool Game::init()
 	addGameArchives();DEBUG_TIMER
 
 	// Applique les options de la configuration actuelle du jeu au driver
-	applyGameConfigDriverOptions();DEBUG_TIMER
+	applyGameConfigDriverOptions(); DEBUG_TIMER
+
+	// Initialise le GUI Manager (il sera valide aussi longtemps que cette classe)
+	if (!guiManager)	// Vérifie tout de même que le GUI Manager n'existe pas déjà
+		guiManager = new GUIManager(); DEBUG_TIMER
+
+	// Passe à la scène de chargement du menu principal (image de chargement initiale)
+	switchToNextScene(ECS_MAIN_MENU_LOADING);
 
 #ifdef USE_JOYSTICKS
 	// Active la gestion des manettes et des joysticks
@@ -328,29 +335,28 @@ bool Game::init()
 		renderer = new EcoWorldRenderer(gameSceneNodesPointers);DEBUG_TIMER
 	}
 
-	// Initialise le GUI Manager (il sera valide aussi longtemps que cette classe)
-	if (!guiManager)	// Vérifie tout de même que le GUI Manager n'existe pas déjà
-		guiManager = new GUIManager();DEBUG_TIMER
-
 	// Indique le renderer de jeu au système (utilisé comme une interface)
-	system.setSystemRenderer(renderer);DEBUG_TIMER
+	system.setSystemRenderer(renderer); DEBUG_TIMER
 
 	// Crée le skin de la GUI et assigne sa transparence
-	guiManager->createGUISkin(gameConfig.guiSkinFile, gameConfig.guiTransparency);DEBUG_TIMER
+	guiManager->createGUISkin(gameConfig.guiSkinFile, gameConfig.guiTransparency); DEBUG_TIMER
 
 	// Crée les GUIs
-	guiManager->createGUIs();DEBUG_TIMER
+	guiManager->createGUIs(); DEBUG_TIMER
+
+	// Crée la caméra RTS
+	createCamera();
 
 #ifdef USE_IRRKLANG
 	// Initialise IrrKlang, et précharge les musiques et les sons si l'audio est activé
 	if (gameConfig.audioEnabled)
-		ikMgr.init(true);DEBUG_TIMER
+		ikMgr.init(true); DEBUG_TIMER
 #endif
 
+	// Crée le menu principal dans tous les cas, car certaines initialisations y sont faites
+	createMainMenu();
+	
 
-
-	// Détermine si on doit charger le menu principal ou si on démarre directement à la scène du chargement du jeu
-	bool loadMainMenu = true;DEBUG_TIMER
 
 	// Vérifie qu'on n'a pas de fichier à ouvrir directement au lancement du jeu (par exemple, par double clic sur une partie sauvegardée ou sur un terrain dans l'explorateur windows)
 	if (gameState.fileToOpen.size() > 0)
@@ -371,13 +377,13 @@ bool Game::init()
 				if (ext.equals_ignore_case("ewt"))
 				{
 					// Si c'est un terrain, on crée une nouvelle partie de difficulté normale avec ce terrain
-					loadMainMenu = createNewGame(EcoWorldModifiers::ED_normal, gameState.fileToOpen);DEBUG_TIMER	// Indique qu'on a besoin de charger le menu principal si la création de la nouvelle partie a échoué
+					createNewGame(EcoWorldModifiers::ED_normal, gameState.fileToOpen);DEBUG_TIMER
 				}
-				// Sinon, on considère automatiquement que le fichier à charger est une partie sauvegardée
-				else
+				// Sinon, on vérifie que le fichier à charger est une partie sauvegardée
+				else if (ext.equals_ignore_case("ewg"))
 				{
 					// Si c'est une partie, on essaie de la charger directement
-					loadMainMenu = loadSavedGame(gameState.fileToOpen);DEBUG_TIMER	// Indique qu'on a besoin de charger le menu principal si le chargement de la partie sauvegardée a échoué
+					loadSavedGame(gameState.fileToOpen);DEBUG_TIMER
 				}
 			}
 		}
@@ -385,10 +391,6 @@ bool Game::init()
 		// Oublie enfin le fichier à ouvrir, pour éviter de l'ouvrir à nouveau
 		gameState.fileToOpen = "";DEBUG_TIMER
 	}
-
-	// Si on n'a pas de fichier à ouvrir, ou si son chargement a échoué : on crée le menu principal
-	if (loadMainMenu)
-		createMainMenu();DEBUG_TIMER
 
 	return true;DEBUG_TIMER
 }
@@ -522,6 +524,7 @@ void Game::applyGameConfigDriverOptions()
 		driver->setTextureCreationFlag(video::ETCF_OPTIMIZED_FOR_QUALITY, true);
 		driver->setTextureCreationFlag(video::ETCF_OPTIMIZED_FOR_SPEED, false);
 		driver->setTextureCreationFlag(video::ETCF_ALWAYS_16_BIT, false);
+		driver->setTextureCreationFlag(video::ETCF_ALWAYS_32_BIT, false);
 	}
 	// Sinon, indique au driver qu'il doit créer des textures ayant un temps de rendu le plus petit possible si la qualité des textures est réglée sur Très Basse
 	else if (gameConfig.texturesQuality == GameConfiguration::ETQ_VERY_LOW)
@@ -539,14 +542,7 @@ void Game::applyGameConfigDriverOptions()
 			driver->setTextureCreationFlag(video::ETCF_OPTIMIZED_FOR_SPEED, true);
 
 		driver->setTextureCreationFlag(video::ETCF_ALWAYS_16_BIT, false);
-	}
-	// Sinon, indique au driver qu'il doit créer des textures en mode 16 bits si on est en mode plein écran avec une profondeur de couleur de 16 bits ou moins
-	// (les profondeurs de couleur ne sont valables qu'en plein écran ; et les textures 32 bits sont inutiles en mode 16 bits)
-	else if (gameConfig.deviceParams.Bits <= 16 && gameConfig.deviceParams.Fullscreen)
-	{
-		driver->setTextureCreationFlag(video::ETCF_OPTIMIZED_FOR_QUALITY, false);
-		driver->setTextureCreationFlag(video::ETCF_OPTIMIZED_FOR_SPEED, false);
-		driver->setTextureCreationFlag(video::ETCF_ALWAYS_16_BIT, true);
+		driver->setTextureCreationFlag(video::ETCF_ALWAYS_32_BIT, false);
 	}
 }
 bool Game::updateAll()
@@ -2665,6 +2661,98 @@ void Game::createScreenShot()
 		LOG("Capture d'écran créée : " << text_SS, ELL_INFORMATION);
 	}
 }
+void Game::drawMainMenuLoadingBackground()
+{
+	// Affichage un écran de chargement primaire : une simple image dessinée à l'écran une seule fois.
+	// En effet, l'ajout de cette image à la GUI ne la dessinerait pas, et il faut éviter d'appeler trop de fonctions avancées ici,
+	// car tous les effets spéciaux (tels que PostProcess) ne sont pas encore créés.
+
+	const core::dimension2du& screenSize = game->driver->getScreenSize();
+	const core::recti screenRect(0, 0, screenSize.Width, screenSize.Height);
+
+
+
+	// Obtient l'image de fond
+	video::ITexture* bgTex = NULL;
+	if (gameConfig.mainIconsSet == GameConfiguration::EMIS_STANDART)
+	{
+		// On choisit ici un titre standard du menu principal
+
+		// Précharge tous les titres du menu principal susceptibles d'être affichés avec cette résolution
+		guiManager->loadMainMenuTitles(screenSize);
+
+		bgTex = guiManager->getMainMenuTitleFromWeather(WI_sunny, screenSize);
+	}
+#ifdef CAN_USE_ROMAIN_DARCEL_RESSOURCES
+	else if (gameConfig.mainIconsSet == GameConfiguration::EMIS_NEXT_GEN)
+	{
+		// Désactive les mip maps dans la création des textures
+		const bool lastMipMapState = game->driver->getTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS);
+		game->driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);
+
+		bgTex = driver->getTexture("MainMenu Background.jpg");
+
+		// Réactive les mip maps dans la création des textures
+		game->driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, lastMipMapState);
+	}
+#endif
+
+	// Obtient les dimensions de l'image de fond et sa couleur d'arrière-plan
+	video::SColor bgCol(0xff000000);	// Noir par défaut
+	core::recti bgTexRect(screenRect);
+	core::recti bgTexOriginalRect(screenRect);
+	if (bgTex)
+	{
+		// Obtient la couleur du premier pixel de cet arrière plan afin de déterminer sa couleur de fond
+		u32* texData = (u32*)bgTex->lock(video::ETLM_READ_ONLY, 0);
+		if (texData)
+		{
+			bgCol.set(*texData);
+			bgTex->unlock();
+		}
+
+		// Détermine le plus grand rectangle possible pour la texture de fond
+		const core::dimension2du& bgTexSize = bgTex->getOriginalSize();
+		bgTexOriginalRect.UpperLeftCorner.set(0, 0);
+		bgTexOriginalRect.LowerRightCorner.set(bgTexSize.Width, bgTexSize.Height);
+
+		const float widthRatio = (float)screenSize.Width / (float)bgTexSize.Width;
+		const float heightRatio = (float)screenSize.Height / (float)bgTexSize.Height;
+		if (widthRatio > heightRatio)
+		{
+			// Le fond n'est pas assez grand en largeur : on agrandit sa hauteur afin qu'il touche les bords de l'écran sans dépasser
+			const int finalWidth = (int)((float)bgTexSize.Width * heightRatio);
+			const int decalX = ((int)screenSize.Width - finalWidth) / 2;
+			bgTexRect.UpperLeftCorner.X = decalX;
+			bgTexRect.LowerRightCorner.X = decalX + finalWidth;
+			//bgTexRect.UpperLeftCorner.Y = 0;
+			//bgTexRect.LowerRightCorner.Y = screenSize.Height;
+		}
+		else
+		{
+			// Le fond n'est pas assez grand en hauteur : on agrandit sa largeur afin qu'il touche les bords de l'écran sans dépasser
+			const int finalHeight = (int)((float)bgTexSize.Height * widthRatio);
+			const int decalY = ((int)screenSize.Height - finalHeight) / 2;
+			//bgTexRect.UpperLeftCorner.X = 0;
+			//bgTexRect.LowerRightCorner.X = screenSize.Width;
+			bgTexRect.UpperLeftCorner.Y = decalY;
+			bgTexRect.LowerRightCorner.Y = decalY + finalHeight;
+		}
+	}
+
+
+
+	// Efface l'écran avec la couleur d'arrière-plan
+	game->driver->setViewPort(screenRect);
+	game->driver->beginScene(true, true, video::SColor(0x0));
+
+	// Dessine l'image de fond si elle est valide
+	if (bgTex)
+		game->driver->draw2DImage(bgTex, bgTexRect, bgTexOriginalRect, NULL, NULL, true);
+
+	// Termine la scène et l'affiche à l'écran
+	game->driver->endScene();
+}
 void Game::switchToNextScene(E_CURRENT_SCENE newCurrentScene)
 {
 	// Désactivé : Provoque quelques bugs interdisant la remise à zéro d'une scène (dans la fonction Game::joinMultiplayerGame(hostIP) en particulier :
@@ -2711,7 +2799,10 @@ void Game::switchToNextScene(E_CURRENT_SCENE newCurrentScene)
 	switch (currentScene)
 	{
 	case ECS_MAIN_MENU_LOADING:	// Chargement du menu principal
-		// TODO : Créer un écran de chargement pour ce menu (sans barre de chargement)
+		// Crée un écran de chargement primaire : une simple image dessinée à l'écran une seule fois
+		// En effet, l'ajout de cette image à la GUI ne la dessinerait pas, et il faut éviter d'appeler trop de fonctions avancées ici,
+		// car tous les effets spéciaux (tels que PostProcess) ne sont pas encore créés.
+		drawMainMenuLoadingBackground();
 		break;
 
 	case ECS_MAIN_MENU:	// Menu principal
@@ -3489,7 +3580,7 @@ bool Game::saveCurrentGame_Eff(io::IWriteFile* writeFile
 
 	return false;
 }
-bool Game::createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::path& terrainFilename
+void Game::createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::path& terrainFilename
 #ifdef USE_RAKNET
 						 , bool multiplayer
 #endif
@@ -3512,28 +3603,20 @@ bool Game::createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::p
 
 #ifdef USE_RAKNET
 	// Si le mode multijoueur est activée, on initialise RakNet
-	if (multiplayer)
+	if (multiplayer && rkMgr.createGame())
 	{
-		if (rkMgr.createGame())
-		{
-			// Indique à l'utilisateur qu'une erreur s'est produite (avant le changement de scène, car ce dernier peut lui aussi envoyer des messages d'erreur, qui remplaceraient alors celui-ci !)
-			showErrorMessageBox(L"Erreur", L"Impossible d'activer le mode multijoueur !");
+		// Indique à l'utilisateur qu'une erreur s'est produite (avant le changement de scène, car ce dernier peut lui aussi envoyer des messages d'erreur, qui remplaceraient alors celui-ci !)
+		showErrorMessageBox(L"Erreur", L"Impossible d'activer le mode multijoueur !");
 
-			// Retourne à la scène du menu de création de partie
-			createMainMenu();
-			switchToNextScene(ECS_NEW_GAME_MENU);
-
-			return true;
-		}
+		// Retourne à la scène du menu de création de partie
+		createMainMenu();
+		switchToNextScene(ECS_NEW_GAME_MENU);
 	}
+	else
 #endif
-
-	// Passe à la scène du jeu
-	switchToNextScene(ECS_PLAY);
-
-	return false;
+		switchToNextScene(ECS_PLAY);	// Passe à la scène du jeu
 }
-bool Game::loadSavedGame(const io::path& adresse)
+void Game::loadSavedGame(const io::path& adresse)
 {
 	// Crée les données pour le fichier
 	io::IReadFile* const readFile = fileSystem->createAndOpenFile(adresse);
@@ -3541,7 +3624,7 @@ bool Game::loadSavedGame(const io::path& adresse)
 	{
 		// Indique à l'utilisateur qu'une erreur s'est produite
 		showErrorMessageBox(L"Erreur", L"Une erreur s'est produite lors du chargement de la partie !");
-		return true;
+		return;
 	}
 
 
@@ -3562,7 +3645,7 @@ bool Game::loadSavedGame(const io::path& adresse)
 
 		// Désactivé : On ne libère pas le readfile car il a automatiquement été libéré dans la fonction loadSavedGame_Eff
 		//readFile->drop();
-		return true;
+		return;
 	}
 
 	// Désactivé : On ne libère pas le readfile car il a automatiquement été libéré dans la fonction loadSavedGame_Eff
@@ -3589,8 +3672,6 @@ bool Game::loadSavedGame(const io::path& adresse)
 		showErrorMessageBox(L"Avertissement", L"Attention :\r\nLe terrain utilisé dans cette sauvegarde n'a pas été trouvé.\r\nDes erreurs pourraient se produire en cours de jeu !");
 
 	LOG(endl << "Jeu chargé : " << adresse.c_str() << endl, ELL_INFORMATION);
-
-	return false;
 }
 bool Game::loadSavedGame_Eff(io::IReadFile* readFile, bool& outSameGameVersion, bool& outStartPaused, core::stringc& outTerrainFilename
 #ifdef USE_RAKNET
@@ -3715,76 +3796,68 @@ bool Game::loadSavedGame_Eff(io::IReadFile* readFile, bool& outSameGameVersion, 
 void Game::createCamera()
 {
 	// Crée la caméra RTS (pour la première et unique fois)
-	if (!cameraRTS)
-	{
-		// Crée la caméra FPS de la caméra RTS
+	if (cameraRTS)
+		return;
+
+	// Crée la caméra FPS de la caméra RTS
 #ifdef CAMERA_CAN_JUMP
-		SKeyMap keyMap[10];
+	SKeyMap keyMap[10];
 #else
-		SKeyMap keyMap[8];
+	SKeyMap keyMap[8];
 #endif
-		keyMap[0].Action = EKA_MOVE_FORWARD;
-		keyMap[0].KeyCode = KEY_UP;
-		keyMap[1].Action = EKA_MOVE_FORWARD;
-		keyMap[1].KeyCode = KEY_KEY_Z;
-		keyMap[2].Action = EKA_MOVE_BACKWARD;
-		keyMap[2].KeyCode = KEY_DOWN;
-		keyMap[3].Action = EKA_MOVE_BACKWARD;
-		keyMap[3].KeyCode = KEY_KEY_S;
-		keyMap[4].Action = EKA_STRAFE_LEFT;
-		keyMap[4].KeyCode = KEY_LEFT;
-		keyMap[5].Action = EKA_STRAFE_LEFT;
-		keyMap[5].KeyCode = KEY_KEY_Q;
-		keyMap[6].Action = EKA_STRAFE_RIGHT;
-		keyMap[6].KeyCode = KEY_RIGHT;
-		keyMap[7].Action = EKA_STRAFE_RIGHT;
-		keyMap[7].KeyCode = KEY_KEY_D;
+	keyMap[0].Action = EKA_MOVE_FORWARD;
+	keyMap[0].KeyCode = KEY_UP;
+	keyMap[1].Action = EKA_MOVE_FORWARD;
+	keyMap[1].KeyCode = KEY_KEY_Z;
+	keyMap[2].Action = EKA_MOVE_BACKWARD;
+	keyMap[2].KeyCode = KEY_DOWN;
+	keyMap[3].Action = EKA_MOVE_BACKWARD;
+	keyMap[3].KeyCode = KEY_KEY_S;
+	keyMap[4].Action = EKA_STRAFE_LEFT;
+	keyMap[4].KeyCode = KEY_LEFT;
+	keyMap[5].Action = EKA_STRAFE_LEFT;
+	keyMap[5].KeyCode = KEY_KEY_Q;
+	keyMap[6].Action = EKA_STRAFE_RIGHT;
+	keyMap[6].KeyCode = KEY_RIGHT;
+	keyMap[7].Action = EKA_STRAFE_RIGHT;
+	keyMap[7].KeyCode = KEY_KEY_D;
 #ifdef CAMERA_CAN_JUMP
-		keyMap[8].Action = EKA_JUMP_UP;
-		keyMap[8].KeyCode = KEY_KEY_J;
-		keyMap[9].Action = EKA_JUMP_UP;
-		keyMap[9].KeyCode = KEY_KEY_E;
+	keyMap[8].Action = EKA_JUMP_UP;
+	keyMap[8].KeyCode = KEY_KEY_J;
+	keyMap[9].Action = EKA_JUMP_UP;
+	keyMap[9].KeyCode = KEY_KEY_E;
 #endif
 
-		// La camera FPS
-		scene::ICameraSceneNode* const cameraFPS = sceneManager->addCameraSceneNodeFPS(0, 100.0f, 0.005f * TAILLE_OBJETS, -1, keyMap,
+	// La camera FPS
+	scene::ICameraSceneNode* const cameraFPS = sceneManager->addCameraSceneNodeFPS(0, 100.0f, 0.005f * TAILLE_OBJETS, -1, keyMap,
 #ifdef CAMERA_CAN_JUMP
-			10,
+		10,
 #ifdef USE_COLLISIONS
-			true,
+		true,
 #else
-			false,
+		false,
 #endif
-			0.05f * TAILLE_OBJETS, false);
+		0.05f * TAILLE_OBJETS, false);
 #else
-			8,
+		8,
 #ifdef USE_COLLISIONS
-			true,
+		true,
 #else
-			false,
+		false,
 #endif
-			0.0f, false);
+		0.0f, false);
 #endif
 
-		cameraFPS->setNearValue(CAMERA_NEAR_VALUE);
-		cameraFPS->setFarValue(CAMERA_FAR_VALUE);
+	cameraFPS->setNearValue(CAMERA_NEAR_VALUE);
+	cameraFPS->setFarValue(CAMERA_FAR_VALUE);
 
-		// La caméra RTS
-		cameraRTS = new RTSCamera(sceneManager->getRootSceneNode(), -1, -500.0f, 100.0f, 350.0f, 500.0f, cameraFPS);
+	// La caméra RTS
+	cameraRTS = new RTSCamera(sceneManager->getRootSceneNode(), -1, -500.0f, 100.0f, 350.0f, 500.0f, cameraFPS);
 
-		cameraRTS->setTerrainLimits(core::rectf(-TERRAIN_LIMITS, -TERRAIN_LIMITS, TERRAIN_LIMITS, TERRAIN_LIMITS));
+	cameraRTS->setTerrainLimits(core::rectf(-TERRAIN_LIMITS, -TERRAIN_LIMITS, TERRAIN_LIMITS, TERRAIN_LIMITS));
 
-		cameraRTS->setNearValue(CAMERA_NEAR_VALUE);
-		cameraRTS->setFarValue(CAMERA_FAR_VALUE);
-	}
-	else
-	{
-		// Supprime les animators de la caméra RTS (ils devront être recréés si nécessaire)
-		cameraRTS->removeAnimators();
-
-		// Indique au scene manager que la caméra RTS est la caméra actuelle
-		cameraRTS->setIsCameraFPSEnabled(false);
-	}
+	cameraRTS->setNearValue(CAMERA_NEAR_VALUE);
+	cameraRTS->setFarValue(CAMERA_FAR_VALUE);
 }
 void Game::createMainMenu()
 {
@@ -3796,21 +3869,35 @@ void Game::createMainMenu()
 
 
 
-	// TEST :
-#if defined(_DEBUG) && 0
-#ifdef CAN_USE_ROMAIN_DARCEL_RESSOURCES
-	if (gameConfig.mainIconsSet == GameConfiguration::EMIS_NEXT_GEN)
+	// Compile les effets nécessaires de PostProcess
+	if (gameConfig.usePostProcessEffects && postProcessManager)
 	{
-		gui::IGUIImage* img = gui->addImage(driver->getTexture("MainMenu Background.jpg"), core::vector2di(0, 0));
-		img->getParent()->sendToBack(img);
+		// Compile les shaders particuliers du jeu : shader de rendu final sur l'écran, shader de tremblement de la caméra et shader de profondeur de la scène
+		postProcessManager->compileParticularShaders(gameConfig.postProcessShakeCameraOnDestroying, gameConfig.postProcessUseDepthRendering);
+
+		// Compile les effets supplémentaires de la configuration du jeu
+		postProcessManager->compileEffects(gameConfig.postProcessEffects);
 	}
-#endif
-#endif
+
+	// Initialise XEffects si ses ombres sont activées
+	if (gameConfig.useXEffectsShadows && !xEffects)
+			xEffects = new EffectHandler(device, gameConfig.xEffectsScreenRTTSize,
+			gameConfig.xEffectsUseVSMShadows,
+			gameConfig.xEffectsUseRoundSpotlights,
+			gameConfig.xEffectsUse32BitDepthBuffers,
+			gameConfig.xEffectsFilterType,
+			shaderPreprocessor, screenQuad);
+
+	// Re-vérifie les options de la configuration actuelle du jeu au driver (elles sont dépendantes de l'utilisation de XEffects)
+	applyGameConfigDriverOptions();
 
 
 
-	// Crée la caméra RTS si elle n'a pas encore été créée, et la réinitialise
-	createCamera();
+	// Supprime les animators de la caméra RTS (ils devront être recréés si nécessaire)
+	cameraRTS->removeAnimators();
+
+	// Indique au scene manager que la caméra RTS est la caméra actuelle
+	cameraRTS->setIsCameraFPSEnabled(false);
 
 	// Indique la positions et la direction de la caméra RTS (relativement à TAILLE_OBJETS) (le +128.0f en Y est dû au décalage des terrains en Y de +128.0f)
 	cameraRTS->setPosition(core::vector3df(0.0f, 128.0f + 5.0f * TAILLE_OBJETS, 0.0f));	// 100.0f pour TAILLE_OBJETS = 20.0f
@@ -3835,30 +3922,6 @@ void Game::createMainMenu()
 
 
 
-	// Compile les effets nécessaires de PostProcess
-	if (gameConfig.usePostProcessEffects && postProcessManager)
-	{
-		// Compile les shaders particuliers du jeu : shader de rendu final sur l'écran, shader de tremblement de la caméra et shader de profondeur de la scène
-		postProcessManager->compileParticularShaders(gameConfig.postProcessShakeCameraOnDestroying, gameConfig.postProcessUseDepthRendering);
-
-		// Compile les effets supplémentaires de la configuration du jeu
-		postProcessManager->compileEffects(gameConfig.postProcessEffects);
-	}
-
-	// Initialise XEffects si ses ombres sont activées
-	if (gameConfig.useXEffectsShadows && !xEffects)
-		xEffects = new EffectHandler(device, gameConfig.xEffectsScreenRTTSize,
-			gameConfig.xEffectsUseVSMShadows,
-			gameConfig.xEffectsUseRoundSpotlights,
-			gameConfig.xEffectsUse32BitDepthBuffers,
-			gameConfig.xEffectsFilterType,
-			shaderPreprocessor, screenQuad);
-
-	// Re-vérifie les options de la configuration actuelle du jeu au driver (elles sont dépendantes de l'utilisation de XEffects)
-	applyGameConfigDriverOptions();
-
-
-
 	// Si un temps forcé est spécifié dans GameState, on l'applique obligatoirement (peut aussi être utilisé à l'appel de cette fonction pour forcer un certain temps)
 	if (gameState.lastWeather != -1)
 	{
@@ -3879,8 +3942,8 @@ void Game::createMainMenu()
 		guiManager->loadMainMenuTitles(driver->getScreenSize());
 
 		// Choisis le titre actuel du menu principal
-		guiManager->chooseMainMenuTitleFromWeather(system.getWeatherManager().getCurrentWeatherID(), driver->getScreenSize());
 		currentWeatherID = system.getWeatherManager().getCurrentWeatherID();
+		guiManager->chooseMainMenuTitleFromWeather(currentWeatherID, driver->getScreenSize());
 	}
 
 	if (renderer)
@@ -3945,8 +4008,11 @@ void Game::loadGameData(const io::path& terrainFilename, bool startSoundsPaused)
 
 
 
-	// Crée la caméra RTS si elle n'a pas encore été créée (par exemple, parce que le menu principal n'a pas été créé : lors d'un double-clic sur une partie ou un terrain dans l'explorateur windows), et la réinitialise
-	createCamera();
+	// Supprime les animators de la caméra RTS (ils devront être recréés si nécessaire)
+	cameraRTS->removeAnimators();
+
+	// Indique au scene manager que la caméra RTS est la caméra actuelle
+	cameraRTS->setIsCameraFPSEnabled(false);
 
 	// Replace la camera à l'origine (relativement à TAILLE_OBJETS) (le +128.0f en Y est dû au décalage des terrains en Y de +128.0f)
 	cameraRTS->setPosition(core::vector3df(0.0f, 128.0f + 20.0f * TAILLE_OBJETS, -20.0f * TAILLE_OBJETS));	// (0.0f, 400.0f, -400.0f) pour TAILLE_OBJETS = 20.0f

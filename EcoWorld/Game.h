@@ -161,6 +161,9 @@ public:
 	// Permet de passer à la scène suivante spécifiée dans newCurrentScene
 	void switchToNextScene(E_CURRENT_SCENE newCurrentScene);
 
+	// Dessine l'image de fond lors du chargement du menu principal
+	void drawMainMenuLoadingBackground();
+
 	// Crée la caméra RTS (ne devrait être appelé qu'une seule fois lors de la vie de cette classe)
 	void createCamera();
 
@@ -171,16 +174,14 @@ public:
 	void loadGameData(const io::path& terrainFilename, bool startSoundsPaused = false);
 
 	// Lance la création d'une nouvelle partie en chargeant le terrain spécifié
-	// Retourne true si une erreur s'est produite, false sinon
-	bool createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::path& terrainFilename
+	void createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::path& terrainFilename
 #ifdef USE_RAKNET
 		, bool multiplayer = false
 #endif
 		);
 
 	// Charge une partie sauvegardée depuis un fichier
-	// Retourne true si une erreur s'est produite, false sinon
-	bool loadSavedGame(const io::path& adresse);
+	void loadSavedGame(const io::path& adresse);
 
 	// Charge une partie sauvegardée depuis un fichier (mode "Efficace")
 	// Ne crée pas automatiquement le read file nécessaire, n'affiche pas de message d'erreur, ne change pas de scène de jeu

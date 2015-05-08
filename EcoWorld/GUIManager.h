@@ -100,6 +100,9 @@ public:
 	// Charge toutes les image des titres du menu principal pour une résolution d'écran donnée
 	void loadMainMenuTitles(const core::dimension2du& screenSize);
 
+	// Obtient l'image du titre du menu principal selon un temps donné
+	video::ITexture* getMainMenuTitleFromWeather(WeatherID weather, const core::dimension2du& screenSize);
+
 	// Change l'image du titre du menu principal suivant le temps actuel du menu principal
 	void chooseMainMenuTitleFromWeather(WeatherID weather, const core::dimension2du& screenSize);
 

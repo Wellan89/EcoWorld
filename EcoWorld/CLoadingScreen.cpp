@@ -84,8 +84,7 @@ video::ITexture* CLoadingScreen::chooseLoadingScreen()
 	const int loadingScreen = (rand() % loadingScreenListSize);
 
 	// Retourne l'écran de chargement ainsi choisi
-	core::list<io::path>::Iterator it = loadingScreenList.begin();
-	it += loadingScreen;
+	core::list<io::path>::ConstIterator it = loadingScreenList.begin() + loadingScreen;
 
 	LOG_DEBUG("Ecran de chargement actuel : " << (*it).c_str(), ELL_INFORMATION);
 

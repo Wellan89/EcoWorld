@@ -585,10 +585,10 @@ void GUIManager::loadMainMenuTitles(const core::dimension2du& screenSize)
 	game->driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, lastDriverTextureCreationStates[4]);
 	game->driver->setTextureCreationFlag(video::ETCF_NO_ALPHA_CHANNEL, lastDriverTextureCreationStates[5]);
 }
-void GUIManager::chooseMainMenuTitleFromWeather(WeatherID weather, const core::dimension2du& screenSize)
+video::ITexture* GUIManager::getMainMenuTitleFromWeather(WeatherID weather, const core::dimension2du& screenSize)
 {
-	if (!game->driver || !guiElements.mainMenuGUI.mainTitle)
-		return;
+	if (!game->driver)
+		return NULL;
 
 	// Crée la texture du titre d'après le temps actuel :
 
@@ -604,8 +604,18 @@ void GUIManager::chooseMainMenuTitleFromWeather(WeatherID weather, const core::d
 #endif
 		sprintf_SS("MainTitle_%u_%u.bmp", titleSize, titleID);
 
+	// Renvoit la texture du titre choisie
+	return game->driver->getTexture(text_SS);
+}
+void GUIManager::chooseMainMenuTitleFromWeather(WeatherID weather, const core::dimension2du& screenSize)
+{
+	if (!game->driver || !guiElements.mainMenuGUI.mainTitle)
+		return;
+
+	// Crée la texture du titre d'après le temps actuel :
+
 	// Charge la texture du titre et l'indique à la gui (elle a normalement déjà été préchargée, cette étape devrait être rapide)
-	guiElements.mainMenuGUI.mainTitle->setImage(game->driver->getTexture(text_SS));
+	guiElements.mainMenuGUI.mainTitle->setImage(getMainMenuTitleFromWeather(weather, screenSize));
 }
 void GUIManager::createNewGameMenuGUI(IGUIElement* parent)
 {

@@ -8,10 +8,10 @@ TODO.h : Liste des tâches à faire, ne pas inclure
 /*
 BUGS Connus :
 
+- BUG : PostProcess ne semble pas fonctionner en mode OpenGL.
+
 - BUG : Les versions 64 bits compilent mais plantent !
 - Problème : les tests ne se lancent pas en mode DEBUG
-
-- BUG : Les effets post-rendus ne fonctionnent pas lors du chargement d'une partie par double clic
 
 - BUG : Crash du jeu lors du défilement de la fenêtre d'informations avec la molette de la souris : Bug de la fonction DispatchMessage dans CIrrDeviceWin32::run() !
 
