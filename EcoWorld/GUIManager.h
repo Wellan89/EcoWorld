@@ -7,8 +7,14 @@
 // sinon il ne montera et descendra que par les appuis sur son onglet "+" ou "-"
 #define MENU_INFERIEUR_REACTIF
 
-// Si défini, le menu inférieur de construction de la GUI du jeu sera placé en position haute (ouvert) par défaut, sinon il sera placé en position basse (fermé)
-#ifndef MENU_INFERIEUR_REACTIF
+#ifdef MENU_INFERIEUR_REACTIF
+// Le temps d'attente en ms du menu inférieur avant que celui-ci ne commence à descendre après que la souris l'ait quitté
+#define MENU_INFERIEUR_WAIT_TIME	1000
+
+#else
+
+// Si défini, le menu inférieur de construction de la GUI du jeu sera placé en position haute (ouvert) par défaut,
+// sinon il sera placé en position basse (fermé)
 #define MENU_INFERIEUR_HAUT
 #endif
 

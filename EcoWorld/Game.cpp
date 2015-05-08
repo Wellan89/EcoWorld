@@ -1630,7 +1630,7 @@ bool Game::OnEventGUI(const SEvent& event
 			// Détermine si la souris vient de passer sur le menu inférieur ou sur l'un de ses enfants
 			if (calculerIsMouseOnGUI(guiManager->guiElements.gameGUI.tabGroupBas))
 			{
-				// Si la souris vient de passer est le menu inférieur ou sur l'un de ses enfants, on demande sa montée quelle que soit sa position actuelle
+				// Si la souris vient de passer sur le menu inférieur ou sur l'un de ses enfants, on demande sa montée, quelle que soit sa position actuelle
 				vitesseDescenteMenuInferieur = -0.001f;
 				realTimeMsStartDescenteMenuInferieur = deviceTimer->getRealTime();
 				menuInferieurStartPosY = guiManager->guiElements.gameGUI.tabGroupBas->getRelativePosition().UpperLeftCorner.Y;
@@ -1677,9 +1677,10 @@ bool Game::OnEventGUI(const SEvent& event
 			// Détermine si la souris vient de passer sur le menu inférieur ou sur l'un de ses enfants
 			if (!calculerIsMouseOnGUI(guiManager->guiElements.gameGUI.tabGroupBas))
 			{
-				// Si la souris vient de quitter le menu inférieur et n'est pas non plus sur ses enfants, on demande sa descente quelle que soit la position actuelle de ce menu
+				// Si la souris vient de quitter le menu inférieur et n'est pas non plus sur ses enfants,
+				// on demande sa descente dans quelques millisecondes, quelle que soit la position actuelle de ce menu
 				vitesseDescenteMenuInferieur = 0.0001f;
-				realTimeMsStartDescenteMenuInferieur = deviceTimer->getRealTime();
+				realTimeMsStartDescenteMenuInferieur = deviceTimer->getRealTime() + MENU_INFERIEUR_WAIT_TIME;
 				menuInferieurStartPosY = guiManager->guiElements.gameGUI.tabGroupBas->getRelativePosition().UpperLeftCorner.Y;
 			}
 		}
@@ -3214,7 +3215,7 @@ void Game::updateGameGUI()
 			vitesseDescenteMenuInferieur = 0.0f;
 
 			// minPosY
-			tabGroupBasPos.UpperLeftCorner.Y =  guiManager->guiElements.gameGUI.tabGroupBas->getParent()->getRelativePosition().LowerRightCorner.Y - guiManager->guiElements.gameGUI.tabGroupBas->getTabHeight();
+			tabGroupBasPos.UpperLeftCorner.Y = guiManager->guiElements.gameGUI.tabGroupBas->getParent()->getRelativePosition().LowerRightCorner.Y - guiManager->guiElements.gameGUI.tabGroupBas->getTabHeight();
 			guiManager->guiElements.gameGUI.tabGroupBas->setRelativePosition(tabGroupBasPos);
 
 #ifndef MENU_INFERIEUR_REACTIF

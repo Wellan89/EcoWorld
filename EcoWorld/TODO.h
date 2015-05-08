@@ -8,8 +8,6 @@ TODO.h : Liste des tâches à faire, ne pas inclure
 /*
 BUGS Connus :
 
-- Attendre un petit temps après que la souris ait quitté le menu inférieur de la GUI du jeu avant celui-ci ne se mette à descendre
-
 - BUG : Les versions 64 bits compilent mais plantent !
 - Problème : les tests ne se lancent pas en mode DEBUG
 

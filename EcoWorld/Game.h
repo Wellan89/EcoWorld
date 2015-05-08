@@ -301,7 +301,7 @@ public:
 	// < 0 : Le menu inférieur remonte
 	float vitesseDescenteMenuInferieur;
 
-	// Le temps réel auquel la descente du menu inférieur a commencée
+	// Le temps réel à partir duquel la descente du menu inférieur doit commencer
 	u32 realTimeMsStartDescenteMenuInferieur;
 
 	// La position de départ en Y du menu inférieur lorsque sa descente a commencée
