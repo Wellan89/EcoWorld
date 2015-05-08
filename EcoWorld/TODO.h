@@ -8,7 +8,7 @@ TODO.h : Liste des tâches à faire, ne pas inclure
 /*
 BUGS Connus :
 
-- BUG : PostProcess ne semble pas fonctionner en mode OpenGL.
+- BUG : FXAA ne compile pas en mode OpenGL ; les post processes n'ont pas le même rendu en mode OpenGL et en mode DirectX.
 
 - BUG : Les versions 64 bits compilent mais plantent !
 - Problème : les tests ne se lancent pas en mode DEBUG
@@ -86,8 +86,13 @@ En cours :
 	=> Sélection des bâtiments buggée (problème interne à Irrlicht !)
 
 
+Conséquent mais important :
+- Réécrire l'architecture du programme !
+
 
 A voir rapidement :
+
+- Permettre une option de "lazy loading" : ne pas précharger toutes les textures ni tous les objets 3D, mais uniquement lorsqu'on en a besoin
 
 - Lorsque le menu de construction descends automatiquement, attendre une ou deux secondes avant de le descendre une fois qu'il est en haut et que la souris vient de le quitter
 

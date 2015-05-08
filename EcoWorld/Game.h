@@ -76,6 +76,9 @@ public:
 	// Ajoute toutes les archives du jeu au système de fichier du device
 	void addGameArchives();
 
+	// Applique les options de la configuration actuelle du jeu afin de créer les shaders PostProcess et XEffects nécessaires
+	void applyGameConfigShadersOptions();
+
 	// Applique les options de la configuration actuelle du jeu au material de remplacement du driver (pour les appliquer à tous les scene nodes) et modifie les paramêtres de création de textures du driver
 	void applyGameConfigDriverOptions();
 
@@ -174,14 +177,16 @@ public:
 	void loadGameData(const io::path& terrainFilename, bool startSoundsPaused = false);
 
 	// Lance la création d'une nouvelle partie en chargeant le terrain spécifié
-	void createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::path& terrainFilename
+	// Retourne true si une erreur s'est produite, false sinon
+	bool createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::path& terrainFilename
 #ifdef USE_RAKNET
 		, bool multiplayer = false
 #endif
 		);
 
 	// Charge une partie sauvegardée depuis un fichier
-	void loadSavedGame(const io::path& adresse);
+	// Retourne true si une erreur s'est produite, false sinon
+	bool loadSavedGame(const io::path& adresse);
 
 	// Charge une partie sauvegardée depuis un fichier (mode "Efficace")
 	// Ne crée pas automatiquement le read file nécessaire, n'affiche pas de message d'erreur, ne change pas de scène de jeu

@@ -353,46 +353,53 @@ bool Game::init()
 		ikMgr.init(true); DEBUG_TIMER
 #endif
 
-	// Crée le menu principal dans tous les cas, car certaines initialisations y sont faites
-	createMainMenu();
+	// Crée les shaders si nécessaire
+	applyGameConfigShadersOptions();
 	
 
+
+	// Détermine si on doit charger le menu principal ou si on démarre directement à la scène du chargement du jeu
+	bool loadMainMenu = true; DEBUG_TIMER
 
 	// Vérifie qu'on n'a pas de fichier à ouvrir directement au lancement du jeu (par exemple, par double clic sur une partie sauvegardée ou sur un terrain dans l'explorateur windows)
 	if (gameState.fileToOpen.size() > 0)
 	{
 		// Supprime les guillements éventuels de la chaîne (présents lorsque le chemin d'accès comporte des espaces par exemple)
-		gameState.fileToOpen.remove('\"');DEBUG_TIMER
+		gameState.fileToOpen.remove('\"'); DEBUG_TIMER
 
 		// Vérifie tout d'abord que le fichier spécifié existe
 		if (fileSystem->existFile(gameState.fileToOpen))
 		{
-			const int extPos = gameState.fileToOpen.findLast('.');DEBUG_TIMER
+			const int extPos = gameState.fileToOpen.findLast('.'); DEBUG_TIMER
 			if (extPos >= 0)
 			{
 				// Obtient l'extension du fichier à 4 caractères maximum (on supprime aussi le '.' de l'extension)
-				const io::path ext = gameState.fileToOpen.subString(extPos + 1, 4);DEBUG_TIMER
+				const io::path ext = gameState.fileToOpen.subString(extPos + 1, 4); DEBUG_TIMER
 
 				// Vérifie si le fichier à ouvrir est un terrain (si il se termine par l'extension ".ewt")
 				if (ext.equals_ignore_case("ewt"))
 				{
 					// Si c'est un terrain, on crée une nouvelle partie de difficulté normale avec ce terrain
-					createNewGame(EcoWorldModifiers::ED_normal, gameState.fileToOpen);DEBUG_TIMER
+					loadMainMenu = createNewGame(EcoWorldModifiers::ED_normal, gameState.fileToOpen); DEBUG_TIMER	// Indique qu'on a besoin de charger le menu principal si la création de la nouvelle partie a échoué
 				}
-				// Sinon, on vérifie que le fichier à charger est une partie sauvegardée
-				else if (ext.equals_ignore_case("ewg"))
+				// Sinon, on considère automatiquement que le fichier à charger est une partie sauvegardée
+				else
 				{
-					// Si c'est une partie, on essaie de la charger directement
-					loadSavedGame(gameState.fileToOpen);DEBUG_TIMER
+						// Si c'est une partie, on essaie de la charger directement
+						loadMainMenu = loadSavedGame(gameState.fileToOpen); DEBUG_TIMER	// Indique qu'on a besoin de charger le menu principal si le chargement de la partie sauvegardée a échoué
 				}
 			}
 		}
 
 		// Oublie enfin le fichier à ouvrir, pour éviter de l'ouvrir à nouveau
-		gameState.fileToOpen = "";DEBUG_TIMER
+		gameState.fileToOpen = ""; DEBUG_TIMER
 	}
 
-	return true;DEBUG_TIMER
+	// Si on n'a pas de fichier à ouvrir, ou si son chargement a échoué : on crée le menu principal
+	if (loadMainMenu)
+		createMainMenu(); DEBUG_TIMER
+
+		return true; DEBUG_TIMER
 }
 void Game::addGameArchives()
 {
@@ -471,6 +478,50 @@ void Game::addGameArchives()
 
 	LOG("", ELL_INFORMATION);
 }
+void Game::applyGameConfigShadersOptions()
+{
+	if (!driver)
+		return;
+
+	// Compile les effets nécessaires de PostProcess
+	if (gameConfig.usePostProcessEffects && postProcessManager)
+	{
+		// Compile les shaders particuliers du jeu : shader de rendu final sur l'écran, shader de tremblement de la caméra et shader de profondeur de la scène
+		postProcessManager->compileParticularShaders(gameConfig.postProcessShakeCameraOnDestroying, gameConfig.postProcessUseDepthRendering);
+
+		// Compile les effets supplémentaires de la configuration du jeu
+		postProcessManager->compileEffects(gameConfig.postProcessEffects);
+	}
+
+	// Initialise XEffects si ses ombres sont activées
+	if (gameConfig.useXEffectsShadows && !xEffects)
+		xEffects = new EffectHandler(device, gameConfig.xEffectsScreenRTTSize,
+			gameConfig.xEffectsUseVSMShadows,
+			gameConfig.xEffectsUseRoundSpotlights,
+			gameConfig.xEffectsUse32BitDepthBuffers,
+			gameConfig.xEffectsFilterType,
+			shaderPreprocessor, screenQuad);
+
+	// Vérifie si XEffects doit gérer la lumière de la scène, ou si on laisse le scene manager la gérer
+	video::SOverrideMaterial& overrideMat = driver->getOverrideMaterial();
+	if (gameConfig.useXEffectsShadows && xEffects)
+	{
+		// XEffects est activé :
+
+		// Indique les paramêtres du matériau de remplacement du driver
+		overrideMat.EnableFlags = EMF_WIREFRAME | EMF_POINTCLOUD | EMF_LIGHTING | EMF_BILINEAR_FILTER | EMF_TRILINEAR_FILTER | EMF_ANISOTROPIC_FILTER | EMF_ANTI_ALIASING;
+
+		// Désactive la lumière du scène manager
+		overrideMat.Material.Lighting = false;
+	}
+	else
+	{
+		// XEffects est désactivé :
+
+		// Indique les paramêtres du matériau de remplacement du driver
+		overrideMat.EnableFlags = EMF_WIREFRAME | EMF_POINTCLOUD | EMF_BILINEAR_FILTER | EMF_TRILINEAR_FILTER | EMF_ANISOTROPIC_FILTER | EMF_ANTI_ALIASING;
+	}
+}
 void Game::applyGameConfigDriverOptions()
 {
 	if (!driver)
@@ -482,25 +533,6 @@ void Game::applyGameConfigDriverOptions()
 	video::SOverrideMaterial& overrideMat = driver->getOverrideMaterial();
 	overrideMat.Enabled = true;
 	overrideMat.EnablePasses = 127;		// ESNRP_CAMERA | ESNRP_LIGHT | ESNRP_SKY_BOX | ESNRP_SOLID | ESNRP_TRANSPARENT | ESNRP_TRANSPARENT_EFFECT | ESNRP_SHADOW = 127
-
-	// Vérifie si XEffects doit gérer la lumière de la scène, ou si on laisse le scene manager la gérer
-	if (gameConfig.useXEffectsShadows && xEffects)
-	{
-		// XEffects est activé :
-
-		// Indique les paramêtres du matériau de remplacement du driver
-		overrideMat.EnableFlags = 18187;	// EMF_WIREFRAME | EMF_POINTCLOUD | EMF_LIGHTING | EMF_BILINEAR_FILTER | EMF_TRILINEAR_FILTER | EMF_ANISOTROPIC_FILTER | EMF_ANTI_ALIASING = 18187
-
-		// Désactive la lumière du scène manager
-		overrideMat.Material.Lighting = false;
-	}
-	else
-	{
-		// XEffects est désactivé :
-
-		// Indique les paramêtres du matériau de remplacement du driver
-		overrideMat.EnableFlags = 18179;	// EMF_WIREFRAME | EMF_POINTCLOUD | EMF_BILINEAR_FILTER | EMF_TRILINEAR_FILTER | EMF_ANISOTROPIC_FILTER | EMF_ANTI_ALIASING = 18179
-	}
 
 	// Indique les paramêtres du matériau de remplacement
 	overrideMat.Material.Wireframe = gameConfig.drawWireframe;
@@ -3580,7 +3612,7 @@ bool Game::saveCurrentGame_Eff(io::IWriteFile* writeFile
 
 	return false;
 }
-void Game::createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::path& terrainFilename
+bool Game::createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::path& terrainFilename
 #ifdef USE_RAKNET
 						 , bool multiplayer
 #endif
@@ -3611,12 +3643,17 @@ void Game::createNewGame(EcoWorldModifiers::E_DIFFICULTY difficulty, const io::p
 		// Retourne à la scène du menu de création de partie
 		createMainMenu();
 		switchToNextScene(ECS_NEW_GAME_MENU);
+
+		return true;
 	}
-	else
 #endif
-		switchToNextScene(ECS_PLAY);	// Passe à la scène du jeu
+
+	// Passe à la scène du jeu
+	switchToNextScene(ECS_PLAY);
+
+	return false;
 }
-void Game::loadSavedGame(const io::path& adresse)
+bool Game::loadSavedGame(const io::path& adresse)
 {
 	// Crée les données pour le fichier
 	io::IReadFile* const readFile = fileSystem->createAndOpenFile(adresse);
@@ -3624,7 +3661,7 @@ void Game::loadSavedGame(const io::path& adresse)
 	{
 		// Indique à l'utilisateur qu'une erreur s'est produite
 		showErrorMessageBox(L"Erreur", L"Une erreur s'est produite lors du chargement de la partie !");
-		return;
+		return true;
 	}
 
 
@@ -3645,7 +3682,7 @@ void Game::loadSavedGame(const io::path& adresse)
 
 		// Désactivé : On ne libère pas le readfile car il a automatiquement été libéré dans la fonction loadSavedGame_Eff
 		//readFile->drop();
-		return;
+		return true;
 	}
 
 	// Désactivé : On ne libère pas le readfile car il a automatiquement été libéré dans la fonction loadSavedGame_Eff
@@ -3672,6 +3709,8 @@ void Game::loadSavedGame(const io::path& adresse)
 		showErrorMessageBox(L"Avertissement", L"Attention :\r\nLe terrain utilisé dans cette sauvegarde n'a pas été trouvé.\r\nDes erreurs pourraient se produire en cours de jeu !");
 
 	LOG(endl << "Jeu chargé : " << adresse.c_str() << endl, ELL_INFORMATION);
+
+	return false;
 }
 bool Game::loadSavedGame_Eff(io::IReadFile* readFile, bool& outSameGameVersion, bool& outStartPaused, core::stringc& outTerrainFilename
 #ifdef USE_RAKNET
@@ -3866,30 +3905,6 @@ void Game::createMainMenu()
 
 	// Efface tous les éléments du système de jeu et du sceneManager (en conservant la caméra RTS si elle existe), et stoppe IrrKlang si autorisé
 	resetGame(true, true, !gameState.keepIrrKlang);
-
-
-
-	// Compile les effets nécessaires de PostProcess
-	if (gameConfig.usePostProcessEffects && postProcessManager)
-	{
-		// Compile les shaders particuliers du jeu : shader de rendu final sur l'écran, shader de tremblement de la caméra et shader de profondeur de la scène
-		postProcessManager->compileParticularShaders(gameConfig.postProcessShakeCameraOnDestroying, gameConfig.postProcessUseDepthRendering);
-
-		// Compile les effets supplémentaires de la configuration du jeu
-		postProcessManager->compileEffects(gameConfig.postProcessEffects);
-	}
-
-	// Initialise XEffects si ses ombres sont activées
-	if (gameConfig.useXEffectsShadows && !xEffects)
-			xEffects = new EffectHandler(device, gameConfig.xEffectsScreenRTTSize,
-			gameConfig.xEffectsUseVSMShadows,
-			gameConfig.xEffectsUseRoundSpotlights,
-			gameConfig.xEffectsUse32BitDepthBuffers,
-			gameConfig.xEffectsFilterType,
-			shaderPreprocessor, screenQuad);
-
-	// Re-vérifie les options de la configuration actuelle du jeu au driver (elles sont dépendantes de l'utilisation de XEffects)
-	applyGameConfigDriverOptions();
 
 
 

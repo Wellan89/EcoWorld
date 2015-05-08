@@ -769,6 +769,7 @@ void CGUIOptionsMenu::applySelectedOptions(bool canShowConfirmationWindow)
 
 	bool haveToRestart = false,
 		haveToReloadXEffects = false,
+		haveToLoadShaders = false,
 		haveToChangeGameConfigMaterial = false,
 		haveToRecreateTextures = false,
 		haveToReloadMainMenu = false,
@@ -1024,15 +1025,15 @@ void CGUIOptionsMenu::applySelectedOptions(bool canShowConfirmationWindow)
 	if (postProcessOptions)
 	{
 		const bool postProcessEffectsEnabled = postProcessOptions->getPostProcessEffectsEnabled();
-		haveToReloadMainMenu |= (gameConfig.usePostProcessEffects != postProcessEffectsEnabled);
+		haveToLoadShaders |= (gameConfig.usePostProcessEffects != postProcessEffectsEnabled);
 		gameConfig.usePostProcessEffects = postProcessEffectsEnabled;
 
 		const bool postProcessCameraShakingEnabled = postProcessOptions->getCameraShakingEnabled();
-		haveToReloadMainMenu |= (gameConfig.postProcessShakeCameraOnDestroying != postProcessCameraShakingEnabled);
+		haveToLoadShaders |= (gameConfig.postProcessShakeCameraOnDestroying != postProcessCameraShakingEnabled);
 		gameConfig.postProcessShakeCameraOnDestroying = postProcessCameraShakingEnabled;
 
 		const bool postProcessNeedDepthPass = postProcessOptions->needDepthPass();
-		haveToReloadMainMenu |= (gameConfig.postProcessUseDepthRendering != postProcessNeedDepthPass);
+		haveToLoadShaders |= (gameConfig.postProcessUseDepthRendering != postProcessNeedDepthPass);
 		gameConfig.postProcessUseDepthRendering = postProcessNeedDepthPass;
 
 		// Indique les nouveaux effets post-rendu activés à la configuration du jeu :
@@ -1044,12 +1045,12 @@ void CGUIOptionsMenu::applySelectedOptions(bool canShowConfirmationWindow)
 			const core::list<core::stringw>::ConstIterator END = enabledEffects.end();
 
 			// Détermine si on doit recréer le menu principal
-			haveToReloadMainMenu |= (enabledEffectsSize != gameConfigEffectsSize);
-			if (!haveToReloadMainMenu)
+			haveToLoadShaders |= (enabledEffectsSize != gameConfigEffectsSize);
+			if (!haveToLoadShaders)
 			{
 				u32 i = 0;
 				for (core::list<core::stringw>::ConstIterator it = enabledEffects.begin(); it != END; ++it, ++i)
-					haveToReloadMainMenu |= ((*it) != gameConfigEffects[i]);
+					haveToLoadShaders |= ((*it) != gameConfigEffects[i]);
 			}
 
 			// Réécrit ces effets dans la configuration du jeu
@@ -1166,9 +1167,8 @@ void CGUIOptionsMenu::applySelectedOptions(bool canShowConfirmationWindow)
 			game->xEffects = NULL;
 		}
 
-		// Et indique qu'on doit changer le matériau de remplacement du driver et recréer le menu principal
-		haveToChangeGameConfigMaterial = true;
-		haveToReloadMainMenu = true;
+		// Et indique qu'on doit charger les shaders
+		haveToLoadShaders = true;
 	}
 
 	// Applique les nouvelles options du matériau de remplacement du driver, ainsi que ses paramêtres de création de texture
@@ -1188,7 +1188,14 @@ void CGUIOptionsMenu::applySelectedOptions(bool canShowConfirmationWindow)
 			// Et indique qu'on doit recharger le menu principal ainsi que le skin de la GUI (sa texture aussi vient d'être détruite) :
 			haveToReloadMainMenu = true;
 			haveToChangeGUISkin = true;
+			haveToLoadShaders = true;
 		}
+	}
+
+	// Charge les nouveaux shaders nécessaires
+	if (haveToLoadShaders)
+	{
+		game->applyGameConfigShadersOptions();
 	}
 
 	if (haveToReloadMainMenu)
