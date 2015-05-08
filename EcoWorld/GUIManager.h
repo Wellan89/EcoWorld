@@ -9,7 +9,7 @@
 
 #ifdef MENU_INFERIEUR_REACTIF
 // Le temps d'attente en ms du menu inférieur avant que celui-ci ne commence à descendre après que la souris l'ait quitté
-#define MENU_INFERIEUR_WAIT_TIME	1000
+#define MENU_INFERIEUR_WAIT_TIME	2000
 
 #else
 

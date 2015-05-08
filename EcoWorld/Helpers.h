@@ -242,7 +242,7 @@ extern EcoWorldLogger ecoWorldLogger;
 #ifdef _DEBUG
 
 // On utilise simplement le flux de sortie standard cout en mode débogage, pour éviter la création d'un fichier de log (facilite ainsi le débogage)
-#define LOG(text, logLevel)	if (EcoWorldLogger::verifyLogLevel(logLevel)) { cout << text << endl; };
+#define LOG(text, logLevel)	{ if (EcoWorldLogger::verifyLogLevel(logLevel)) { cout << text << endl; } }
 
 // Envoie les logs de débogage uniquement
 #define LOG_DEBUG(text, logLevel)	LOG(text, logLevel)
@@ -251,7 +251,7 @@ extern EcoWorldLogger ecoWorldLogger;
 #else
 
 // Utilise le logger du jeu pour envoyer ce texte de log
-#define LOG(text, logLevel)	if (EcoWorldLogger::verifyLogLevel(logLevel)) { stringstream log_str; log_str << text; ecoWorldLogger.log(log_str); };
+#define LOG(text, logLevel)	{ if (EcoWorldLogger::verifyLogLevel(logLevel)) { stringstream log_str; log_str << text; ecoWorldLogger.log(log_str); } }
 
 // Envoie les logs de release uniquement
 #define LOG_DEBUG(text, logLevel)

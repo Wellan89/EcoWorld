@@ -54,7 +54,7 @@ Game::Game() : currentScene(ECS_MAIN_MENU_LOADING), showFPS(false), hasChangedPa
 #endif
  hasChangedGammaLevel(false), isPaused(false), device(0), driver(0), sceneManager(0), gui(0), deviceTimer(0), fileSystem(0), cameraRTS(0),
  postProcessManager(0), postProcessRender(true), realTimeMsCameraStopShaking(0), xEffects(0), xEffectsRender(true), shaderPreprocessor(0), screenQuad(0),
- lastDeviceTime(0), elapsedTimeMs(0), lastRealDeviceTime(0), realElapsedTimeMs(0), elapsedTime(0.0f), lastAutoSaveTime(0), currentWeatherID(WI_sunny),
+ lastDeviceTime(0), elapsedTimeMs(0), lastRealDeviceTime(0), realElapsedTimeMs(0), elapsedTime(0.0f), lastAutoSaveTime(0), currentWeatherID(WI_sunny), isMouseOnMenuInferieur(false),
  isMouseOnGUI(false), lockCamera(false), renderer(0), guiManager(0), vitesseDescenteMenuInferieur(0.0f), realTimeMsStartDescenteMenuInferieur(0), canHandleKeysEvent(false)
 {
 	// Réinitialise l'état de toutes les touches du clavier
@@ -1634,6 +1634,7 @@ bool Game::OnEventGUI(const SEvent& event
 				vitesseDescenteMenuInferieur = -0.001f;
 				realTimeMsStartDescenteMenuInferieur = deviceTimer->getRealTime();
 				menuInferieurStartPosY = guiManager->guiElements.gameGUI.tabGroupBas->getRelativePosition().UpperLeftCorner.Y;
+				isMouseOnMenuInferieur = true;
 			}
 		}
 #endif
@@ -1675,13 +1676,14 @@ bool Game::OnEventGUI(const SEvent& event
 		else if (guiManager->guiElements.gameGUI.tabGroupBas)
 		{
 			// Détermine si la souris vient de passer sur le menu inférieur ou sur l'un de ses enfants
-			if (!calculerIsMouseOnGUI(guiManager->guiElements.gameGUI.tabGroupBas))
+			if (!calculerIsMouseOnGUI(guiManager->guiElements.gameGUI.tabGroupBas) && isMouseOnMenuInferieur)
 			{
 				// Si la souris vient de quitter le menu inférieur et n'est pas non plus sur ses enfants,
 				// on demande sa descente dans quelques millisecondes, quelle que soit la position actuelle de ce menu
 				vitesseDescenteMenuInferieur = 0.0001f;
 				realTimeMsStartDescenteMenuInferieur = deviceTimer->getRealTime() + MENU_INFERIEUR_WAIT_TIME;
 				menuInferieurStartPosY = guiManager->guiElements.gameGUI.tabGroupBas->getRelativePosition().UpperLeftCorner.Y;
+				isMouseOnMenuInferieur = false;
 			}
 		}
 #endif

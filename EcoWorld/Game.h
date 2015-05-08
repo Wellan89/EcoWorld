@@ -304,6 +304,9 @@ public:
 	// Le temps réel à partir duquel la descente du menu inférieur doit commencer
 	u32 realTimeMsStartDescenteMenuInferieur;
 
+	// Booléen déterminant si la souris est sur le menu inférieur (permet de savoir si elle vient de le quitter)
+	bool isMouseOnMenuInferieur;
+
 	// La position de départ en Y du menu inférieur lorsque sa descente a commencée
 	int menuInferieurStartPosY;
 
