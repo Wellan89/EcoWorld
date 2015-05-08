@@ -258,8 +258,8 @@ bool Game::init()
 
 	if (!device)
 	{
-		LOG_DEBUG("Game : La creation du device d'Irrlicht a echouee !", ELL_WARNING);DEBUG_TIMER
-		LOG_RELEASE("ERREUR : La création du device d'Irrlicht a échouée !", ELL_WARNING);DEBUG_TIMER
+		LOG_DEBUG("Game : La creation du device d'Irrlicht a echoue !", ELL_WARNING);DEBUG_TIMER
+		LOG_RELEASE("ERREUR : La création du device d'Irrlicht a échoué !", ELL_WARNING);DEBUG_TIMER
 		return false;DEBUG_TIMER
 	}
 	LOG_DEBUG("Game : Creation du device d'Irrlicht reussie" << endl, ELL_INFORMATION);DEBUG_TIMER
@@ -4110,7 +4110,7 @@ bool Game::joinMultiplayerGame(const char* hostIP)
 				}
 				else if (gamePacket.packetType == RakNetManager::EGPT_MULTIPLAYER_GAME_DATA_FAILED)
 				{
-					// La réception des données du jeu a échouée : on annule le chargement
+					// La réception des données du jeu a échoué : on annule le chargement
 					keepSearchingGameData = false;
 
 					// Supprime ce message de la liste des messages du jeu puis quitte cette boucle

@@ -8,8 +8,12 @@ TODO.h : Liste des tâches à faire, ne pas inclure
 /*
 BUGS Connus :
 
+- Attendre un petit temps après que la souris ait quitté le menu inférieur de la GUI du jeu avant celui-ci ne se mette à descendre
+
 - BUG : Les versions 64 bits compilent mais plantent !
 - Problème : les tests ne se lancent pas en mode DEBUG
+
+- BUG : Le chargement d'une partie ou d'un terrain par double-clic ne fonctionne plus
 
 - BUG : Crash du jeu lors du défilement de la fenêtre d'informations avec la molette de la souris : Bug de la fonction DispatchMessage dans CIrrDeviceWin32::run() !
 

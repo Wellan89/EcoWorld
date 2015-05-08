@@ -14,8 +14,11 @@
 #endif
 #include <RakPeerInterface.h>
 
+// Le nombre de ports consécutifs à tester si le port par défaut est occupé avant d'abandonner la création de RakNet
+#define NB_ESSAIS_PORTS	8
+
 // Macro de LOG personnalisée pour le débogage du module réseau (log avec la priorité ELL_INFORMATION et le préfixe du RakNetManager : RkMgr) :
-#define LOG_RAKNET(text)	LOG("RkMgr: " << text, ELL_INFORMATION)
+#define LOG_RAKNET(text)	LOG("RkMgr: " text, ELL_INFORMATION)
 
 RakNetManager::RakNetManager() : peer(NULL), packetLogger(NULL), currentNetworkState(ENGS_NOT_ENABLED),
 	nextTimeSendMsg_searchGamesPing(0), nextTimeSendMsg_synchronizeGameTime(0)
@@ -51,7 +54,10 @@ bool RakNetManager::init()
 	if (!peer)
 		peer = RakPeerInterface::GetInstance();
 	if (!peer)
+	{
 		LOG("RkMgr: ERROR : Could not create RakNet instance !", ELL_ERROR);
+		return true;
+	}
 
 #if _RAKNET_SUPPORT_PacketLogger==1
 	// Initialise le PacketLogger si nécessaire (lorsque le mode de log est ELL_DEBUG)
@@ -83,7 +89,7 @@ bool RakNetManager::init()
 
 		LOG_RAKNET("Started result : " << result << " (Port : " << port << ")");
 
-	} while (result != RAKNET_STARTED && i <= 8);	// 8 ports consécutifs testés au maximum
+	} while (result != RAKNET_STARTED && i < NB_ESSAIS_PORTS);
 
 	return (result != RAKNET_STARTED);	// Vérifie que l'instance de RakNet a bien pu démarrer
 }
@@ -473,13 +479,16 @@ void RakNetManager::sendMessages_SearchingGames()
 	if (currentNetworkState != ENGS_SEARCHING_GAMES)
 		return;
 
-	// Envoie le message de Ping à toutes les machines du réseau (adresse de Broadcast) et par le port par défaut
+	// Envoie le message de Ping à toutes les machines du réseau (adresse de Broadcast) et par les ports consécutifs par défaut
 	// pour connaître les machines qui hébergent des parties sur ce réseau local
 	const RakNet::Time currentTime = GetTime();
 	if (currentTime >= nextTimeSendMsg_searchGamesPing)
 	{
-		peer->Ping("255.255.255.255", DEFAULT_PORT, true);
-		nextTimeSendMsg_searchGamesPing = currentTime + SEND_MSG_PERIOD_SEARCH_GAMES_PING;	// Envoie ce message toutes les 500 ms
+		for (int i = 0; i < NB_ESSAIS_PORTS; i++)
+			peer->Ping("255.255.255.255", DEFAULT_PORT + i, true);
+
+		// Envoie ce message toutes les 500 ms
+		nextTimeSendMsg_searchGamesPing = currentTime + SEND_MSG_PERIOD_SEARCH_GAMES_PING;
 	}
 
 
