@@ -22,12 +22,47 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="AnimateSequence.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AnimateSequence.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AnimateSequence.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="EcoWorldSystem.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="EcoWorldSystem.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>EcoWorldSystem.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="EventSequence.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="EventSequence.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>EventSequence.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="GUIManager.classdiagram">
       <SubType>Content</SubType>
     </Content>
     <Content Include="GUIManager.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>GUIManager.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="LifeSequence.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LifeSequence.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LifeSequence.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="MessageSequence.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MessageSequence.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MessageSequence.sequencediagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Package1_0041.uml">
       <SubType>Content</SubType>
@@ -50,12 +85,6 @@
     <Content Include="ModelDefinition\Package_0044.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ModelDefinition\Package_0045.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package_0047.uml">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="ModelDefinition\Package_0105.uml">
       <SubType>Content</SubType>
     </Content>
@@ -67,6 +96,27 @@
     </Content>
     <Content Include="ModelDefinition\Package_0120.uml">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="PluginManager.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PluginManager.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PluginManager.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="RenderManager.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RenderManager.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>RenderManager.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="RenderSequence.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RenderSequence.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>RenderSequence.sequencediagram</DependentUpon>
     </Content>
     <Content Include="SceneManager.classdiagram">
       <SubType>Content</SubType>

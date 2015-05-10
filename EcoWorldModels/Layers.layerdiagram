@@ -11,7 +11,7 @@
     <layer Id="6e21a5cc-c6d5-4837-a324-47719e5ab304" name="GUI Manager" />
     <layer Id="40435092-2d35-40c8-b4b2-45573aad36fa" name="Renderer" />
     <layer Id="ed845e66-0dc9-4fae-9e53-b3893e394742" name="Plugin Manager" />
-    <layer Id="aaa8dcc6-6463-4ab2-88fd-259ff006474a" name="Shaders">
+    <layer Id="aaa8dcc6-6463-4ab2-88fd-259ff006474a" name="Pugins">
       <dependencyToLayers>
         <dependencyFromLayerToLayer Id="b11ff660-91be-477e-8332-c8c620bf20dd" direction="Forward">
           <layerMoniker Id="ed845e66-0dc9-4fae-9e53-b3893e394742" />

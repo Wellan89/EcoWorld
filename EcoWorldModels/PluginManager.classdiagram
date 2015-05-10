@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="89c0bef7-635e-47a0-b9e1-72bafea4ce75" name="PluginManager" linkedPackageId="c6b479c5-a85f-4586-9090-78703136d22c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="a353b491-fbd8-4e0e-a74c-087717869c6f" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="516ee810-d134-49ea-b9de-c5e9b897d3a9" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="41d8443f-e5d5-4dce-bfc7-621eabfa3285">
+          <propertyInstance Id="c1502a5a-cf0e-42ea-bac4-e070db45679e" name="BaseName">
+            <elementDefinition Id="3ca5dae0-47bf-44c6-99f8-818e38be7dd5" />
+          </propertyInstance>
+          <elementDefinition Id="f9c569e0-23c7-4758-8b5f-af7ae34e8291" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b28d372b-374e-4e4e-abc2-a331bc34a137">
+          <propertyInstance Id="b525b51b-8750-4652-b606-dadf1f09af18" name="ClrAttributes">
+            <elementDefinition Id="4e946049-1227-4c27-a943-268ff1fd7324" />
+          </propertyInstance>
+          <elementDefinition Id="5fe54eef-8d2d-4777-a67f-2bcddbdc8dbf" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="e8829d33-6529-4f18-b9bc-edf63119bbd1">
+          <propertyInstance Id="f2d7c81b-ddd6-4e13-82d5-c11cfb803082" name="Usings">
+            <elementDefinition Id="ad33e1ad-e124-44ac-b8a2-e54a0ab01fdb" />
+          </propertyInstance>
+          <elementDefinition Id="186dc6de-dd18-4241-a93a-ac4a7a2ff200" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="4e63685e-14dd-4595-a867-084ec4d78b9f" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="0c2fbfca-ebe7-468a-b6d4-1f720d3e9bc7" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="16b670ad-d8e4-4f3c-a7e6-834e0ad2d2dc">
+          <propertyInstance Id="8b4b7d19-7853-45c7-8b25-8bd5728eb956" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="7eaed157-6cf9-4d92-8776-5ff0e417d3fd" />
+          </propertyInstance>
+          <elementDefinition Id="85f9df72-0636-4d62-bf56-f389ea35ce5e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="00df34a5-4916-49b7-8642-91f9571babb1">
+          <propertyInstance Id="60aed952-5d7d-4c2e-827a-82b2feb42004" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="ce0059fa-f4d1-4281-815f-ad750cf51465" />
+          </propertyInstance>
+          <elementDefinition Id="749a92c7-dd35-4f36-a53e-acb3ec4c2edb" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="1a64ca11-0c3e-44e0-837b-555e46af7fc4">
+          <propertyInstance Id="accde00f-771e-4bde-b926-1eb13ba3e0d5" name="ProjectPath" value="ClassTemplate=..\EcoWorldModelsLib\EcoWorldModelsLib.csproj|EnumTemplate=..\EcoWorldModelsLib\EcoWorldModelsLib.csproj|InterfaceTemplate=..\EcoWorldModelsLib\EcoWorldModelsLib.csproj|StructTemplate=..\EcoWorldModelsLib\EcoWorldModelsLib.csproj">
+            <elementDefinition Id="f5e2fdbc-9bef-476d-9e66-cd5deac188f5" />
+          </propertyInstance>
+          <elementDefinition Id="7b79d50d-874a-4e42-b4fc-8ec47e3b52ed" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="91f6b2f4-a5df-4216-99b8-e668c2e9caf9">
+          <propertyInstance Id="630f7649-07cf-4323-98d7-5245e964294a" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="9bea6977-b7a3-4394-94e8-6d5c3238b382" />
+          </propertyInstance>
+          <elementDefinition Id="89b5d965-c49e-4927-bf4b-841b5b750b1e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="93c88e45-d4d4-4808-a8eb-34d7f54b5312">
+          <propertyInstance Id="8245827a-7326-4824-a9c5-90f234f8c870" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="d9620abd-5bf4-4b6e-9b20-9059691c8ad0" />
+          </propertyInstance>
+          <elementDefinition Id="b5b3c2a0-a0c2-487f-b682-f86ada7a0af0" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d24d3ad8-0497-4b1a-acdd-8c750946e569">
+          <propertyInstance Id="c24aa498-7b98-42ba-b829-a69d223f6be2" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="a71acd5f-daca-4b28-9448-999d710662fa" />
+          </propertyInstance>
+          <elementDefinition Id="9234f903-999b-4210-a725-8fbef7294a07" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="cecc4407-8171-430d-bc07-1b03a279d269">
+          <propertyInstance Id="e964f319-758f-493e-9b2d-b6b5b33b19a7" name="Parameters">
+            <elementDefinition Id="7898cb0a-a693-4d10-b5ba-badefb97787d" />
+          </propertyInstance>
+          <elementDefinition Id="c63c8610-d931-4950-a7db-9d93d6d427da" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="c1c97e9d-bc8f-426e-8bdf-3a081a5d1851" name="Plugins">
+        <elementDefinition Id="db5b6e3e-a454-4dc2-b9e4-3a7e96a949c9" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="c2749d79-c3d9-4996-98f2-2c479aafefe5" name="PluginManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7c13ca85-11b9-459f-a263-fbdfca66e251" />
+              <targetEnds>
+                <association Id="1cb7c6d6-dad8-43b0-a650-2af7643c3787" isDerived="false" sourceEndRoleName="PluginManager" targetEndRoleName="LoadSavePlugin" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="225cebe0-37d1-4de0-8046-ad7e92732693" LastKnownName="LoadSavePlugin" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5701325e-282f-4dce-8f06-9187d03dba3e" name="PluginManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="02cc88e1-f1e1-45e3-8674-74905bd289f0" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="9afa0126-b95e-418c-b9cf-2948e92c76a2" name="LoadSavePlugin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="03c81517-9a62-4b45-9c9a-3833bd65155e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="551197bc-1009-4dc5-ab1d-b1871fd969ab" />
+                </association>
+                <association Id="86b39a75-aabf-4a0c-b8d6-5c00c8bb3a38" isDerived="false" sourceEndRoleName="PluginManager" targetEndRoleName="MultiplayerPlugin" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="89d3fab6-4e39-476b-b64a-badb26e4003d" LastKnownName="MultiplayerPlugin" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="be2ff574-9b7d-4413-aadc-052e3c2fd5b2" name="PluginManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="60884c5a-4bd4-40e3-9279-b7a893a3fc2f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="d3290276-ef2d-4d62-960e-990d2272db67" name="MultiplayerPlugin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="a0772d79-bb2a-488a-9062-5c396b52b11c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="d8d7f0c1-d620-4148-82e1-cdf641c67bad" />
+                </association>
+                <association Id="9d0b8221-1c96-409a-880d-de2f35115d57" isDerived="false" sourceEndRoleName="PluginManager" targetEndRoleName="ConfigPlugin" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="aa5f13a5-7fa0-4951-a8f4-08c90aa02dfa" LastKnownName="OptionsPlugin" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="3f3ef680-fd35-4ceb-897d-56729c961829" name="PluginManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="8e4ae7b8-7ce2-4609-8e83-cd7240ccee5b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="8d1745aa-372c-47a3-af47-90ef7858c5f0" name="ConfigPlugin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="2d2b7314-15aa-4312-b9be-407b2db18f99" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="34784942-9c91-43a5-9308-772d966289ad" />
+                </association>
+                <association Id="3574369f-739c-4686-a7e8-5cc5e8d39c54" isDerived="false" sourceEndRoleName="PluginManager" targetEndRoleName="PostProcessPlugin" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="bf6212f1-4ffb-4a87-8330-18770af713c8" LastKnownName="PostProcessPlugin" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="267e9f7c-886f-46ea-a8e9-f48c576bac5a" name="PluginManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="3aa61ea5-e77d-49c0-8ad7-e075f20914a4" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2060a750-0613-45ed-a668-12dfcd10d759" name="PostProcessPlugin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="580c3d55-52d4-4212-a93b-b77ee407cca5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="25bc8a41-4e70-484d-b4f9-e80a6bbbc780" />
+                </association>
+                <association Id="94d64681-7ef8-4069-8e67-971cd71a15f6" isDerived="false" sourceEndRoleName="PluginManager" targetEndRoleName="XEffectsPlugin" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="e6a6490c-4336-44e3-920f-c8d828e745b8" LastKnownName="XEffectsPlugin" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="f3aa4bd4-2b96-48c9-aceb-830df0d7f956" name="PluginManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="6295f271-b29f-4cd8-a0ac-2053844c523e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="63394f7c-205b-4aed-8349-92ecca26f61a" name="XEffectsPlugin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="8598318b-2136-4a68-9907-658d0b7d9c86" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6c30859a-a682-47ac-b78e-db4c9b43680b" />
+                </association>
+                <association Id="e042f1f6-0051-44cb-bb33-e625030ba9b4" isDerived="false" sourceEndRoleName="PluginManager" targetEndRoleName="ParticlesPlugin" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="538ab628-06b2-45ec-a29a-12356e91092f" LastKnownName="ParticlesPlugin" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="bdf2f15b-66be-4294-b05c-fa118b84af2a" name="PluginManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="542fef38-385c-4f73-97c4-5d868c51814a" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="953396b3-9475-4332-bd91-f2c653622433" name="ParticlesPlugin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="34897823-3947-4940-9c62-8613802ddc75" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="78381f82-3148-4344-b934-300740185937" />
+                </association>
+                <association Id="703b2271-d691-4269-a2ba-ca772393d75c" isDerived="false" sourceEndRoleName="PluginManager" targetEndRoleName="TreesPlugin" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="fa846a2e-7a3d-4839-9951-8efd2987766c" LastKnownName="TreesFactory" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="8613db6d-16cb-4b4f-ba93-077c02da6164" name="PluginManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="70296631-fd01-49f1-bf03-39085b20d467" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="cb279362-1386-48fb-bcc1-c4b7528c58af" name="TreesPlugin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="39dc1800-80a2-40b2-818a-34850f79789d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="8148ea4c-4261-4f58-bbd2-f2adea1af03d" />
+                </association>
+                <association Id="4541ed7a-47cc-411f-ba3a-708f78961f79" isDerived="false" sourceEndRoleName="PluginManager" targetEndRoleName="ObjectsPlugin" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="9b64b1de-3947-4fc4-9b7e-2fe40c05aebf" LastKnownName="ObjectsLoader" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="250b8a48-6a40-496d-9c77-d358518aaed6" name="PluginManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="b8c9f2f7-1697-4a7c-930f-8c5a845f5450" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="65f9a499-0c5b-4c33-8bf8-e9f132cb24a3" name="ObjectsPlugin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="85b88fbf-0d02-4ba0-894f-c3565cbb52c6" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="0404ea70-370d-4a69-905f-9a12c34e340a" />
+                </association>
+                <association Id="1448b4ca-3c62-4cb0-ba3b-7ee3e225eae5" isDerived="false" sourceEndRoleName="PluginManager" targetEndRoleName="TerrainPlugin" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="bfe3252b-1e39-4249-96b7-d9de1cf3b480" LastKnownName="TerrainManager" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ef08b68d-3ea3-49dd-a99c-239be0db1e58" name="PluginManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="ca328062-ed55-45b4-a339-bb6832b0b115" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e85cb216-c92e-40cd-92a3-b53a4e320da2" name="TerrainPlugin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="b0987e2d-c576-4711-8447-c11fd81425cb" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="66ff0479-76c7-4e88-b986-01554b7ef6de" />
+                </association>
+              </targetEnds>
+              <ownedOperationsInternal>
+                <operation Id="60615320-d369-4fa3-85ef-6fc557ff59a7" name="PostMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="64e1174f-88c1-4586-ad04-6ef6f3e6494f" />
+                </operation>
+                <operation Id="905f01ca-d6e8-4e12-89fb-46e053b26b78" name="ProcessMsgs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="6de8e468-ff5f-45f9-8dc5-cfb5e218d399" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="78fed4b4-e98c-46e4-a982-bdcd2d8873b2" name="Plugin" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="4cf877d2-9483-43eb-b9b3-74d4b00c185c" />
+              <ownedLiterals>
+                <enumerationLiteral Id="9c61df7e-057b-4fc7-9280-7a33af84eaac" name="System">
+                  <elementDefinition Id="db6913f0-75ad-434b-95d3-746fc9f699b7" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="02bdd622-d9dc-465d-8919-b107a1bfb07f" name="LoadSave">
+                  <elementDefinition Id="39d8d796-936a-4fc2-9f80-549edd9b9dff" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="4214cf62-2747-4147-b0eb-dd7fa9a98241" name="Multiplayer">
+                  <elementDefinition Id="b207c908-73ce-49b2-a4e4-f22064ebda72" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="e4be254b-b23b-44b2-8214-6386ee7c1bdc" name="Config">
+                  <elementDefinition Id="04e38c5a-ffe9-4e76-aa5d-88cccfbfd588" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="d7bb6824-034e-4170-be88-d0c40527b688" name="PostProcess">
+                  <elementDefinition Id="4629dbe3-064e-4379-b1ce-4d7ffedae23f" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="da9ff442-3042-4b42-afb8-22aa56e828e7" name="XEffects">
+                  <elementDefinition Id="0bd96149-9641-40a9-80b9-7ec155d899d1" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="9ca58a79-2945-4c7f-b1d5-889643b10de6" name="Particles">
+                  <elementDefinition Id="2cc731d2-1620-40dc-be6e-62f50e07e5f2" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="db8f1f75-8cb0-4c02-8612-f0a22a6f62d6" name="Trees">
+                  <elementDefinition Id="b5585ae3-3a79-4dea-b4bd-222a38e7d11f" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="a68746c8-5c25-4da3-886a-58f6e1a108d5" name="Objects">
+                  <elementDefinition Id="bf9f4095-e659-4f74-bbef-8c66e19a613c" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="6c7cd8fe-3ab5-4b3d-966c-4bd69b8505dc" name="Terrain">
+                  <elementDefinition Id="ee6cd6ac-1881-4e8c-8b40-a2aaf2812558" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="dfd6c27b-ff55-474c-aee9-633337d1e727" name="Messages" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="48ad42ba-5876-4a00-a120-56bac2643581" />
+            </enumeration>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <class Id="225cebe0-37d1-4de0-8046-ad7e92732693" name="LoadSavePlugin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="73dce21f-09df-48c0-bd9a-9fcfac58e73b" />
+        <suppliersInternal>
+          <interfaceRealization Id="177ae3af-ba8b-417d-be6b-bc999bd4f577">
+            <interfaceMoniker Id="aff80710-0bc3-4197-bc53-09cee32f5e44" LastKnownName="IPlugin" />
+            <elementDefinition Id="8ca40072-9646-4054-aade-619efbef0a88" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="c6a43f9e-dc9d-4d13-a36a-846ee266fa3e" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b49aff1-094e-40e1-a80f-627bc9378007" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0425f2f0-7a4a-4a51-9709-54df8f03bbd3" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="16e50cbb-4b4b-44ac-ac03-cbc0fb9bc88b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b26e8d10-d800-47d5-820f-17e7d4760d9c" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b8cb9415-9574-4bed-9150-3886b52f9771" />
+          </operation>
+          <operation Id="689a8cb6-9f9b-4177-8684-f7e2767043ef" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fb29598c-38a4-4eeb-aad2-c6fc9ae146da" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ea749def-f8bf-4a13-a25f-f44f1466eb7a" name="guiEvent" direction="In" isUnique="false">
+                  <elementDefinition Id="4e3505a2-1865-441d-8740-0cb9293f5783" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class Id="89d3fab6-4e39-476b-b64a-badb26e4003d" name="MultiplayerPlugin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="99bcbaaf-d72b-43a0-ab92-6b19ea7afd21" />
+        <suppliersInternal>
+          <interfaceRealization Id="42590a6b-7103-4e8a-8479-0e07a71fbd35">
+            <interfaceMoniker Id="aff80710-0bc3-4197-bc53-09cee32f5e44" LastKnownName="IPlugin" />
+            <elementDefinition Id="66c5d8a9-c0e1-4064-a1bd-67d88ad0158b" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="642ce13c-7864-4f20-9a97-287e06f0434e" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ded90df2-23d6-47d8-b577-8f8187c757fd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b8e44354-1dc4-41ad-8366-b88972c71ce5" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="79a6e2b0-869b-4bf1-94bb-56fdab23a3ab" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4df11b70-3996-46eb-8224-8090694c05f4" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="50ce6f75-453c-46b0-a2c9-8a3409296192" />
+          </operation>
+          <operation Id="080f04a6-40ad-419a-98ba-6e4ba7389c89" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0e916025-f546-4300-b6e1-7f1b7271e1c1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ed236391-bd0d-47af-a20d-328de1696802" name="guiEvent" direction="In" isUnique="false">
+                  <elementDefinition Id="8fe993d3-3ee5-44b3-8e33-457b4397a7b7" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class Id="aa5f13a5-7fa0-4951-a8f4-08c90aa02dfa" name="OptionsPlugin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d2357bac-caec-43aa-8b6a-c2828e868369" />
+        <suppliersInternal>
+          <interfaceRealization Id="1cd7634b-b1fc-46ab-86d8-fceaef7a8d4d">
+            <interfaceMoniker Id="aff80710-0bc3-4197-bc53-09cee32f5e44" LastKnownName="IPlugin" />
+            <elementDefinition Id="bf97c592-d2dd-4246-b595-4e71ac06ec36" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="264d8af6-a9b1-4876-a138-db522e14deff" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="84afa1f6-f0a4-465f-9a05-a5ae1cabcc30" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="aa5dd32d-d281-4f0d-b89c-0af7f894b587" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="a626419b-e42c-4f12-8a55-d3343cb39380" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="199c312e-5cdc-4584-8b2a-4a0a716c33e6" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="69c4108a-dbea-4de4-ac63-31c83f62beaf" />
+          </operation>
+          <operation Id="74260df1-8397-4f61-bd45-cf859d06999b" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3f45530c-113c-437e-96aa-b0eb665e5f1f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="498f9d5c-d976-428b-9c02-fe67513ae93a" name="guiEvent" direction="In" isUnique="false">
+                  <elementDefinition Id="d513938c-73b9-4c7b-af66-3c5cf2e5d168" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class Id="bf6212f1-4ffb-4a87-8330-18770af713c8" name="PostProcessPlugin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7e038e3c-ded8-4367-a28c-1b8ab8377be7" />
+        <suppliersInternal>
+          <interfaceRealization Id="99978027-1438-4482-9883-7e01f0034a77">
+            <interfaceMoniker Id="aff80710-0bc3-4197-bc53-09cee32f5e44" LastKnownName="IPlugin" />
+            <elementDefinition Id="db13ab99-0cb8-4fa8-a34c-c43d730a6ffa" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="6ab2fd00-8fbf-46ac-9f5d-8a096579138f" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="67e5197c-d666-4827-b7a3-ca699eece529" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d8fe062e-e3d7-42a8-a3e3-8c4103752155" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="efec7256-7854-41ba-aa6e-0aa10030f181" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cd1f3763-bc53-4f07-988d-f1cf94537d60" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6f0efd88-9a4a-45f1-a66c-9013450f3920" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b6bb79b6-b365-4d04-857d-2e0014647f91" name="timeMs" direction="In" isUnique="false">
+                  <elementDefinition Id="79b226c8-a194-4e9a-9555-a1bd451ccd34" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8ca9ba9b-73b7-4d80-80d4-5993a79995e6" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="831a1863-3904-49b1-9fe4-8e928c17da70" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="251f68aa-e6dc-430c-a235-152ad7d0c399" name="RenderPass" direction="In" isUnique="false">
+                  <elementDefinition Id="4f5985e1-fbb9-401a-88e1-c2c5001ce170" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class Id="e6a6490c-4336-44e3-920f-c8d828e745b8" name="XEffectsPlugin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="14a88357-9256-4179-9755-624477ee5a17" />
+        <suppliersInternal>
+          <interfaceRealization Id="45371100-d7ec-4f87-a824-112e409ac62d">
+            <interfaceMoniker Id="aff80710-0bc3-4197-bc53-09cee32f5e44" LastKnownName="IPlugin" />
+            <elementDefinition Id="a649885a-4ca5-4e90-b3fb-f338c247f276" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="f0cf6361-e104-4a36-920e-e40c8245c3b9" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9f4f0990-1921-405e-a7f4-9e02bcb7e92c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="01cd9448-a24c-4085-a279-eaaf987334cc" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="393bbf27-b50a-4822-9497-030f7afa6778" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e75084d9-1e9b-44e1-96b6-d1f8faabae9e" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3209a9f7-8d84-4d50-9973-30e442682366" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5dcc16ef-c51f-4efb-a07c-8224eed20525" name="timeMs" direction="In" isUnique="false">
+                  <elementDefinition Id="1bdbfefb-7c01-4427-bb5c-df95e682e8cf" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="076dc343-12a7-4571-9ae2-68da8518e996" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="debca23a-1af7-4f27-8804-03d96824eb82" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="77ae71d6-29fa-4c4e-ba52-ea4d54a419d8" name="RenderPass" direction="In" isUnique="false">
+                  <elementDefinition Id="a321f8d5-f54b-4e93-b0e9-971df42f19ca" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class Id="538ab628-06b2-45ec-a29a-12356e91092f" name="ParticlesPlugin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="09d80b54-b935-4391-9ed8-ee057cb284f1" />
+        <suppliersInternal>
+          <interfaceRealization Id="82b8bcf0-258a-4816-89cc-6dfaf965a61b">
+            <interfaceMoniker Id="aff80710-0bc3-4197-bc53-09cee32f5e44" LastKnownName="IPlugin" />
+            <elementDefinition Id="1cedf3e4-e682-4dc1-b879-9ea085e057e5" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="d42977ce-70a7-46d8-a334-6150478be9c7" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="516264b7-a884-4a2d-a2b5-74ac18cdf94a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="03fc03f9-f4c0-4fb3-bc6a-ad9762125530" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="2fdaadfb-bb72-4a2d-8dfe-76a77dd0a613" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fc3c62c6-aafc-453b-bacb-dca8025164a9" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="df837fa0-b28a-4118-b656-40c0b61f5aa0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="93d0a4e3-e1ba-4f80-800f-d8d0b11ce378" name="timeMs" direction="In" isUnique="false">
+                  <elementDefinition Id="584ca55f-4f8d-4802-aed8-67cd792fb833" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bf7b25d6-a4e0-491a-8d6f-29cef476b547" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="055193bf-b938-4aa8-bff8-39d6487c2dc8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="67ca686c-844e-4f4a-a907-48aabe773ad6" name="RenderPass" direction="In" isUnique="false">
+                  <elementDefinition Id="b5e6e526-6f9d-41b6-8fda-7b802dc0f98a" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class Id="fa846a2e-7a3d-4839-9951-8efd2987766c" name="TreesFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ad579fe0-b1d5-440e-af1a-73d3ceb68a55" />
+        <suppliersInternal>
+          <interfaceRealization Id="87c2d40f-8278-4276-9acf-a5994129cddc">
+            <interfaceMoniker Id="aff80710-0bc3-4197-bc53-09cee32f5e44" LastKnownName="IPlugin" />
+            <elementDefinition Id="403d218c-6f55-4249-b528-59e1725a59e2" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="02b10105-933a-4a28-999f-a0e6b991a351" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5943870d-d46a-4a35-bbfa-9fde63bbf2e2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f8b193f6-3e9f-4c8d-9591-db25ed9d10ee" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="30ab1e80-12d2-4e9d-b7dc-8aa5a3a4b0da" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="da54d911-f574-40a6-889f-ed3cb9b0634f" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="060631c0-3a90-474b-a36b-0fd1cef8c0df" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d82a93e8-9a05-46f7-97a8-64b5f34323e7" name="timeMs" direction="In" isUnique="false">
+                  <elementDefinition Id="8875a67e-e034-498d-ae99-d006c7df2334" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8e3e768f-5cf9-4d12-9b08-25da8171a374" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7e8ac881-d97f-4597-8bc4-62e0ce7d49ef" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d1c0ac4d-cc93-4eab-98b8-6d6b87e09436" name="RenderPass" direction="In" isUnique="false">
+                  <elementDefinition Id="ef07b207-3b18-4e4f-89c6-52e72728c20c" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class Id="bfe3252b-1e39-4249-96b7-d9de1cf3b480" name="TerrainManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ad36a6c5-6d4b-49c7-a0ed-f22e080b8b54" />
+        <suppliersInternal>
+          <interfaceRealization Id="31b866ec-927a-4aaa-a2f4-4a1b9eb91ba1">
+            <interfaceMoniker Id="aff80710-0bc3-4197-bc53-09cee32f5e44" LastKnownName="IPlugin" />
+            <elementDefinition Id="cddb84d5-d791-4392-b4c1-27ebb2af9203" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="c1a6747c-0b40-4e51-8ad6-f8f68e3c8133" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="65a76e52-5ab7-4132-9e4a-57b29104f66d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fc44ccc6-f8ec-4f8e-959a-674e056a73e1" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="8bb69eb0-7442-4516-aad6-d8707cf63487" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="27d6986f-ea94-4971-ac6a-bae5740145ca" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4d9e8432-d145-4783-b60f-d779d13b069e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="921f3182-abe1-45eb-9424-1287bed113c8" name="timeMs" direction="In" isUnique="false">
+                  <elementDefinition Id="b9aa2a52-bee7-4280-9653-83c14c1d61ec" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3d79efe3-5158-4887-aa62-c723b525552b" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="281cdb87-56ef-4e2b-a019-e56d78cad4d3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="de82fc7e-5efd-4bfc-9380-848a55e6b5ac" name="RenderPass" direction="In" isUnique="false">
+                  <elementDefinition Id="7871e8c1-57d1-4e2a-8c04-ad91849a2b5e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class Id="9b64b1de-3947-4fc4-9b7e-2fe40c05aebf" name="ObjectsLoader" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dc516334-9fb5-4ed7-9f43-688ebe45557c" />
+        <suppliersInternal>
+          <interfaceRealization Id="ba360329-ac5c-4182-8315-d69739c21074">
+            <interfaceMoniker Id="aff80710-0bc3-4197-bc53-09cee32f5e44" LastKnownName="IPlugin" />
+            <elementDefinition Id="e2d63926-6423-4005-bfcb-3bfa2c4d024a" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="2747eaec-6957-47af-a58f-746b540c0705" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="de238504-36e8-4268-a829-43b78bf4d804" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="720d2738-d023-4211-a1c9-0ee0ad17397d" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="dc55d179-b678-40bf-a12d-4e8f64fde950" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0076d501-fbae-4327-9160-52132612c6c8" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="28e2c2a2-cbd6-4010-a367-a9975dd6acfa" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2cda3df4-ab09-403d-b9c8-682076f54785" name="timeMs" direction="In" isUnique="false">
+                  <elementDefinition Id="8c767c80-9e54-4181-954e-012f38aef4ef" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f872652b-8229-4fd8-b21a-3b8de1996684" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6b908b2a-cef1-4a12-a161-d3b322309d88" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="78d5cebd-695d-4a78-a084-f77e5fbdae43" name="RenderPass" direction="In" isUnique="false">
+                  <elementDefinition Id="3db9f5a5-4b6f-448c-b2f5-66a506264571" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface Id="aff80710-0bc3-4197-bc53-09cee32f5e44" name="IPlugin" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7511a273-b17c-4617-adff-e0b7c274ae7a" />
+        <ownedOperations>
+          <operation Id="10b77aa9-fa61-46d7-b32d-22c57b6c7267" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7df29b83-7c03-4b17-8ed7-e98059aef344" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e946d9f4-6db0-4d42-b75a-7d478472a089" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="a2c8c9e6-1d89-40be-a7b1-b84c234e3744" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c6b479c5-a85f-4586-9090-78703136d22c" name="EcoWorldModels">
+    <elementDefinition Id="8afb82f3-dbcc-4311-8162-2c341419be93" />
+    <profileInstances>
+      <packageHasProfileInstances Id="78141dac-4a21-4b9e-8ad2-df820b8a6a56">
+        <profileInstance Id="a3666667-05fc-441f-af46-80a4c626ee4c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0c8334cc-df78-47b6-bcde-ebbdb1a47df2">
+        <profileInstance Id="7314484a-b7d0-4d1e-874e-f9433fbbbd07" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="71a4920e-b078-4944-b1dd-d1bd9769050b">
+        <profileInstance Id="9169ff75-cb82-4abe-8840-bffa70e2c6ae" name="CSharpProfile">
+          <elementDefinition Id="187512f4-2939-4a9e-9f81-18d06c986bf3" />
+        </profileInstance>
+        <elementDefinition Id="5cf654ca-0297-44a0-927f-6bf9bbdfa04a" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="72369409-59b5-4970-84d3-4f00daad9816">
+        <profileInstance Id="48bc7509-1ed1-4367-a2f1-09f5ced9ed00" name="TextTemplateBindings">
+          <elementDefinition Id="cec2143c-2c99-4c08-8569-9171fe37c319" />
+        </profileInstance>
+        <elementDefinition Id="b12236da-160b-466a-bc37-8a6daa3b1116" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

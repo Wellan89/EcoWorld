@@ -32,10 +32,10 @@
     <layerShape Id="ddc18308-5121-43c1-837f-f82fc99cf7fe" absoluteBounds="6.125, 4, 2, 0.75" customColor="161, 199, 231">
       <layerMoniker Id="ed845e66-0dc9-4fae-9e53-b3893e394742" />
     </layerShape>
-    <layerShape Id="87f04066-2e8c-441e-9ec5-3b77ff1ed000" absoluteBounds="8.5, 3.5, 1.375, 0.25" customColor="161, 199, 231">
+    <layerShape Id="87f04066-2e8c-441e-9ec5-3b77ff1ed000" absoluteBounds="8.5, 4.25, 1.375, 0.25" customColor="161, 199, 231">
       <layerMoniker Id="aaa8dcc6-6463-4ab2-88fd-259ff006474a" />
     </layerShape>
-    <dependencyConnector edgePoints="[(8.5 : 3.75); (8.125 : 4)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
+    <dependencyConnector edgePoints="[(8.5 : 4.375); (8.125 : 4.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
       <dependencyFromLayerToLayerMoniker Id="b11ff660-91be-477e-8332-c8c620bf20dd" />
       <relativeChildShapes />
       <nodes>

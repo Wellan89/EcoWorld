@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="db5b6e3e-a454-4dc2-b9e4-3a7e96a949c9"
   name="Plugins" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -11,42 +11,502 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <interfaceRealization
-            Id="51fadb12-e44b-4d6a-9539-0be2b8138faa">
-            <interfaceMoniker
-              Id="0d0ed91d-0206-4a86-8c64-e7a1565e6e4a"
-              LastKnownName="Renderable"
+        <targetEnds>
+          <association
+            Id="551197bc-1009-4dc5-ab1d-b1871fd969ab"
+            isDerived="false"
+            sourceEndRoleName="PluginManager"
+            targetEndRoleName="LoadSavePlugin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="73dce21f-09df-48c0-bd9a-9fcfac58e73b"
+              LastKnownName="LoadSavePlugin"
               LastKnownLocation="Package_0120.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="02cc88e1-f1e1-45e3-8674-74905bd289f0"
+                  name="PluginManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="03c81517-9a62-4b45-9c9a-3833bd65155e"
+                  name="LoadSavePlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d8d7f0c1-d620-4148-82e1-cdf641c67bad"
+            isDerived="false"
+            sourceEndRoleName="PluginManager"
+            targetEndRoleName="MultiplayerPlugin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="99bcbaaf-d72b-43a0-ab92-6b19ea7afd21"
+              LastKnownName="MultiplayerPlugin"
+              LastKnownLocation="Package_0120.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="60884c5a-4bd4-40e3-9279-b7a893a3fc2f"
+                  name="PluginManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a0772d79-bb2a-488a-9062-5c396b52b11c"
+                  name="MultiplayerPlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="34784942-9c91-43a5-9308-772d966289ad"
+            isDerived="false"
+            sourceEndRoleName="PluginManager"
+            targetEndRoleName="ConfigPlugin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d2357bac-caec-43aa-8b6a-c2828e868369"
+              LastKnownName="OptionsPlugin"
+              LastKnownLocation="Package_0120.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e4ae7b8-7ce2-4609-8e83-cd7240ccee5b"
+                  name="PluginManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d2b7314-15aa-4312-b9be-407b2db18f99"
+                  name="ConfigPlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="25bc8a41-4e70-484d-b4f9-e80a6bbbc780"
+            isDerived="false"
+            sourceEndRoleName="PluginManager"
+            targetEndRoleName="PostProcessPlugin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7e038e3c-ded8-4367-a28c-1b8ab8377be7"
+              LastKnownName="PostProcessPlugin"
+              LastKnownLocation="Package1_0044.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3aa61ea5-e77d-49c0-8ad7-e075f20914a4"
+                  name="PluginManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="580c3d55-52d4-4212-a93b-b77ee407cca5"
+                  name="PostProcessPlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6c30859a-a682-47ac-b78e-db4c9b43680b"
+            isDerived="false"
+            sourceEndRoleName="PluginManager"
+            targetEndRoleName="XEffectsPlugin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="14a88357-9256-4179-9755-624477ee5a17"
+              LastKnownName="XEffectsPlugin"
+              LastKnownLocation="Package1_0044.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6295f271-b29f-4cd8-a0ac-2053844c523e"
+                  name="PluginManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8598318b-2136-4a68-9907-658d0b7d9c86"
+                  name="XEffectsPlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="78381f82-3148-4344-b934-300740185937"
+            isDerived="false"
+            sourceEndRoleName="PluginManager"
+            targetEndRoleName="ParticlesPlugin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="09d80b54-b935-4391-9ed8-ee057cb284f1"
+              LastKnownName="ParticlesPlugin"
+              LastKnownLocation="Package1_0044.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="542fef38-385c-4f73-97c4-5d868c51814a"
+                  name="PluginManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="34897823-3947-4940-9c62-8613802ddc75"
+                  name="ParticlesPlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8148ea4c-4261-4f58-bbd2-f2adea1af03d"
+            isDerived="false"
+            sourceEndRoleName="PluginManager"
+            targetEndRoleName="TreesPlugin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ad579fe0-b1d5-440e-af1a-73d3ceb68a55"
+              LastKnownName="TreesFactory"
+              LastKnownLocation="Package1_0044.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="70296631-fd01-49f1-bf03-39085b20d467"
+                  name="PluginManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="39dc1800-80a2-40b2-818a-34850f79789d"
+                  name="TreesPlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0404ea70-370d-4a69-905f-9a12c34e340a"
+            isDerived="false"
+            sourceEndRoleName="PluginManager"
+            targetEndRoleName="ObjectsPlugin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="dc516334-9fb5-4ed7-9f43-688ebe45557c"
+              LastKnownName="ObjectsLoader"
+              LastKnownLocation="Package1_0044.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b8c9f2f7-1697-4a7c-930f-8c5a845f5450"
+                  name="PluginManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="85b88fbf-0d02-4ba0-894f-c3565cbb52c6"
+                  name="ObjectsPlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="66ff0479-76c7-4e88-b986-01554b7ef6de"
+            isDerived="false"
+            sourceEndRoleName="PluginManager"
+            targetEndRoleName="TerrainPlugin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ad36a6c5-6d4b-49c7-a0ed-f22e080b8b54"
+              LastKnownName="TerrainManager"
+              LastKnownLocation="Package1_0044.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca328062-ed55-45b4-a339-bb6832b0b115"
+                  name="PluginManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b0987e2d-c576-4711-8447-c11fd81425cb"
+                  name="TerrainPlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="638110b6-e087-4e2f-8910-5d997c3bfae8"
+            name="plugins"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="f0afd854-71c9-4c4d-a730-9ae323718515"
-            name="Animate"
+            Id="64e1174f-88c1-4586-ad04-6ef6f3e6494f"
+            name="postMsg"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="c837755b-5dba-456d-919b-8756bbcf5949"
-            name="OnEvent"
+            Id="6de8e468-ff5f-45f9-8dc5-cfb5e218d399"
+            name="processMsgs"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="0279507f-97e6-425a-82e6-9750c9004037"
-            name="Render"
+            Id="bb088f71-55c4-414e-8fa4-7864892d7781"
+            name="register"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="65a757de-0f9b-42b0-b0df-aa423530fb49"
+                  name="plugin"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7da776c9-d83b-4814-9771-c880f4f3b01f"
+            name="unregister"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="46878fc7-814f-4450-bcfa-b2a76704f187"
+                  name="plugin"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7511a273-b17c-4617-adff-e0b7c274ae7a"
+        name="IPlugin"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="7df29b83-7c03-4b17-8ed7-e98059aef344"
+            name="processMsg"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8a6e4a28-00e4-4e87-953e-0a5dce682012"
+                  name="msg"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="4cf877d2-9483-43eb-b9b3-74d4b00c185c"
+        name="E_PLUGIN"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="db6913f0-75ad-434b-95d3-746fc9f699b7"
+            name="System" />
+          <enumerationLiteral
+            Id="39d8d796-936a-4fc2-9f80-549edd9b9dff"
+            name="LoadSave" />
+          <enumerationLiteral
+            Id="b207c908-73ce-49b2-a4e4-f22064ebda72"
+            name="Multiplayer" />
+          <enumerationLiteral
+            Id="04e38c5a-ffe9-4e76-aa5d-88cccfbfd588"
+            name="Config" />
+          <enumerationLiteral
+            Id="4629dbe3-064e-4379-b1ce-4d7ffedae23f"
+            name="PostProcess" />
+          <enumerationLiteral
+            Id="0bd96149-9641-40a9-80b9-7ec155d899d1"
+            name="XEffects" />
+          <enumerationLiteral
+            Id="2cc731d2-1620-40dc-be6e-62f50e07e5f2"
+            name="Particles" />
+          <enumerationLiteral
+            Id="b5585ae3-3a79-4dea-b4bd-222a38e7d11f"
+            name="Trees" />
+          <enumerationLiteral
+            Id="bf9f4095-e659-4f74-bbef-8c66e19a613c"
+            name="Objects" />
+          <enumerationLiteral
+            Id="ee6cd6ac-1881-4e8c-8b40-a2aaf2812558"
+            name="Terrain" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="48ad42ba-5876-4a00-a120-56bac2643581"
+        name="E_MESSAGES"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

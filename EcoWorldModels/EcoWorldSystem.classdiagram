@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="911615a9-f6a9-4255-bafe-f26ee0ad4ef7" name="EcoWorldSystem" linkedPackageId="14f6517c-1a09-4e3f-8dc0-5599897da42d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="7742b891-afa6-498f-b821-4439a1ac87f0" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="516ee810-d134-49ea-b9de-c5e9b897d3a9" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="a13aed0b-afd2-44d6-aefb-5422a11e7e20">
+          <propertyInstance Id="843e0c20-9941-4920-b4d7-5c374a7a8704" name="BaseName">
+            <elementDefinition Id="3ca5dae0-47bf-44c6-99f8-818e38be7dd5" />
+          </propertyInstance>
+          <elementDefinition Id="f9c569e0-23c7-4758-8b5f-af7ae34e8291" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="93429d6e-bebe-4c74-909b-044ceb1f2228">
+          <propertyInstance Id="a516e167-f135-4b0c-be18-657741b7e4d5" name="ClrAttributes">
+            <elementDefinition Id="4e946049-1227-4c27-a943-268ff1fd7324" />
+          </propertyInstance>
+          <elementDefinition Id="5fe54eef-8d2d-4777-a67f-2bcddbdc8dbf" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="7d28645b-5610-4cb4-93d9-0febd8d355a7">
+          <propertyInstance Id="511fe51a-f6b8-4837-ae60-b7de0ca09e18" name="Usings">
+            <elementDefinition Id="ad33e1ad-e124-44ac-b8a2-e54a0ab01fdb" />
+          </propertyInstance>
+          <elementDefinition Id="186dc6de-dd18-4241-a93a-ac4a7a2ff200" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="b44b3c0f-6bb0-4a1e-80bd-0170b0261487" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="0c2fbfca-ebe7-468a-b6d4-1f720d3e9bc7" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2eb435a2-7762-4605-8ecd-3ddb8c6ba95e">
+          <propertyInstance Id="198faedc-d9cb-4b2d-b6f0-670b404800b8" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="7eaed157-6cf9-4d92-8776-5ff0e417d3fd" />
+          </propertyInstance>
+          <elementDefinition Id="85f9df72-0636-4d62-bf56-f389ea35ce5e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="683cbf21-e9e1-4142-9c97-3b9e5168e3af">
+          <propertyInstance Id="54c74b2a-84aa-4cb0-b4c9-b595623ccf63" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="ce0059fa-f4d1-4281-815f-ad750cf51465" />
+          </propertyInstance>
+          <elementDefinition Id="749a92c7-dd35-4f36-a53e-acb3ec4c2edb" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2abe640e-3810-47d0-9255-6254f5dfe427">
+          <propertyInstance Id="5a803532-4a74-4d8e-99f7-ff5c8ba7f95f" name="ProjectPath" value="ClassTemplate=..\EcoWorldModelsLib\EcoWorldModelsLib.csproj|EnumTemplate=..\EcoWorldModelsLib\EcoWorldModelsLib.csproj|InterfaceTemplate=..\EcoWorldModelsLib\EcoWorldModelsLib.csproj|StructTemplate=..\EcoWorldModelsLib\EcoWorldModelsLib.csproj">
+            <elementDefinition Id="f5e2fdbc-9bef-476d-9e66-cd5deac188f5" />
+          </propertyInstance>
+          <elementDefinition Id="7b79d50d-874a-4e42-b4fc-8ec47e3b52ed" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5f6617d1-d29e-4fb2-bd21-7eab6005fde5">
+          <propertyInstance Id="b9b984f0-2089-47a3-9055-3d87316109d5" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="9bea6977-b7a3-4394-94e8-6d5c3238b382" />
+          </propertyInstance>
+          <elementDefinition Id="89b5d965-c49e-4927-bf4b-841b5b750b1e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="a24ab663-abaa-4eee-8700-5f96b8f1c212">
+          <propertyInstance Id="34cea0fe-9194-424c-bfcd-1d23aad5e7d9" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="d9620abd-5bf4-4b6e-9b20-9059691c8ad0" />
+          </propertyInstance>
+          <elementDefinition Id="b5b3c2a0-a0c2-487f-b682-f86ada7a0af0" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="3ac4243b-a225-4fea-be6c-031e3b4cad2b">
+          <propertyInstance Id="73eb7cec-cfb2-4359-a6cd-3a7d05dd611c" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="a71acd5f-daca-4b28-9448-999d710662fa" />
+          </propertyInstance>
+          <elementDefinition Id="9234f903-999b-4210-a725-8fbef7294a07" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="1d0c14b3-89b5-41d7-9812-a1a3a1bd1a28">
+          <propertyInstance Id="21a51ae3-4408-41ff-b883-d1b87141741d" name="Parameters">
+            <elementDefinition Id="7898cb0a-a693-4d10-b5ba-badefb97787d" />
+          </propertyInstance>
+          <elementDefinition Id="c63c8610-d931-4950-a7db-9d93d6d427da" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="51bee829-bd90-4a83-9a79-2b55f4721eeb">
+      <profileInstance Id="3a7e6192-4d9b-43e7-ab7e-af4c885e762e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="84b2abdb-bd12-42aa-99c9-a2518381a75a">
+      <profileInstance Id="4e28de1f-01d2-41ee-82da-e35c5e257c17" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="379e8419-7194-4460-8b71-5a84f374322c">
+      <profileInstance Id="f1d6b117-2775-45bf-a401-5725cf299ce3" name="CSharpProfile">
+        <elementDefinition Id="187512f4-2939-4a9e-9f81-18d06c986bf3" />
+      </profileInstance>
+      <elementDefinition Id="5cf654ca-0297-44a0-927f-6bf9bbdfa04a" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="41b3f31c-5357-4004-928c-36d7d655e512">
+      <profileInstance Id="40020c0c-7fb7-4108-8595-eb82a6afde88" name="TextTemplateBindings">
+        <elementDefinition Id="cec2143c-2c99-4c08-8569-9171fe37c319" />
+      </profileInstance>
+      <elementDefinition Id="b12236da-160b-466a-bc37-8a6daa3b1116" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="13c0ddd5-0eec-46c4-ae6f-0df940a17b2e" name="System">
+        <elementDefinition Id="7331f90b-e131-4cbc-8707-73920fcdd407" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="1cc2583c-82bc-4179-b54a-500774ce0afa" name="EcoWorldSystem" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="6d40c099-524f-426a-9362-2ae77c2dbeba" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="14f6517c-1a09-4e3f-8dc0-5599897da42d" name="EcoWorldModels">
+    <elementDefinition Id="8afb82f3-dbcc-4311-8162-2c341419be93" />
+  </package>
+</logicalClassDesignerModel>
