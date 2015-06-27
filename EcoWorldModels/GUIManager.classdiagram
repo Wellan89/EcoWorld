@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="2224578f-438f-497a-a6a9-47343386b730" name="GUIManager" linkedPackageId="8b83f9c8-3bdf-4c4a-a5e6-b2d28026439f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="2224578f-438f-497a-a6a9-47343386b730" name="GUIManager" linkedPackageId="8b83f9c8-3bdf-4c4a-a5e6-b2d28026439f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="f8e01a5d-e818-4e8b-b6eb-b156e7189526" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="516ee810-d134-49ea-b9de-c5e9b897d3a9" />
@@ -80,12 +80,6 @@
           <packageHasNamedElement>
             <class Id="5603957c-5bbf-4dbb-9d13-2ddbd8d10523" name="GUIManager" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="a359763b-1d02-4ca1-ad17-4536e8e3a6bc" />
-              <suppliersInternal>
-                <interfaceRealization Id="d29516ff-4624-498b-ba8d-78cc9035bf75">
-                  <interfaceMoniker Id="69bc6024-530f-49cb-8daf-143413b0163f" LastKnownName="IGUIEventListener" />
-                  <elementDefinition Id="21324136-f0ad-4f32-a8ff-e11f0f23dd5f" />
-                </interfaceRealization>
-              </suppliersInternal>
               <targetEnds>
                 <association Id="665ece53-179a-4aeb-9737-df4d889d3ad6" isDerived="false" sourceEndRoleName="GUIManager" targetEndRoleName="LoadingScreen" isLeaf="false" isAbstract="false">
                   <classMoniker Id="5d7d5bb1-9826-4a1d-92d4-2f011527f214" LastKnownName="LoadingScreen" />
@@ -199,14 +193,55 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="a7a239c2-ff66-4ce2-8308-98a9ca028838" />
                 </association>
+                <association Id="d2c9deac-d1a0-4111-a834-1f45d0ee0e8b" isDerived="false" sourceEndRoleName="GUIManager" targetEndRoleName="GameEndMenu" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="6c78790f-70cf-442f-b8ec-fe82d49ea897" LastKnownName="GameEndMenu" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="6a84a389-20c6-4124-8e3d-27b026f4bcc6" name="GUIManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="46ff5904-9586-4b40-a2d0-a1d4a83616cd" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="aa5179bd-e18b-4280-b8cb-635ed5cb0dae" name="GameEndMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="aee15369-2cec-43b6-911d-c5ed4409f9ac" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="8f362e13-2c82-4e87-8c12-aa2b0b2c0f19" />
+                </association>
               </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="a2c8681d-84e3-4d5b-aa94-02d8960a2c17" name="guiEventListeners" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3866133a-81e6-4322-91c6-e7845b4b1482" />
+                </property>
+              </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="d752d2d1-a134-4b38-a593-8e9c59617fcb" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="5f56ae54-cd21-4b88-9faa-da4968b022c3" />
+                <operation Id="29649951-8fd0-4855-b4a4-6578faa959ca" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2e46c6ea-610e-47df-89ef-4f6f175b25ae" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="a27dea33-29af-4870-9154-250bd6b12c04" name="guiEvent" direction="In" isUnique="false">
-                        <elementDefinition Id="99d8a293-308d-4f88-a313-e3df68d7954c" />
+                      <parameter Id="c095e0dd-5ee2-4ca3-8bfe-5ace0763f4ac" name="guiEvent" direction="In" isUnique="false">
+                        <elementDefinition Id="93443c0c-f2aa-4f05-a698-5832e7edfd43" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="9328d060-87aa-4d0e-89d7-3a655a410168" name="register" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="6e5d8724-73e6-4d41-a098-67bc0eda6466" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7e9c1753-809c-449b-aa6e-71d28b6266eb" name="guiEventListener" direction="In" isUnique="false">
+                        <elementDefinition Id="bc701986-0093-4909-83ea-b1560fa46d96" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="37ac3aa0-bf8a-47c9-bd03-c1c8608a2d7a" name="unregister" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="7383b3fa-2015-4fa2-9fc8-db05c1605bef" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4834b911-a033-46f3-b67f-f567d4362682" name="guiEventListener" direction="In" isUnique="false">
+                        <elementDefinition Id="e2d45ce3-7580-41f8-9719-b62d57a8061b" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -219,7 +254,7 @@
               <elementDefinition Id="aed37a59-b895-4678-9409-f76593377631" />
               <suppliersInternal>
                 <interfaceRealization Id="540919be-412e-4fa2-9139-92287fdfc18f">
-                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="GUIMenu" />
+                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="IGUIMenu" />
                   <elementDefinition Id="1b767fff-1f6c-4ca6-8f0e-96b54005dd33" />
                 </interfaceRealization>
                 <interfaceRealization Id="6aaba1f8-71c8-43b1-b741-b35c772de42a">
@@ -228,7 +263,7 @@
                 </interfaceRealization>
               </suppliersInternal>
               <ownedOperationsInternal>
-                <operation Id="e2bcf484-fe52-4069-b730-2199c8ee7262" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="e2bcf484-fe52-4069-b730-2199c8ee7262" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="cce3fa6c-9c6d-430a-86cf-e7e83563eaea" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -241,7 +276,7 @@
                 <operation Id="ee6d2f83-9208-41a4-8228-ed787d1084e4" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="3a7050fa-a44b-4d03-944e-65a9ab402b8b" />
                 </operation>
-                <operation Id="b0df43c8-b51f-417a-b4f2-e65e5985dd90" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="b0df43c8-b51f-417a-b4f2-e65e5985dd90" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="37639822-27ea-4d6a-abc6-049933bd99c8" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -259,7 +294,7 @@
               <elementDefinition Id="89f1a9a8-4845-49cf-ad46-aa1a82c7bdb5" />
               <suppliersInternal>
                 <interfaceRealization Id="852774d9-5e40-4835-a15c-2c954dbfae1a">
-                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="GUIMenu" />
+                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="IGUIMenu" />
                   <elementDefinition Id="1927cf9b-47b4-49fa-9353-21901357f0d9" />
                 </interfaceRealization>
                 <interfaceRealization Id="57e285a7-58d4-4666-a18a-739b8a7a37b0">
@@ -271,7 +306,7 @@
                 <operation Id="c634c576-1e63-48cd-b2a0-0d608435f97e" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="bbafdc04-0196-4f53-bcd8-e04aa65adab7" />
                 </operation>
-                <operation Id="abaab5f1-2211-4f04-8667-8cfe7246d77d" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="abaab5f1-2211-4f04-8667-8cfe7246d77d" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="00de3306-f1a3-4bcf-9a1d-8bc015b99ce2" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -281,7 +316,7 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="186a3393-90a4-4a03-9a59-ada5c23de0bd" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="186a3393-90a4-4a03-9a59-ada5c23de0bd" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="18d11be7-c243-4067-811f-99a3d85fea93" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -299,7 +334,7 @@
               <elementDefinition Id="26cdcc4c-bbd4-465b-a4a2-7b54b81790bf" />
               <suppliersInternal>
                 <interfaceRealization Id="4c075a4f-c422-462d-8245-932e406a853d">
-                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="GUIMenu" />
+                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="IGUIMenu" />
                   <elementDefinition Id="be1b6f89-3aee-41c9-9ac1-737a0379dd5c" />
                 </interfaceRealization>
                 <interfaceRealization Id="c7818f39-e964-47b7-b3bf-25a9f24dc5dd">
@@ -308,7 +343,7 @@
                 </interfaceRealization>
               </suppliersInternal>
               <ownedOperationsInternal>
-                <operation Id="f0d1a528-3bff-483d-9f68-0f5442499e03" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="f0d1a528-3bff-483d-9f68-0f5442499e03" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="0b07d732-9eee-4889-a12a-9c1fa3375ea4" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -321,7 +356,7 @@
                 <operation Id="c04a949a-4ff9-4abb-aa19-f8bc548739ab" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="0c5030b8-8359-490c-88d9-be08b195be9e" />
                 </operation>
-                <operation Id="d30c543c-1b4f-4ae1-b0f8-7728a736c2c6" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="d30c543c-1b4f-4ae1-b0f8-7728a736c2c6" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="12b601da-32b0-47c4-a55c-24abf66303ef" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -335,7 +370,7 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <Interface Id="37925512-ec84-4be4-83d2-55d2d2c7d929" name="GUIMenu" isAbstract="false" isLeaf="false">
+            <Interface Id="37925512-ec84-4be4-83d2-55d2d2c7d929" name="IGUIMenu" isAbstract="false" isLeaf="false">
               <elementDefinition Id="810d8ab2-622d-43c6-b917-f80838a5e018" />
               <generalsInternal>
                 <generalization Id="1166c1af-1ef4-4da7-970a-7f55f9987f62" isSubstitutable="false">
@@ -354,12 +389,12 @@
             <Interface Id="69bc6024-530f-49cb-8daf-143413b0163f" name="IGUIEventListener" isAbstract="false" isLeaf="false">
               <elementDefinition Id="3941d505-853e-417a-b490-0efa6028a95e" />
               <ownedOperations>
-                <operation Id="052644bd-b39b-4613-81fd-55400bfb0599" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                <operation Id="052644bd-b39b-4613-81fd-55400bfb0599" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="b0a4518e-ee2f-4f8e-a5fe-615c13052e10" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="4052fcbc-7bf3-452b-bd1d-6f458d1274ee" name="guiEvent" direction="In" isUnique="false">
-                        <elementDefinition Id="809d8584-2784-4a52-8efa-579b73475928" />
+                      <parameter Id="a0228a9a-8f1d-473b-b1ff-3ca7fe653217" name="guiEvent" direction="In" isUnique="false">
+                        <elementDefinition Id="d464e7ef-8c60-4322-a37f-bc7b09e27b2c" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -372,7 +407,7 @@
               <elementDefinition Id="cd4bfa5c-f031-43ac-b3ed-57608e8c966f" />
               <suppliersInternal>
                 <interfaceRealization Id="fba79aa0-cf3e-4a82-9e1a-27d0908b3d6f">
-                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="GUIMenu" />
+                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="IGUIMenu" />
                   <elementDefinition Id="c2fc521d-3f56-43d8-9ddd-dbc59bb3ec8f" />
                 </interfaceRealization>
                 <interfaceRealization Id="3f8db541-3fad-4718-9e49-4c4d5e7e0e26">
@@ -384,7 +419,7 @@
                 <operation Id="1940a904-1658-4b73-a2b8-bd344b8ab3d5" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="cbc8b24b-5d04-4d50-8ca5-55ffc10c8009" />
                 </operation>
-                <operation Id="ab0b392e-fe3e-4d1f-96a5-9eceb8651dcc" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="ab0b392e-fe3e-4d1f-96a5-9eceb8651dcc" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="864f4f32-df07-4724-be74-b96ef9a395dc" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -394,7 +429,7 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="57e8fcc9-970d-436f-bd18-fc6f48639503" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="57e8fcc9-970d-436f-bd18-fc6f48639503" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="236ff061-8eba-4479-b6e9-375bd7f91658" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -416,12 +451,12 @@
                   <elementDefinition Id="66c5d8a9-c0e1-4064-a1bd-67d88ad0158b" />
                 </interfaceRealization>
                 <interfaceRealization Id="10d7908c-a5c4-4a5a-aaa6-019cef0e84ac">
-                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="GUIMenu" />
+                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="IGUIMenu" />
                   <elementDefinition Id="7ec7c813-e6ff-4cde-919f-9444067c7f37" />
                 </interfaceRealization>
               </suppliersInternal>
               <ownedOperationsInternal>
-                <operation Id="ba6bc297-0c68-4453-b0c9-fcc935363634" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="ba6bc297-0c68-4453-b0c9-fcc935363634" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="ded90df2-23d6-47d8-b577-8f8187c757fd" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -434,7 +469,7 @@
                 <operation Id="3d4fd277-5172-4cb5-a847-dc7ee0cc6e47" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="50ce6f75-453c-46b0-a2c9-8a3409296192" />
                 </operation>
-                <operation Id="dd951bc5-9985-496e-9272-511e4ca5a18f" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="dd951bc5-9985-496e-9272-511e4ca5a18f" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="0e916025-f546-4300-b6e1-7f1b7271e1c1" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -456,12 +491,12 @@
                   <elementDefinition Id="8ca40072-9646-4054-aade-619efbef0a88" />
                 </interfaceRealization>
                 <interfaceRealization Id="ae7b3fa3-6a9d-4a04-bec6-2493094c1fc0">
-                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="GUIMenu" />
+                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="IGUIMenu" />
                   <elementDefinition Id="fd60834f-e598-41a5-890a-2249ed2f053b" />
                 </interfaceRealization>
               </suppliersInternal>
               <ownedOperationsInternal>
-                <operation Id="88142c57-29a4-4aee-b356-767fbb34ac42" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="88142c57-29a4-4aee-b356-767fbb34ac42" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="8b49aff1-094e-40e1-a80f-627bc9378007" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -474,7 +509,7 @@
                 <operation Id="9a7c44e4-65d4-4525-ac94-3414d064eccd" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="b8cb9415-9574-4bed-9150-3886b52f9771" />
                 </operation>
-                <operation Id="eaccc86e-cf56-43fe-8830-635736cc052c" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="eaccc86e-cf56-43fe-8830-635736cc052c" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="fb29598c-38a4-4eeb-aad2-c6fc9ae146da" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -496,12 +531,12 @@
                   <elementDefinition Id="bf97c592-d2dd-4246-b595-4e71ac06ec36" />
                 </interfaceRealization>
                 <interfaceRealization Id="e40e761a-a9d5-4ca9-a70f-8d6803083dcc">
-                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="GUIMenu" />
+                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="IGUIMenu" />
                   <elementDefinition Id="ec7ca8ee-ad72-4cd2-a21d-c26a43674ad5" />
                 </interfaceRealization>
               </suppliersInternal>
               <ownedOperationsInternal>
-                <operation Id="4c0b92ee-7b05-4dac-962f-1262449e06c5" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="4c0b92ee-7b05-4dac-962f-1262449e06c5" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="84afa1f6-f0a4-465f-9a05-a5ae1cabcc30" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -514,12 +549,52 @@
                 <operation Id="91575069-ae55-41ab-830a-85a1b740e971" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="69c4108a-dbea-4de4-ac63-31c83f62beaf" />
                 </operation>
-                <operation Id="104a89a9-fc7e-4f45-a7ae-501abbfda9bb" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="104a89a9-fc7e-4f45-a7ae-501abbfda9bb" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="3f45530c-113c-437e-96aa-b0eb665e5f1f" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
                       <parameter Id="6ce1bb03-780e-45bd-ae4c-e82c80ebcc1c" name="guiEvent" direction="In" isUnique="false">
                         <elementDefinition Id="d513938c-73b9-4c7b-af66-3c5cf2e5d168" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="6c78790f-70cf-442f-b8ec-fe82d49ea897" name="GameEndMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="fdec9395-93ab-4cf4-9d80-9b72116df7b7" />
+              <suppliersInternal>
+                <interfaceRealization Id="bd3b471c-8144-4c5b-9e23-6a1a5a7560d3">
+                  <interfaceMoniker Id="37925512-ec84-4be4-83d2-55d2d2c7d929" LastKnownName="IGUIMenu" />
+                  <elementDefinition Id="134d6e26-3735-4e04-9ab0-92571018f90f" />
+                </interfaceRealization>
+                <interfaceRealization Id="78f10d5c-9156-4201-b81a-df70fc6e783e">
+                  <interfaceMoniker Id="573f5e14-8ace-4fe2-8d76-678719225e81" LastKnownName="IPlugin" />
+                  <elementDefinition Id="8fea7e84-fd75-4ef7-a5cc-7b8571baf3c3" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="eba46c41-3caf-4f0c-86fb-727c7f21910b" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2d6e7fc8-25b0-44fb-b99f-ac059ada5fd2" />
+                </operation>
+                <operation Id="849b96fd-223a-4b91-9421-c1eb7682a918" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="14181c18-c011-4fd9-a5a8-644a0b53250f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="867eb4ac-63ff-4354-b881-0177b5a1f481" name="guiEvent" direction="In" isUnique="false">
+                        <elementDefinition Id="bab7dc5c-a7b1-4d80-9ddf-136bcf206a47" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="80903105-a7e0-43c9-9672-af7079ed0177" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4137b709-f5f8-4b3d-8b16-66c983413c94" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="662ef858-2bff-4452-9f5a-75cc4859cac1" name="msg" direction="In" isUnique="false">
+                        <elementDefinition Id="d8402992-5959-4ee4-b400-a0ea6805580d" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -534,12 +609,12 @@
       <Interface Id="573f5e14-8ace-4fe2-8d76-678719225e81" name="IPlugin" isAbstract="false" isLeaf="false">
         <elementDefinition Id="7511a273-b17c-4617-adff-e0b7c274ae7a" />
         <ownedOperations>
-          <operation Id="233fbdcf-4b17-41bd-8496-bb8ed83142c5" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+          <operation Id="233fbdcf-4b17-41bd-8496-bb8ed83142c5" name="processMsg" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="7df29b83-7c03-4b17-8ed7-e98059aef344" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="c652a33c-cf43-4c4a-a600-d6fb0f27023d" name="msg" direction="In" isUnique="false">
-                  <elementDefinition Id="a2c8c9e6-1d89-40be-a7b1-b84c234e3744" />
+                <parameter Id="419aa02c-55ed-4cd5-ae6a-8f7e40f2ef4b" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="8a6e4a28-00e4-4e87-953e-0a5dce682012" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>

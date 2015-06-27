@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="c790aaae-31ed-4b66-8add-db260f55665d"
   name="GUI" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -284,6 +284,45 @@
                 <memberEnd
                   Id="cb33f4ee-09f2-4cfc-ab66-8f1ea58b37bd"
                   name="OptionsPlugin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8f362e13-2c82-4e87-8c12-aa2b0b2c0f19"
+            isDerived="false"
+            sourceEndRoleName="GUIManager"
+            targetEndRoleName="GameEndMenu"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fdec9395-93ab-4cf4-9d80-9b72116df7b7"
+              LastKnownName="GameEndMenu"
+              LastKnownLocation="Package_0105.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="46ff5904-9586-4b40-a2d0-a1d4a83616cd"
+                  name="GUIManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aee15369-2cec-43b6-911d-c5ed4409f9ac"
+                  name="GameEndMenu"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -697,6 +736,77 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="ce30f8c4-2138-4323-8071-8218437ee6f8"
+                  name="msg"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fdec9395-93ab-4cf4-9d80-9b72116df7b7"
+        name="GameEndMenu"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="134d6e26-3735-4e04-9ab0-92571018f90f">
+            <interfaceMoniker
+              Id="810d8ab2-622d-43c6-b917-f80838a5e018"
+              LastKnownName="IGUIMenu"
+              LastKnownLocation="Package_0105.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="8fea7e84-fd75-4ef7-a5cc-7b8571baf3c3">
+            <interfaceMoniker
+              Id="7511a273-b17c-4617-adff-e0b7c274ae7a"
+              LastKnownName="IPlugin"
+              LastKnownLocation="Package_0107.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2d6e7fc8-25b0-44fb-b99f-ac059ada5fd2"
+            name="SetCurrentGUI"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="14181c18-c011-4fd9-a5a8-644a0b53250f"
+            name="onGUIEvent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bab7dc5c-a7b1-4d80-9ddf-136bcf206a47"
+                  name="guiEvent"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4137b709-f5f8-4b3d-8b16-66c983413c94"
+            name="processMsg"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d8402992-5959-4ee4-b400-a0ea6805580d"
                   name="msg"
                   direction="In"
                   isUnique="false" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="8afb82f3-dbcc-4311-8162-2c341419be93"
   name="EcoWorldModels" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -476,7 +476,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </coveredLifelines>
             <finish>
@@ -495,14 +495,6 @@
               <messageOccurrenceSpecificationMoniker
                 Id="d0f9e05e-bfbf-4dcf-9568-2c2a58c99df0"
                 LastKnownName="MessageOccurrenceSpecification8"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="654559c8-a0a3-4b67-b9f7-1dafba761e45"
-                LastKnownName="MessageOccurrenceSpecification23"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="4c6da2ab-a313-4674-bc47-f09a1900ac85"
-                LastKnownName="MessageOccurrenceSpecification26"
                 LastKnownLocation="EcoWorldModels.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="1d6712b7-45a0-4e8d-8526-bd504d9b8891"
@@ -524,7 +516,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -544,125 +536,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="6f7db541-e397-4fe8-8521-442a0bcf73cf"
-            name="BehaviorExecutionSpecification7">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="91182cbd-d2c7-4da8-8ce0-d05e236e6a53"
-                LastKnownName="ExecutionOccurrenceSpecification14"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="4451d446-272b-42b9-bc30-44325828510d"
-                LastKnownName="ExecutionOccurrenceSpecification13"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="f798a96c-df1d-4a03-a236-16403dbc606e"
-                LastKnownName="MessageOccurrenceSpecification24"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="a1804944-a1fb-4688-b152-3f0764a0a2dd"
-                LastKnownName="MessageOccurrenceSpecification25"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="4451d446-272b-42b9-bc30-44325828510d"
-            name="ExecutionOccurrenceSpecification13">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="d6bd0581-e1f0-4e67-86bc-6e691333ca7b"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="f798a96c-df1d-4a03-a236-16403dbc606e"
-            name="MessageOccurrenceSpecification24">
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="654559c8-a0a3-4b67-b9f7-1dafba761e45"
-            name="MessageOccurrenceSpecification23">
-            <covered>
-              <lifelineMoniker
-                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="a1804944-a1fb-4688-b152-3f0764a0a2dd"
-            name="MessageOccurrenceSpecification25">
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="4c6da2ab-a313-4674-bc47-f09a1900ac85"
-            name="MessageOccurrenceSpecification26">
-            <covered>
-              <lifelineMoniker
-                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="91182cbd-d2c7-4da8-8ce0-d05e236e6a53"
-            name="ExecutionOccurrenceSpecification14">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="7989a104-c58b-4c11-a85a-99ae048d4175"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="1d6712b7-45a0-4e8d-8526-bd504d9b8891"
-            name="MessageOccurrenceSpecification9">
-            <covered>
-              <lifelineMoniker
-                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -673,6 +547,16 @@
               <lifelineMoniker
                 Id="2cc66a4d-ed72-40ac-a516-d92e3d79ee61"
                 LastKnownName="renderManager : RenderManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1d6712b7-45a0-4e8d-8526-bd504d9b8891"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -690,7 +574,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -700,7 +584,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </coveredLifelines>
             <finish>
@@ -719,14 +603,6 @@
               <messageOccurrenceSpecificationMoniker
                 Id="67868edc-17fe-48c8-a27b-2e96e5ff2447"
                 LastKnownName="MessageOccurrenceSpecification12"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="eb674518-7205-4398-b066-35fd48b2caf0"
-                LastKnownName="MessageOccurrenceSpecification27"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="ca618917-25b1-4a4a-8a74-dda49eff9bc5"
-                LastKnownName="MessageOccurrenceSpecification30"
                 LastKnownLocation="EcoWorldModels.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="36231911-7cfd-44f0-a7ad-ede78d023149"
@@ -748,7 +624,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -768,125 +644,17 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="0b561001-1945-4dc9-99d9-ac3b9d823674"
-            name="BehaviorExecutionSpecification8">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="c059f8bb-edd9-4b81-bd05-e0495cb94e98"
-                LastKnownName="ExecutionOccurrenceSpecification16"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="9969dc1e-af75-4a9e-95bb-2c5a71a5488b"
-                LastKnownName="ExecutionOccurrenceSpecification15"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="cc510054-efb6-4642-a9dd-de40d8f5cc1f"
-                LastKnownName="MessageOccurrenceSpecification28"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="0f78f974-fc5f-48a5-9afa-795aefe14457"
-                LastKnownName="MessageOccurrenceSpecification29"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="9969dc1e-af75-4a9e-95bb-2c5a71a5488b"
-            name="ExecutionOccurrenceSpecification15">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="7c09576e-f604-42e6-93b2-3cd80f7f5272"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="cc510054-efb6-4642-a9dd-de40d8f5cc1f"
-            name="MessageOccurrenceSpecification28">
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="eb674518-7205-4398-b066-35fd48b2caf0"
-            name="MessageOccurrenceSpecification27">
-            <covered>
-              <lifelineMoniker
-                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="0f78f974-fc5f-48a5-9afa-795aefe14457"
-            name="MessageOccurrenceSpecification29">
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="ca618917-25b1-4a4a-8a74-dda49eff9bc5"
-            name="MessageOccurrenceSpecification30">
-            <covered>
-              <lifelineMoniker
-                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="c059f8bb-edd9-4b81-bd05-e0495cb94e98"
-            name="ExecutionOccurrenceSpecification16">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="852b7ae6-7224-4e03-b1dc-a7f182414095"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="36231911-7cfd-44f0-a7ad-ede78d023149"
             name="MessageOccurrenceSpecification13">
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -914,7 +682,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -924,7 +692,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </coveredLifelines>
             <finish>
@@ -943,14 +711,6 @@
               <messageOccurrenceSpecificationMoniker
                 Id="f9c47e34-1d31-4dae-891e-d4a62b7b19c9"
                 LastKnownName="MessageOccurrenceSpecification16"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="3367d37d-768c-4ee0-9439-198db7475dc0"
-                LastKnownName="MessageOccurrenceSpecification31"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="9980c1fd-fabc-4abb-8f95-3052b055b437"
-                LastKnownName="MessageOccurrenceSpecification34"
                 LastKnownLocation="EcoWorldModels.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="d9924818-2bff-4500-bfc6-242e79fa64a2"
@@ -972,7 +732,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -992,118 +752,10 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="fbb08946-9580-4628-b7bb-213cd20817b4"
-            name="BehaviorExecutionSpecification9">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="b7670c6a-7a7c-4a0e-830e-e271c06314e8"
-                LastKnownName="ExecutionOccurrenceSpecification18"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="278ea963-cb5a-47b5-9289-f9373f883ecf"
-                LastKnownName="ExecutionOccurrenceSpecification17"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="be239731-cad4-44f6-a875-5569bed46c51"
-                LastKnownName="MessageOccurrenceSpecification32"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="5b558740-b8e1-4ccc-b1e7-aa9e51555024"
-                LastKnownName="MessageOccurrenceSpecification33"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="278ea963-cb5a-47b5-9289-f9373f883ecf"
-            name="ExecutionOccurrenceSpecification17">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="6caa396d-c963-4166-9f3f-ebccf2a9579d"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="be239731-cad4-44f6-a875-5569bed46c51"
-            name="MessageOccurrenceSpecification32">
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="3367d37d-768c-4ee0-9439-198db7475dc0"
-            name="MessageOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="5b558740-b8e1-4ccc-b1e7-aa9e51555024"
-            name="MessageOccurrenceSpecification33">
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="9980c1fd-fabc-4abb-8f95-3052b055b437"
-            name="MessageOccurrenceSpecification34">
-            <covered>
-              <lifelineMoniker
-                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="b7670c6a-7a7c-4a0e-830e-e271c06314e8"
-            name="ExecutionOccurrenceSpecification18">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="7ab230e5-1d21-4b91-9925-0c8733490946"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="70d592bb-6879-4759-9e62-258c6ac7b00a"
             name="MessageOccurrenceSpecification18">
@@ -1120,7 +772,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1138,7 +790,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1148,7 +800,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </coveredLifelines>
             <finish>
@@ -1167,14 +819,6 @@
               <messageOccurrenceSpecificationMoniker
                 Id="bf194d95-a26f-4435-8bfc-9b91cb88403a"
                 LastKnownName="MessageOccurrenceSpecification20"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="7770b8bc-e905-4231-aa85-1142b548cff8"
-                LastKnownName="MessageOccurrenceSpecification35"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="6cc9192c-819e-47db-81a9-4e9f6b05552a"
-                LastKnownName="MessageOccurrenceSpecification38"
                 LastKnownLocation="EcoWorldModels.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="2359d564-56ec-45be-9361-65a956a49547"
@@ -1196,7 +840,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1216,118 +860,10 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="27d1566d-c808-4c0e-a8b5-fd2e548ea68e"
-            name="BehaviorExecutionSpecification10">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="5475d00a-e41b-404b-90d0-a8079e34e0b1"
-                LastKnownName="ExecutionOccurrenceSpecification20"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="18877704-90d1-4708-a289-6425c1bc8a1e"
-                LastKnownName="ExecutionOccurrenceSpecification19"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="a649266f-b988-428d-a5f6-0700793ebf7c"
-                LastKnownName="MessageOccurrenceSpecification36"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="a4a1dbfa-99b3-462e-83e4-901fc035985c"
-                LastKnownName="MessageOccurrenceSpecification37"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="18877704-90d1-4708-a289-6425c1bc8a1e"
-            name="ExecutionOccurrenceSpecification19">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="61cc8612-77fc-4f09-8ab5-a7e1b0dd3677"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="7770b8bc-e905-4231-aa85-1142b548cff8"
-            name="MessageOccurrenceSpecification35">
-            <covered>
-              <lifelineMoniker
-                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="a649266f-b988-428d-a5f6-0700793ebf7c"
-            name="MessageOccurrenceSpecification36">
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="a4a1dbfa-99b3-462e-83e4-901fc035985c"
-            name="MessageOccurrenceSpecification37">
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="6cc9192c-819e-47db-81a9-4e9f6b05552a"
-            name="MessageOccurrenceSpecification38">
-            <covered>
-              <lifelineMoniker
-                Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="5475d00a-e41b-404b-90d0-a8079e34e0b1"
-            name="ExecutionOccurrenceSpecification20">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="ca6499ab-2ab9-4839-8129-17be2a4fca20"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="77f9602f-6b34-4d52-be39-4c2c24d70419"
             name="MessageOccurrenceSpecification22">
@@ -1344,7 +880,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1362,7 +898,7 @@
             <covered>
               <lifelineMoniker
                 Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1450,14 +986,9 @@
           </lifeline>
           <lifeline
             Id="f39b0cc5-6222-4b87-8ce1-aa105bb40c3f"
-            name="pluginManager : PluginManager"
+            name="For each rendered plugin"
             isActor="false"
-            lifelineDisplayName="pluginManager : PluginManager">
-            <represents>
-              <propertyMoniker
-                Id="779443a8-eb40-4d33-b7eb-0c5efa59eda6"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </represents>
+            lifelineDisplayName="For each rendered plugin">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="fc8bfc50-a745-4d76-9bdc-996d4c6e2f60"
@@ -1490,46 +1021,6 @@
               <executionOccurrenceSpecificationMoniker
                 Id="c3d90e5e-2e35-403e-9225-010c5c31c487"
                 LastKnownName="ExecutionOccurrenceSpecification12"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="e45d18ab-e802-4f24-97b2-b6ad1ad9f551"
-            name="For each Plugin"
-            isActor="false"
-            lifelineDisplayName="For each Plugin">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="4451d446-272b-42b9-bc30-44325828510d"
-                LastKnownName="ExecutionOccurrenceSpecification13"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="91182cbd-d2c7-4da8-8ce0-d05e236e6a53"
-                LastKnownName="ExecutionOccurrenceSpecification14"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="9969dc1e-af75-4a9e-95bb-2c5a71a5488b"
-                LastKnownName="ExecutionOccurrenceSpecification15"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="c059f8bb-edd9-4b81-bd05-e0495cb94e98"
-                LastKnownName="ExecutionOccurrenceSpecification16"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="278ea963-cb5a-47b5-9289-f9373f883ecf"
-                LastKnownName="ExecutionOccurrenceSpecification17"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="b7670c6a-7a7c-4a0e-830e-e271c06314e8"
-                LastKnownName="ExecutionOccurrenceSpecification18"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="18877704-90d1-4708-a289-6425c1bc8a1e"
-                LastKnownName="ExecutionOccurrenceSpecification19"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="5475d00a-e41b-404b-90d0-a8079e34e0b1"
-                LastKnownName="ExecutionOccurrenceSpecification20"
                 LastKnownLocation="EcoWorldModels.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -1574,44 +1065,6 @@
             </receiveEvent>
           </message>
           <message
-            Id="66484020-2a1b-4844-bf7a-b6a94fe47e1e"
-            name="Render(PreProcess)"
-            messageKind="Complete"
-            messageSort="SynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="654559c8-a0a3-4b67-b9f7-1dafba761e45"
-                LastKnownName="MessageOccurrenceSpecification23"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="f798a96c-df1d-4a03-a236-16403dbc606e"
-                LastKnownName="MessageOccurrenceSpecification24"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="e070463e-9fd1-4bba-a7ba-ff8dd98e1938"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="a1804944-a1fb-4688-b152-3f0764a0a2dd"
-                LastKnownName="MessageOccurrenceSpecification25"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="4c6da2ab-a313-4674-bc47-f09a1900ac85"
-                LastKnownName="MessageOccurrenceSpecification26"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
             Id="5f4b6fc7-91e1-4103-bfcb-50b20cad6075"
             name="&lt;&lt;return&gt;&gt;"
             messageKind="Complete"
@@ -1646,44 +1099,6 @@
               <messageOccurrenceSpecificationMoniker
                 Id="67868edc-17fe-48c8-a27b-2e96e5ff2447"
                 LastKnownName="MessageOccurrenceSpecification12"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="be1ad7f6-69ed-4380-a31c-5529ae6348f7"
-            name="Render(Scene)"
-            messageKind="Complete"
-            messageSort="SynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="eb674518-7205-4398-b066-35fd48b2caf0"
-                LastKnownName="MessageOccurrenceSpecification27"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="cc510054-efb6-4642-a9dd-de40d8f5cc1f"
-                LastKnownName="MessageOccurrenceSpecification28"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="846fa250-dd6f-4bd9-9ce4-9cae9e756e42"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="0f78f974-fc5f-48a5-9afa-795aefe14457"
-                LastKnownName="MessageOccurrenceSpecification29"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="ca618917-25b1-4a4a-8a74-dda49eff9bc5"
-                LastKnownName="MessageOccurrenceSpecification30"
                 LastKnownLocation="EcoWorldModels.uml" />
             </receiveEvent>
           </message>
@@ -1726,44 +1141,6 @@
             </receiveEvent>
           </message>
           <message
-            Id="6c277281-706b-444b-b926-317761c1b638"
-            name="Render(PostProcess)"
-            messageKind="Complete"
-            messageSort="SynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="3367d37d-768c-4ee0-9439-198db7475dc0"
-                LastKnownName="MessageOccurrenceSpecification31"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="be239731-cad4-44f6-a875-5569bed46c51"
-                LastKnownName="MessageOccurrenceSpecification32"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="05b48851-6ca1-479b-9854-e3b5667ff289"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="5b558740-b8e1-4ccc-b1e7-aa9e51555024"
-                LastKnownName="MessageOccurrenceSpecification33"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="9980c1fd-fabc-4abb-8f95-3052b055b437"
-                LastKnownName="MessageOccurrenceSpecification34"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
             Id="89c68b79-571d-405f-84e8-b6c0d882f3d0"
             name="&lt;&lt;return&gt;&gt;"
             messageKind="Complete"
@@ -1798,44 +1175,6 @@
               <messageOccurrenceSpecificationMoniker
                 Id="bf194d95-a26f-4435-8bfc-9b91cb88403a"
                 LastKnownName="MessageOccurrenceSpecification20"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="435425ae-68ee-4844-8040-bc08b47b0a43"
-            name="Render(GUI)"
-            messageKind="Complete"
-            messageSort="SynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="7770b8bc-e905-4231-aa85-1142b548cff8"
-                LastKnownName="MessageOccurrenceSpecification35"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="a649266f-b988-428d-a5f6-0700793ebf7c"
-                LastKnownName="MessageOccurrenceSpecification36"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="329576ae-7a44-40e4-905c-4bf348062062"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="a4a1dbfa-99b3-462e-83e4-901fc035985c"
-                LastKnownName="MessageOccurrenceSpecification37"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="6cc9192c-819e-47db-81a9-4e9f6b05552a"
-                LastKnownName="MessageOccurrenceSpecification38"
                 LastKnownLocation="EcoWorldModels.uml" />
             </receiveEvent>
           </message>
@@ -1909,22 +1248,6 @@
                 Id="f23c32f7-e527-4d24-9b22-24cb2cadd417"
                 LastKnownName="RenderManager"
                 LastKnownLocation="Package1_0044.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="779443a8-eb40-4d33-b7eb-0c5efa59eda6"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <classMoniker
-                Id="7c13ca85-11b9-459f-a263-fbdfca66e251"
-                LastKnownName="PluginManager"
-                LastKnownLocation="Package_0107.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -2429,22 +1752,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="38b33c71-51a0-4344-be13-dda5d07ddcdf"
-            name="MessageOccurrenceSpecification81">
-            <covered>
-              <lifelineMoniker
-                Id="a0e1aefe-0a0a-4e39-9a5f-acfc02bca4d6"
-                LastKnownName="For each Event Listener Plugins"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="84390d6e-f3bc-48ca-b173-c3ae264bccfb"
             name="MessageOccurrenceSpecification82">
             <covered>
               <lifelineMoniker
                 Id="34c1d7c8-4976-418a-934b-def3bc61cdef"
                 LastKnownName="pluginManager : PluginManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="38b33c71-51a0-4344-be13-dda5d07ddcdf"
+            name="MessageOccurrenceSpecification81">
+            <covered>
+              <lifelineMoniker
+                Id="a0e1aefe-0a0a-4e39-9a5f-acfc02bca4d6"
+                LastKnownName="For each Event Listener Plugins"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2645,22 +1968,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="52d0ecd0-1dc9-42a7-bcb9-f53cfeb0ce96"
-            name="MessageOccurrenceSpecification22">
-            <covered>
-              <lifelineMoniker
-                Id="b77fda53-51bc-4bad-8ba6-49f7184fad7a"
-                LastKnownName="gameCore : GameCore"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="40a82e93-8fae-49cc-b464-dfe2693d327e"
             name="MessageOccurrenceSpecification21">
             <covered>
               <lifelineMoniker
                 Id="fdde62bb-2c4d-412c-ba2d-1e6dbfc709ff"
                 LastKnownName="device : Device"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="52d0ecd0-1dc9-42a7-bcb9-f53cfeb0ce96"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="b77fda53-51bc-4bad-8ba6-49f7184fad7a"
+                LastKnownName="gameCore : GameCore"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2823,22 +2146,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="dd7a5227-a040-4861-a4ed-a79bd1a1d057"
-            name="MessageOccurrenceSpecification89">
-            <covered>
-              <lifelineMoniker
-                Id="b77fda53-51bc-4bad-8ba6-49f7184fad7a"
-                LastKnownName="gameCore : GameCore"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="ce4b9a6b-d9c0-4243-b2a7-5fbca176f1e7"
             name="MessageOccurrenceSpecification90">
             <covered>
               <lifelineMoniker
                 Id="a0e1aefe-0a0a-4e39-9a5f-acfc02bca4d6"
                 LastKnownName="For each Event Listener Plugins"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dd7a5227-a040-4861-a4ed-a79bd1a1d057"
+            name="MessageOccurrenceSpecification89">
+            <covered>
+              <lifelineMoniker
+                Id="b77fda53-51bc-4bad-8ba6-49f7184fad7a"
+                LastKnownName="gameCore : GameCore"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3201,22 +2524,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="27ef5ed9-f342-40be-9e97-f6ba0fac8219"
-            name="MessageOccurrenceSpecification45">
-            <covered>
-              <lifelineMoniker
-                Id="fdde62bb-2c4d-412c-ba2d-1e6dbfc709ff"
-                LastKnownName="device : Device"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="1d4faf84-762a-46fe-a6d4-94a3d3b96fda"
             name="MessageOccurrenceSpecification46">
             <covered>
               <lifelineMoniker
                 Id="c7f69d29-c410-47ab-9a6d-4e8d38be37e9"
                 LastKnownName="gUIManager : GUIManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="27ef5ed9-f342-40be-9e97-f6ba0fac8219"
+            name="MessageOccurrenceSpecification45">
+            <covered>
+              <lifelineMoniker
+                Id="fdde62bb-2c4d-412c-ba2d-1e6dbfc709ff"
+                LastKnownName="device : Device"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3553,22 +2876,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="b1bab68f-b421-4e78-9bc8-1e5aee8f7007"
-            name="MessageOccurrenceSpecification47">
-            <covered>
-              <lifelineMoniker
-                Id="c7f69d29-c410-47ab-9a6d-4e8d38be37e9"
-                LastKnownName="gUIManager : GUIManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="01d1a49d-ce00-4dc4-9787-e08476a202b9"
             name="MessageOccurrenceSpecification48">
             <covered>
               <lifelineMoniker
                 Id="fdde62bb-2c4d-412c-ba2d-1e6dbfc709ff"
                 LastKnownName="device : Device"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b1bab68f-b421-4e78-9bc8-1e5aee8f7007"
+            name="MessageOccurrenceSpecification47">
+            <covered>
+              <lifelineMoniker
+                Id="c7f69d29-c410-47ab-9a6d-4e8d38be37e9"
+                LastKnownName="gUIManager : GUIManager"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4411,46 +3734,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="d6bd0581-e1f0-4e67-86bc-6e691333ca7b"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="7989a104-c58b-4c11-a85a-99ae048d4175"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="7c09576e-f604-42e6-93b2-3cd80f7f5272"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="852b7ae6-7224-4e03-b1dc-a7f182414095"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="6caa396d-c963-4166-9f3f-ebccf2a9579d"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="7ab230e5-1d21-4b91-9925-0c8733490946"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="61cc8612-77fc-4f09-8ab5-a7e1b0dd3677"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="ca6499ab-2ab9-4839-8129-17be2a4fca20"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
         Id="af573f25-9b71-42af-acff-56db4ab54447"
         name="ExecutionEvent" />
     </packageHasNamedElement>
@@ -4474,8 +3757,8 @@
             <body>Animate according to plugin's animation priorities (higher is sooner)</body>
             <annotatedElements>
               <behaviorExecutionSpecificationMoniker
-                Id="020ffade-3855-4c0f-86aa-d11a0677d551"
-                LastKnownName="BehaviorExecutionSpecification2"
+                Id="d76c2673-f72c-4768-aae5-7fdb64bd00e4"
+                LastKnownName="BehaviorExecutionSpecification1"
                 LastKnownLocation="EcoWorldModels.uml" />
             </annotatedElements>
           </comment>
@@ -4487,7 +3770,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="b6f7d1f3-2de2-4440-bc75-70b8f56b9524"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </coveredLifelines>
             <finish>
@@ -4506,14 +3789,6 @@
               <messageOccurrenceSpecificationMoniker
                 Id="996f71d0-f62d-4b22-8f90-6e56236cad70"
                 LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="600b4fd4-7e2f-41e7-bb61-09ce610f8463"
-                LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="f01da336-62bd-439b-bb85-7613a66cb644"
-                LastKnownName="MessageOccurrenceSpecification8"
                 LastKnownLocation="EcoWorldModels.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="5ed99021-6077-49f2-be62-cd66167daead"
@@ -4535,7 +3810,7 @@
             <covered>
               <lifelineMoniker
                 Id="b6f7d1f3-2de2-4440-bc75-70b8f56b9524"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4555,125 +3830,17 @@
             <covered>
               <lifelineMoniker
                 Id="b6f7d1f3-2de2-4440-bc75-70b8f56b9524"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="020ffade-3855-4c0f-86aa-d11a0677d551"
-            name="BehaviorExecutionSpecification2">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="13ea71a4-801c-4ee3-8e0b-60bb82c56295"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="ec65bd82-58e0-4fbd-828e-adef03dd9563"
-                LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="9e95dfaa-93b6-4715-bcb9-b5a016adf5d2"
-                LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="09e0d45b-60de-4469-933c-057cd69abdd0"
-                LastKnownName="MessageOccurrenceSpecification6"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="037cc231-02aa-4898-b860-301d1670e09e"
-                LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="9e95dfaa-93b6-4715-bcb9-b5a016adf5d2"
-            name="ExecutionOccurrenceSpecification3">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="63af9132-2202-42ba-9b29-91ecbcd0dabe"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="13ea71a4-801c-4ee3-8e0b-60bb82c56295"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="600b4fd4-7e2f-41e7-bb61-09ce610f8463"
-            name="MessageOccurrenceSpecification5">
-            <covered>
-              <lifelineMoniker
-                Id="b6f7d1f3-2de2-4440-bc75-70b8f56b9524"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="09e0d45b-60de-4469-933c-057cd69abdd0"
-            name="MessageOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="13ea71a4-801c-4ee3-8e0b-60bb82c56295"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="037cc231-02aa-4898-b860-301d1670e09e"
-            name="MessageOccurrenceSpecification7">
-            <covered>
-              <lifelineMoniker
-                Id="13ea71a4-801c-4ee3-8e0b-60bb82c56295"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="f01da336-62bd-439b-bb85-7613a66cb644"
-            name="MessageOccurrenceSpecification8">
-            <covered>
-              <lifelineMoniker
-                Id="b6f7d1f3-2de2-4440-bc75-70b8f56b9524"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="ec65bd82-58e0-4fbd-828e-adef03dd9563"
-            name="ExecutionOccurrenceSpecification4">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="0b9c9ee9-30ef-49d2-923a-fd99c20a5bc4"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="13ea71a4-801c-4ee3-8e0b-60bb82c56295"
-                LastKnownName="For each Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="5ed99021-6077-49f2-be62-cd66167daead"
             name="MessageOccurrenceSpecification3">
             <covered>
               <lifelineMoniker
                 Id="b6f7d1f3-2de2-4440-bc75-70b8f56b9524"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4701,7 +3868,7 @@
             <covered>
               <lifelineMoniker
                 Id="b6f7d1f3-2de2-4440-bc75-70b8f56b9524"
-                LastKnownName="pluginManager : PluginManager"
+                LastKnownName="For each rendered plugin"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4730,14 +3897,9 @@
           </lifeline>
           <lifeline
             Id="b6f7d1f3-2de2-4440-bc75-70b8f56b9524"
-            name="pluginManager : PluginManager"
+            name="For each rendered plugin"
             isActor="false"
-            lifelineDisplayName="pluginManager : PluginManager">
-            <represents>
-              <propertyMoniker
-                Id="0cf1802d-5b5b-4b47-8fa8-ee0d15810281"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </represents>
+            lifelineDisplayName="For each rendered plugin">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="69104257-3290-42f2-85df-93655ba64fb6"
@@ -4746,22 +3908,6 @@
               <executionOccurrenceSpecificationMoniker
                 Id="68d0a3ea-abb0-4969-874f-5074f35cc4d8"
                 LastKnownName="ExecutionOccurrenceSpecification2"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="13ea71a4-801c-4ee3-8e0b-60bb82c56295"
-            name="For each Plugin"
-            isActor="false"
-            lifelineDisplayName="For each Plugin">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="9e95dfaa-93b6-4715-bcb9-b5a016adf5d2"
-                LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="ec65bd82-58e0-4fbd-828e-adef03dd9563"
-                LastKnownName="ExecutionOccurrenceSpecification4"
                 LastKnownLocation="EcoWorldModels.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -4783,44 +3929,6 @@
               <messageOccurrenceSpecificationMoniker
                 Id="996f71d0-f62d-4b22-8f90-6e56236cad70"
                 LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="b725418f-62af-45d1-ba5f-b996ba7c9959"
-            name="Animate(timeMs)"
-            messageKind="Complete"
-            messageSort="SynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="600b4fd4-7e2f-41e7-bb61-09ce610f8463"
-                LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="09e0d45b-60de-4469-933c-057cd69abdd0"
-                LastKnownName="MessageOccurrenceSpecification6"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="1afcdc12-fd5a-4fc6-97ed-74c9325ede05"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="037cc231-02aa-4898-b860-301d1670e09e"
-                LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="f01da336-62bd-439b-bb85-7613a66cb644"
-                LastKnownName="MessageOccurrenceSpecification8"
                 LastKnownLocation="EcoWorldModels.uml" />
             </receiveEvent>
           </message>
@@ -4861,22 +3969,6 @@
                 LastKnownLocation="Package2_0041.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="0cf1802d-5b5b-4b47-8fa8-ee0d15810281"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <classMoniker
-                Id="7c13ca85-11b9-459f-a263-fbdfca66e251"
-                LastKnownName="PluginManager"
-                LastKnownLocation="Package_0107.uml" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
       </interaction>
     </packageHasNamedElement>
@@ -4888,16 +3980,6 @@
     <packageHasNamedElement>
       <executionEvent
         Id="4dba47bb-e26a-4287-82c4-a992fe11ded9"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="63af9132-2202-42ba-9b29-91ecbcd0dabe"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="0b9c9ee9-30ef-49d2-923a-fd99c20a5bc4"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -5565,22 +4647,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="daf47107-93fd-4834-8ed0-13a91717691d"
-            name="MessageOccurrenceSpecification60">
-            <covered>
-              <lifelineMoniker
-                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
-                LastKnownName="gameCore : GameCore"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="49c9625b-3e7e-4f01-88eb-9246351b2b2d"
             name="MessageOccurrenceSpecification59">
             <covered>
               <lifelineMoniker
                 Id="b6810fad-423a-4246-9512-9ea0428952a9"
                 LastKnownName="guiManager : GUIManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="daf47107-93fd-4834-8ed0-13a91717691d"
+            name="MessageOccurrenceSpecification60">
+            <covered>
+              <lifelineMoniker
+                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
+                LastKnownName="gameCore : GameCore"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5857,22 +4939,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="f3e8cd95-f02a-40cb-87e3-5a812a257382"
-            name="MessageOccurrenceSpecification69">
-            <covered>
-              <lifelineMoniker
-                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
-                LastKnownName="For each Plugin,Menu, Scene"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="3dcb20bc-72d7-433b-b43e-8c8cb6b7882b"
             name="MessageOccurrenceSpecification70">
             <covered>
               <lifelineMoniker
                 Id="2101b1be-baf8-403c-a563-87e5a561ddbe"
                 LastKnownName="pluginManager : PluginManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f3e8cd95-f02a-40cb-87e3-5a812a257382"
+            name="MessageOccurrenceSpecification69">
+            <covered>
+              <lifelineMoniker
+                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
+                LastKnownName="For each Plugin,Menu, Scene"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -6417,22 +5499,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="3d3ecc74-4f3e-403a-bae5-3e575faed5f3"
-            name="MessageOccurrenceSpecification160">
-            <covered>
-              <lifelineMoniker
-                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
-                LastKnownName="For each Plugin,Menu, Scene"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="7415a269-afe8-4a2e-9863-6ce639615af5"
             name="MessageOccurrenceSpecification159">
             <covered>
               <lifelineMoniker
                 Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
                 LastKnownName="gameCore : GameCore"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3d3ecc74-4f3e-403a-bae5-3e575faed5f3"
+            name="MessageOccurrenceSpecification160">
+            <covered>
+              <lifelineMoniker
+                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
+                LastKnownName="For each Plugin,Menu, Scene"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -6635,22 +5717,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="46b8614b-3917-4869-9a9e-fd26aaaea5f8"
-            name="MessageOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
-                LastKnownName="gameCore : GameCore"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="30d029d2-9ca0-42e3-83c4-daa29b891a79"
             name="MessageOccurrenceSpecification5">
             <covered>
               <lifelineMoniker
                 Id="3508db08-fff8-4ff9-acc7-6ef717b3e619"
                 LastKnownName="main()"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="46b8614b-3917-4869-9a9e-fd26aaaea5f8"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
+                LastKnownName="gameCore : GameCore"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -6819,8 +5901,8 @@
             referredToFile="Message Sequence">
             <referencesInternal>
               <reference
-                Id="e203b024-059b-4e18-a3a8-aa30b1dbbe7e"
-                handle="backplane://Backplane/Microsoft.VisualStudio.TeamArchitect.SequenceDesigner.ToolAdapter.SequenceServiceManager/f6f442fe-ecbc-4765-9087-903652a17199\Message Sequence.sequencediagram"
+                Id="0291f637-ca0d-48fe-8365-a329e8b58cee"
+                handle="backplane://Backplane/Microsoft.VisualStudio.TeamArchitect.SequenceDesigner.ToolAdapter.SequenceServiceManager/f6f442fe-ecbc-4765-9087-903652a17199\MessageSequence.sequencediagram"
                 tag="Definition Reference" />
             </referencesInternal>
             <coveredLifelines>
@@ -6893,62 +5975,12 @@
             </interactionUseOccurrenceSpecifications>
           </interactionUse>
           <interactionUseOccurrenceSpecification
-            Id="58fa2ad2-8c19-472e-a004-d8d31e204b39"
-            name="InteractionUseOccurrenceSpecification51">
+            Id="0f7f62d5-2ee8-4cb3-8786-884e4fa588fd"
+            name="InteractionUseOccurrenceSpecification58">
             <covered>
               <lifelineMoniker
-                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
-                LastKnownName="gameCore : GameCore"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="e1fa9d91-5146-4bfe-9cce-1100c7780173"
-            name="InteractionUseOccurrenceSpecification52">
-            <covered>
-              <lifelineMoniker
-                Id="d59873b7-1df0-463e-8c8e-ea24109ab540"
-                LastKnownName="device : Device"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="eece6ff1-79a6-4b41-bdfe-33b44436b533"
-            name="InteractionUseOccurrenceSpecification55">
-            <covered>
-              <lifelineMoniker
-                Id="db64b10a-d785-42cd-be1d-8e944125c67e"
-                LastKnownName="renderManager : RenderManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="4d702b47-7763-449b-9aad-7a3d544e9ac6"
-            name="InteractionUseOccurrenceSpecification56">
-            <covered>
-              <lifelineMoniker
-                Id="456f5166-8e59-456c-9994-a152df4ea406"
-                LastKnownName="sceneManager : SceneManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="593a01fa-6784-465a-a858-cf65bda133fc"
-            name="InteractionUseOccurrenceSpecification53">
-            <covered>
-              <lifelineMoniker
-                Id="2101b1be-baf8-403c-a563-87e5a561ddbe"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="d03356e3-7736-47f5-9a1b-ba9e72472f60"
-            name="InteractionUseOccurrenceSpecification54">
-            <covered>
-              <lifelineMoniker
-                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
-                LastKnownName="For each Plugin,Menu, Scene"
+                Id="bb44a218-801b-4cd4-b9a9-5bbdc31a34f0"
+                LastKnownName="ecoWorldSystem : EcoWorldSystem"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </interactionUseOccurrenceSpecification>
@@ -6963,12 +5995,62 @@
             </covered>
           </interactionUseOccurrenceSpecification>
           <interactionUseOccurrenceSpecification
-            Id="0f7f62d5-2ee8-4cb3-8786-884e4fa588fd"
-            name="InteractionUseOccurrenceSpecification58">
+            Id="d03356e3-7736-47f5-9a1b-ba9e72472f60"
+            name="InteractionUseOccurrenceSpecification54">
             <covered>
               <lifelineMoniker
-                Id="bb44a218-801b-4cd4-b9a9-5bbdc31a34f0"
-                LastKnownName="ecoWorldSystem : EcoWorldSystem"
+                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
+                LastKnownName="For each Plugin,Menu, Scene"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="593a01fa-6784-465a-a858-cf65bda133fc"
+            name="InteractionUseOccurrenceSpecification53">
+            <covered>
+              <lifelineMoniker
+                Id="2101b1be-baf8-403c-a563-87e5a561ddbe"
+                LastKnownName="pluginManager : PluginManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="58fa2ad2-8c19-472e-a004-d8d31e204b39"
+            name="InteractionUseOccurrenceSpecification51">
+            <covered>
+              <lifelineMoniker
+                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
+                LastKnownName="gameCore : GameCore"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="eece6ff1-79a6-4b41-bdfe-33b44436b533"
+            name="InteractionUseOccurrenceSpecification55">
+            <covered>
+              <lifelineMoniker
+                Id="db64b10a-d785-42cd-be1d-8e944125c67e"
+                LastKnownName="renderManager : RenderManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="e1fa9d91-5146-4bfe-9cce-1100c7780173"
+            name="InteractionUseOccurrenceSpecification52">
+            <covered>
+              <lifelineMoniker
+                Id="d59873b7-1df0-463e-8c8e-ea24109ab540"
+                LastKnownName="device : Device"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="4d702b47-7763-449b-9aad-7a3d544e9ac6"
+            name="InteractionUseOccurrenceSpecification56">
+            <covered>
+              <lifelineMoniker
+                Id="456f5166-8e59-456c-9994-a152df4ea406"
+                LastKnownName="sceneManager : SceneManager"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </interactionUseOccurrenceSpecification>
@@ -7052,66 +6134,6 @@
             </interactionUseOccurrenceSpecifications>
           </interactionUse>
           <interactionUseOccurrenceSpecification
-            Id="116761e9-9188-4e55-b6c2-4ac21b3ab98f"
-            name="InteractionUseOccurrenceSpecification62">
-            <covered>
-              <lifelineMoniker
-                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
-                LastKnownName="For each Plugin,Menu, Scene"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="efcbeb75-d9a7-4d80-9162-5e025cc25aa0"
-            name="InteractionUseOccurrenceSpecification60">
-            <covered>
-              <lifelineMoniker
-                Id="d59873b7-1df0-463e-8c8e-ea24109ab540"
-                LastKnownName="device : Device"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="0eb82d81-7703-4999-8186-bc0c18d679a7"
-            name="InteractionUseOccurrenceSpecification59">
-            <covered>
-              <lifelineMoniker
-                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
-                LastKnownName="gameCore : GameCore"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="b2c616df-f32a-4a05-b28d-a62d2cc6be65"
-            name="InteractionUseOccurrenceSpecification66">
-            <covered>
-              <lifelineMoniker
-                Id="bb44a218-801b-4cd4-b9a9-5bbdc31a34f0"
-                LastKnownName="ecoWorldSystem : EcoWorldSystem"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="61034703-6a02-4df8-ad31-f9be84bc99f9"
-            name="InteractionUseOccurrenceSpecification63">
-            <covered>
-              <lifelineMoniker
-                Id="db64b10a-d785-42cd-be1d-8e944125c67e"
-                LastKnownName="renderManager : RenderManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="ce26d3db-9060-4c54-a0a3-346afe79534e"
-            name="InteractionUseOccurrenceSpecification65">
-            <covered>
-              <lifelineMoniker
-                Id="b6810fad-423a-4246-9512-9ea0428952a9"
-                LastKnownName="guiManager : GUIManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
             Id="619e22ce-ffc0-43ad-9628-e8727ece4b00"
             name="InteractionUseOccurrenceSpecification61">
             <covered>
@@ -7128,6 +6150,66 @@
               <lifelineMoniker
                 Id="456f5166-8e59-456c-9994-a152df4ea406"
                 LastKnownName="sceneManager : SceneManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="ce26d3db-9060-4c54-a0a3-346afe79534e"
+            name="InteractionUseOccurrenceSpecification65">
+            <covered>
+              <lifelineMoniker
+                Id="b6810fad-423a-4246-9512-9ea0428952a9"
+                LastKnownName="guiManager : GUIManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="61034703-6a02-4df8-ad31-f9be84bc99f9"
+            name="InteractionUseOccurrenceSpecification63">
+            <covered>
+              <lifelineMoniker
+                Id="db64b10a-d785-42cd-be1d-8e944125c67e"
+                LastKnownName="renderManager : RenderManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="0eb82d81-7703-4999-8186-bc0c18d679a7"
+            name="InteractionUseOccurrenceSpecification59">
+            <covered>
+              <lifelineMoniker
+                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
+                LastKnownName="gameCore : GameCore"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="efcbeb75-d9a7-4d80-9162-5e025cc25aa0"
+            name="InteractionUseOccurrenceSpecification60">
+            <covered>
+              <lifelineMoniker
+                Id="d59873b7-1df0-463e-8c8e-ea24109ab540"
+                LastKnownName="device : Device"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="116761e9-9188-4e55-b6c2-4ac21b3ab98f"
+            name="InteractionUseOccurrenceSpecification62">
+            <covered>
+              <lifelineMoniker
+                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
+                LastKnownName="For each Plugin,Menu, Scene"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="b2c616df-f32a-4a05-b28d-a62d2cc6be65"
+            name="InteractionUseOccurrenceSpecification66">
+            <covered>
+              <lifelineMoniker
+                Id="bb44a218-801b-4cd4-b9a9-5bbdc31a34f0"
+                LastKnownName="ecoWorldSystem : EcoWorldSystem"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </interactionUseOccurrenceSpecification>
@@ -7211,52 +6293,12 @@
             </interactionUseOccurrenceSpecifications>
           </interactionUse>
           <interactionUseOccurrenceSpecification
-            Id="576d46d1-7f28-4a5a-a9bc-727e7ac4b8fb"
-            name="InteractionUseOccurrenceSpecification83">
+            Id="6220ed5f-22e6-443e-97d4-7706b25a76f9"
+            name="InteractionUseOccurrenceSpecification84">
             <covered>
               <lifelineMoniker
-                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
-                LastKnownName="gameCore : GameCore"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="e05c93d3-0c57-4eaf-9736-495855d5a156"
-            name="InteractionUseOccurrenceSpecification88">
-            <covered>
-              <lifelineMoniker
-                Id="456f5166-8e59-456c-9994-a152df4ea406"
-                LastKnownName="sceneManager : SceneManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="5a06dfdf-9b19-45de-9572-daf692cda035"
-            name="InteractionUseOccurrenceSpecification85">
-            <covered>
-              <lifelineMoniker
-                Id="2101b1be-baf8-403c-a563-87e5a561ddbe"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="18e0bd3f-2632-40e6-b933-de46e6fdeebd"
-            name="InteractionUseOccurrenceSpecification86">
-            <covered>
-              <lifelineMoniker
-                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
-                LastKnownName="For each Plugin,Menu, Scene"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="46e90a15-c3b9-465f-b54b-abb60a359660"
-            name="InteractionUseOccurrenceSpecification90">
-            <covered>
-              <lifelineMoniker
-                Id="bb44a218-801b-4cd4-b9a9-5bbdc31a34f0"
-                LastKnownName="ecoWorldSystem : EcoWorldSystem"
+                Id="d59873b7-1df0-463e-8c8e-ea24109ab540"
+                LastKnownName="device : Device"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </interactionUseOccurrenceSpecification>
@@ -7271,6 +6313,16 @@
             </covered>
           </interactionUseOccurrenceSpecification>
           <interactionUseOccurrenceSpecification
+            Id="46e90a15-c3b9-465f-b54b-abb60a359660"
+            name="InteractionUseOccurrenceSpecification90">
+            <covered>
+              <lifelineMoniker
+                Id="bb44a218-801b-4cd4-b9a9-5bbdc31a34f0"
+                LastKnownName="ecoWorldSystem : EcoWorldSystem"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
             Id="0a0294ef-12a2-4079-8be6-c973736f00d7"
             name="InteractionUseOccurrenceSpecification89">
             <covered>
@@ -7281,12 +6333,42 @@
             </covered>
           </interactionUseOccurrenceSpecification>
           <interactionUseOccurrenceSpecification
-            Id="6220ed5f-22e6-443e-97d4-7706b25a76f9"
-            name="InteractionUseOccurrenceSpecification84">
+            Id="5a06dfdf-9b19-45de-9572-daf692cda035"
+            name="InteractionUseOccurrenceSpecification85">
             <covered>
               <lifelineMoniker
-                Id="d59873b7-1df0-463e-8c8e-ea24109ab540"
-                LastKnownName="device : Device"
+                Id="2101b1be-baf8-403c-a563-87e5a561ddbe"
+                LastKnownName="pluginManager : PluginManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="e05c93d3-0c57-4eaf-9736-495855d5a156"
+            name="InteractionUseOccurrenceSpecification88">
+            <covered>
+              <lifelineMoniker
+                Id="456f5166-8e59-456c-9994-a152df4ea406"
+                LastKnownName="sceneManager : SceneManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="576d46d1-7f28-4a5a-a9bc-727e7ac4b8fb"
+            name="InteractionUseOccurrenceSpecification83">
+            <covered>
+              <lifelineMoniker
+                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
+                LastKnownName="gameCore : GameCore"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="18e0bd3f-2632-40e6-b933-de46e6fdeebd"
+            name="InteractionUseOccurrenceSpecification86">
+            <covered>
+              <lifelineMoniker
+                Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
+                LastKnownName="For each Plugin,Menu, Scene"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </interactionUseOccurrenceSpecification>
@@ -7591,22 +6673,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="f12b36df-a5ef-488e-a678-9521c3020ac8"
-            name="MessageOccurrenceSpecification97">
-            <covered>
-              <lifelineMoniker
-                Id="2101b1be-baf8-403c-a563-87e5a561ddbe"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="326e0c38-39cd-4534-ab2f-7dadaf37675e"
             name="MessageOccurrenceSpecification98">
             <covered>
               <lifelineMoniker
                 Id="a3a0b296-e8f8-4f05-bf04-b15704189962"
                 LastKnownName="For each Plugin,Menu, Scene"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f12b36df-a5ef-488e-a678-9521c3020ac8"
+            name="MessageOccurrenceSpecification97">
+            <covered>
+              <lifelineMoniker
+                Id="2101b1be-baf8-403c-a563-87e5a561ddbe"
+                LastKnownName="pluginManager : PluginManager"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -7757,22 +6839,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="1a6cc2ac-7abe-4af5-9c9f-aabd8b947336"
-            name="MessageOccurrenceSpecification95">
-            <covered>
-              <lifelineMoniker
-                Id="2101b1be-baf8-403c-a563-87e5a561ddbe"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="d9cad368-5a17-42ed-825e-f24bcd757115"
             name="MessageOccurrenceSpecification96">
             <covered>
               <lifelineMoniker
                 Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
                 LastKnownName="gameCore : GameCore"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1a6cc2ac-7abe-4af5-9c9f-aabd8b947336"
+            name="MessageOccurrenceSpecification95">
+            <covered>
+              <lifelineMoniker
+                Id="2101b1be-baf8-403c-a563-87e5a561ddbe"
+                LastKnownName="pluginManager : PluginManager"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -7953,22 +7035,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="b620fd03-3b50-4110-a6f1-7e7275f70789"
-            name="MessageOccurrenceSpecification109">
-            <covered>
-              <lifelineMoniker
-                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
-                LastKnownName="gameCore : GameCore"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="913e4ddb-7a9e-48a7-961e-6a2d958d90d7"
             name="MessageOccurrenceSpecification110">
             <covered>
               <lifelineMoniker
                 Id="456f5166-8e59-456c-9994-a152df4ea406"
                 LastKnownName="sceneManager : SceneManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b620fd03-3b50-4110-a6f1-7e7275f70789"
+            name="MessageOccurrenceSpecification109">
+            <covered>
+              <lifelineMoniker
+                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
+                LastKnownName="gameCore : GameCore"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8081,22 +7163,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="af828cc0-d837-49e8-97c4-8dffc44d82c0"
-            name="MessageOccurrenceSpecification120">
-            <covered>
-              <lifelineMoniker
-                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
-                LastKnownName="gameCore : GameCore"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="167b756f-6599-42b5-a7a2-12797e8b1e60"
             name="MessageOccurrenceSpecification119">
             <covered>
               <lifelineMoniker
                 Id="db64b10a-d785-42cd-be1d-8e944125c67e"
                 LastKnownName="renderManager : RenderManager"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="af828cc0-d837-49e8-97c4-8dffc44d82c0"
+            name="MessageOccurrenceSpecification120">
+            <covered>
+              <lifelineMoniker
+                Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
+                LastKnownName="gameCore : GameCore"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8297,22 +7379,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="1645e6b7-a350-4932-85e7-223b446cd2c1"
-            name="MessageOccurrenceSpecification123">
-            <covered>
-              <lifelineMoniker
-                Id="d59873b7-1df0-463e-8c8e-ea24109ab540"
-                LastKnownName="device : Device"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="eb9d80a5-299c-4e08-9f51-3a5a9d0c2dde"
             name="MessageOccurrenceSpecification124">
             <covered>
               <lifelineMoniker
                 Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
                 LastKnownName="gameCore : GameCore"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1645e6b7-a350-4932-85e7-223b446cd2c1"
+            name="MessageOccurrenceSpecification123">
+            <covered>
+              <lifelineMoniker
+                Id="d59873b7-1df0-463e-8c8e-ea24109ab540"
+                LastKnownName="device : Device"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8335,22 +7417,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="594ee9cb-ae1b-41b1-8768-970469734138"
-            name="MessageOccurrenceSpecification12">
-            <covered>
-              <lifelineMoniker
-                Id="3508db08-fff8-4ff9-acc7-6ef717b3e619"
-                LastKnownName="main()"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="c406332f-89d8-441e-8bb1-56a484e7ad59"
             name="MessageOccurrenceSpecification11">
             <covered>
               <lifelineMoniker
                 Id="37591f1a-7536-4ef1-8e9b-9cda6b0f5c7d"
                 LastKnownName="gameCore : GameCore"
+                LastKnownLocation="EcoWorldModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="594ee9cb-ae1b-41b1-8768-970469734138"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="3508db08-fff8-4ff9-acc7-6ef717b3e619"
+                LastKnownName="main()"
                 LastKnownLocation="EcoWorldModels.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -10004,666 +9086,6 @@
     <packageHasNamedElement>
       <executionEvent
         Id="8ad06360-c01f-420f-b748-dd7812a3f1d7"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <interaction
-        Id="73b02c50-ae09-42a3-9c50-5ccf0c6ea53d"
-        name="SceneChange"
-        collapseFragmentsFlag="false"
-        isActiveClass="false"
-        isAbstract="false"
-        isLeaf="false"
-        isReentrant="false">
-        <fragments>
-          <interactionUse
-            Id="f4b8021c-9ccb-4c7b-8a68-068d32143b27"
-            name="Event Sequence"
-            referredToFile="EventSequence">
-            <referencesInternal>
-              <reference
-                Id="3fe5a4c8-b598-4fff-8b57-8f57af39e106"
-                handle="backplane://Backplane/Microsoft.VisualStudio.TeamArchitect.SequenceDesigner.ToolAdapter.SequenceServiceManager/f6f442fe-ecbc-4765-9087-903652a17199\EventSequence.sequencediagram"
-                tag="Definition Reference" />
-            </referencesInternal>
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-                LastKnownName="Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </coveredLifelines>
-            <interactionUseOccurrenceSpecifications>
-              <interactionUseOccurrenceSpecificationMoniker
-                Id="ff61e7f4-4fa4-48c9-9d3f-267d44884293"
-                LastKnownName="InteractionUseOccurrenceSpecification2"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <interactionUseOccurrenceSpecificationMoniker
-                Id="e74d5dcf-5c52-42e9-b787-b1a4e4bcb3e5"
-                LastKnownName="InteractionUseOccurrenceSpecification3"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </interactionUseOccurrenceSpecifications>
-          </interactionUse>
-          <interactionUseOccurrenceSpecification
-            Id="ff61e7f4-4fa4-48c9-9d3f-267d44884293"
-            name="InteractionUseOccurrenceSpecification2">
-            <covered>
-              <lifelineMoniker
-                Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-                LastKnownName="Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <interactionUseOccurrenceSpecification
-            Id="e74d5dcf-5c52-42e9-b787-b1a4e4bcb3e5"
-            name="InteractionUseOccurrenceSpecification3">
-            <covered>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="963c9b14-be3f-415b-b265-d8e5184991fb"
-            name="BehaviorExecutionSpecification2">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-                LastKnownName="Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="273f9d06-c642-41bf-9570-968a65b28420"
-                LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="afca0d6c-a25e-4d85-905c-a43cd40e1225"
-                LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="f3a00abf-2425-429f-8d51-5002d2bb5b2b"
-                LastKnownName="MessageOccurrenceSpecification3"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="278a92e8-8760-4248-9618-d4c8b3084534"
-                LastKnownName="MessageOccurrenceSpecification6"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="d3fb2ace-fbe1-4fb3-ae5f-9b129c50d407"
-                LastKnownName="MessageOccurrenceSpecification9"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="933fe6fa-cf63-4547-af0e-83410fe01509"
-                LastKnownName="MessageOccurrenceSpecification4"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="afca0d6c-a25e-4d85-905c-a43cd40e1225"
-            name="ExecutionOccurrenceSpecification3">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="28684b36-2a0b-4701-b537-ba6fb94c6608"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-                LastKnownName="Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="a9eeb3f5-fe7a-4eb6-8341-38ef9158d2d1"
-            name="MessageOccurrenceSpecification2">
-            <covered>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="f3a00abf-2425-429f-8d51-5002d2bb5b2b"
-            name="MessageOccurrenceSpecification3">
-            <covered>
-              <lifelineMoniker
-                Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-                LastKnownName="Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="dd79d20b-52e5-470b-9da8-c5e6e235f6a6"
-            name="BehaviorExecutionSpecification3">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="c9fb4418-ce3b-4c8a-8d7f-d980f87ee518"
-                LastKnownName="ExecutionOccurrenceSpecification6"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="66e5d8bb-fa10-4c86-8289-b4c20909eae1"
-                LastKnownName="ExecutionOccurrenceSpecification5"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="e6f27f7e-c932-4c91-9faa-83f593354a3c"
-                LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="fad2192d-716b-4f11-9f0d-c91402b393f7"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="aeaa3da0-7f21-4f1d-bb19-d97858407425"
-                LastKnownName="MessageOccurrenceSpecification17"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="53793673-83e6-478e-9d62-2e0972f764d2"
-                LastKnownName="MessageOccurrenceSpecification8"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="66e5d8bb-fa10-4c86-8289-b4c20909eae1"
-            name="ExecutionOccurrenceSpecification5">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="8d96f3de-c0ab-4b01-a4c5-231d78691d48"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="e6f27f7e-c932-4c91-9faa-83f593354a3c"
-            name="MessageOccurrenceSpecification7">
-            <covered>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="278a92e8-8760-4248-9618-d4c8b3084534"
-            name="MessageOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-                LastKnownName="Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="3f0d425f-4ac6-455b-9f57-4d23e5b6a49f"
-            name="BehaviorExecutionSpecification5">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="ad70f2d5-66e2-4323-8910-a84e8c48d4c7"
-                LastKnownName="sceneManager : SceneManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="1aa0638b-ac44-4b32-aa5b-816436171e6c"
-                LastKnownName="ExecutionOccurrenceSpecification10"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="0d9367cc-44dc-419b-93c3-e7724fe74020"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="aed79b9a-6c01-4457-8193-915c26a93a77"
-                LastKnownName="MessageOccurrenceSpecification15"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="ae454db4-a67f-473e-92bf-764aa2fcb914"
-                LastKnownName="MessageOccurrenceSpecification16"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="0d9367cc-44dc-419b-93c3-e7724fe74020"
-            name="ExecutionOccurrenceSpecification9">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="00611524-6938-424c-85a5-a6cc5a8ac350"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="ad70f2d5-66e2-4323-8910-a84e8c48d4c7"
-                LastKnownName="sceneManager : SceneManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="aed79b9a-6c01-4457-8193-915c26a93a77"
-            name="MessageOccurrenceSpecification15">
-            <covered>
-              <lifelineMoniker
-                Id="ad70f2d5-66e2-4323-8910-a84e8c48d4c7"
-                LastKnownName="sceneManager : SceneManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="fad2192d-716b-4f11-9f0d-c91402b393f7"
-            name="MessageOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="aeaa3da0-7f21-4f1d-bb19-d97858407425"
-            name="MessageOccurrenceSpecification17">
-            <covered>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="ae454db4-a67f-473e-92bf-764aa2fcb914"
-            name="MessageOccurrenceSpecification16">
-            <covered>
-              <lifelineMoniker
-                Id="ad70f2d5-66e2-4323-8910-a84e8c48d4c7"
-                LastKnownName="sceneManager : SceneManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="1aa0638b-ac44-4b32-aa5b-816436171e6c"
-            name="ExecutionOccurrenceSpecification10">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="e7888474-3bbe-46d2-9a74-af5411905099"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="ad70f2d5-66e2-4323-8910-a84e8c48d4c7"
-                LastKnownName="sceneManager : SceneManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="d3fb2ace-fbe1-4fb3-ae5f-9b129c50d407"
-            name="MessageOccurrenceSpecification9">
-            <covered>
-              <lifelineMoniker
-                Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-                LastKnownName="Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="53793673-83e6-478e-9d62-2e0972f764d2"
-            name="MessageOccurrenceSpecification8">
-            <covered>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="c9fb4418-ce3b-4c8a-8d7f-d980f87ee518"
-            name="ExecutionOccurrenceSpecification6">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="2a26ab0d-1c12-42e1-865a-c727776c6717"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="933fe6fa-cf63-4547-af0e-83410fe01509"
-            name="MessageOccurrenceSpecification4">
-            <covered>
-              <lifelineMoniker
-                Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-                LastKnownName="Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="0511ef4f-80e1-445f-a541-7e8947338d57"
-            name="MessageOccurrenceSpecification5">
-            <covered>
-              <lifelineMoniker
-                Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-                LastKnownName="pluginManager : PluginManager"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="273f9d06-c642-41bf-9570-968a65b28420"
-            name="ExecutionOccurrenceSpecification4">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="24b123df-29cf-45ff-b520-9a476bfc599a"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="EcoWorldModels.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-                LastKnownName="Plugin"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-        </fragments>
-        <lifelines>
-          <lifeline
-            Id="eea5e045-3f88-4174-a42d-7c74ab7913c9"
-            name="Plugin"
-            isActor="false"
-            lifelineDisplayName="Plugin">
-            <topLevelOccurrences>
-              <interactionUseOccurrenceSpecificationMoniker
-                Id="ff61e7f4-4fa4-48c9-9d3f-267d44884293"
-                LastKnownName="InteractionUseOccurrenceSpecification2"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="afca0d6c-a25e-4d85-905c-a43cd40e1225"
-                LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="273f9d06-c642-41bf-9570-968a65b28420"
-                LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="bc02b9d3-c538-434b-ad4f-ad5984bbce17"
-            name="pluginManager : PluginManager"
-            isActor="false"
-            lifelineDisplayName="pluginManager : PluginManager">
-            <represents>
-              <propertyMoniker
-                Id="83f9d668-d7aa-4939-a035-07e7cc90c8be"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </represents>
-            <topLevelOccurrences>
-              <interactionUseOccurrenceSpecificationMoniker
-                Id="e74d5dcf-5c52-42e9-b787-b1a4e4bcb3e5"
-                LastKnownName="InteractionUseOccurrenceSpecification3"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="a9eeb3f5-fe7a-4eb6-8341-38ef9158d2d1"
-                LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="66e5d8bb-fa10-4c86-8289-b4c20909eae1"
-                LastKnownName="ExecutionOccurrenceSpecification5"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="c9fb4418-ce3b-4c8a-8d7f-d980f87ee518"
-                LastKnownName="ExecutionOccurrenceSpecification6"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="0511ef4f-80e1-445f-a541-7e8947338d57"
-                LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="ad70f2d5-66e2-4323-8910-a84e8c48d4c7"
-            name="sceneManager : SceneManager"
-            isActor="false"
-            lifelineDisplayName="sceneManager : SceneManager">
-            <represents>
-              <propertyMoniker
-                Id="c79fdafd-736a-4fee-9447-6d5a0588235b"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </represents>
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="0d9367cc-44dc-419b-93c3-e7724fe74020"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="EcoWorldModels.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="1aa0638b-ac44-4b32-aa5b-816436171e6c"
-                LastKnownName="ExecutionOccurrenceSpecification10"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-        </lifelines>
-        <messages>
-          <message
-            Id="96ea724e-b19d-4f0d-a760-6980e6215b61"
-            name="OnEvent"
-            messageKind="Complete"
-            messageSort="SynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="a9eeb3f5-fe7a-4eb6-8341-38ef9158d2d1"
-                LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="f3a00abf-2425-429f-8d51-5002d2bb5b2b"
-                LastKnownName="MessageOccurrenceSpecification3"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="710c6b9d-f0ef-445f-9162-e5e3244c9cc2"
-            name="ChangeScene(scene)"
-            messageKind="Complete"
-            messageSort="SynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="278a92e8-8760-4248-9618-d4c8b3084534"
-                LastKnownName="MessageOccurrenceSpecification6"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="e6f27f7e-c932-4c91-9faa-83f593354a3c"
-                LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="4943748a-511b-47c1-a2c5-9db331732a84"
-            name="ChangeScene(scene)"
-            messageKind="Complete"
-            messageSort="SynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="fad2192d-716b-4f11-9f0d-c91402b393f7"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="aed79b9a-6c01-4457-8193-915c26a93a77"
-                LastKnownName="MessageOccurrenceSpecification15"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="60093fcf-4a05-4e47-a9dc-251d600f1d33"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="ae454db4-a67f-473e-92bf-764aa2fcb914"
-                LastKnownName="MessageOccurrenceSpecification16"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="aeaa3da0-7f21-4f1d-bb19-d97858407425"
-                LastKnownName="MessageOccurrenceSpecification17"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="90d57dfb-da23-4122-a22e-60ab39cb3fcc"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="53793673-83e6-478e-9d62-2e0972f764d2"
-                LastKnownName="MessageOccurrenceSpecification8"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="d3fb2ace-fbe1-4fb3-ae5f-9b129c50d407"
-                LastKnownName="MessageOccurrenceSpecification9"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="4d20657d-d29f-4df4-b49b-70ebf35d7e73"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="933fe6fa-cf63-4547-af0e-83410fe01509"
-                LastKnownName="MessageOccurrenceSpecification4"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="0511ef4f-80e1-445f-a541-7e8947338d57"
-                LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="EcoWorldModels.uml" />
-            </receiveEvent>
-          </message>
-        </messages>
-        <ownedAttributesInternal>
-          <property
-            Id="83f9d668-d7aa-4939-a035-07e7cc90c8be"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <classMoniker
-                Id="7c13ca85-11b9-459f-a263-fbdfca66e251"
-                LastKnownName="PluginManager"
-                LastKnownLocation="Package_0107.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="c79fdafd-736a-4fee-9447-6d5a0588235b"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <classMoniker
-                Id="15ecd763-41b2-477c-85c7-8bb5c970f2b7"
-                LastKnownName="SceneManager"
-                LastKnownLocation="Package_0106.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </interaction>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="28684b36-2a0b-4701-b537-ba6fb94c6608"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="24b123df-29cf-45ff-b520-9a476bfc599a"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="8d96f3de-c0ab-4b01-a4c5-231d78691d48"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="2a26ab0d-1c12-42e1-865a-c727776c6717"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="00611524-6938-424c-85a5-a6cc5a8ac350"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="e7888474-3bbe-46d2-9a74-af5411905099"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>

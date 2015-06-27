@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="89c0bef7-635e-47a0-b9e1-72bafea4ce75" name="PluginManager" linkedPackageId="c6b479c5-a85f-4586-9090-78703136d22c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="89c0bef7-635e-47a0-b9e1-72bafea4ce75" name="PluginManager" linkedPackageId="c6b479c5-a85f-4586-9090-78703136d22c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="a353b491-fbd8-4e0e-a74c-087717869c6f" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="516ee810-d134-49ea-b9de-c5e9b897d3a9" />
@@ -226,18 +226,60 @@
                   <elementDefinition Id="66ff0479-76c7-4e88-b986-01554b7ef6de" />
                 </association>
               </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="d637582d-1de0-44cf-a4cd-dffe76a73be5" name="plugins" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="638110b6-e087-4e2f-8910-5d997c3bfae8" />
+                </property>
+              </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="60615320-d369-4fa3-85ef-6fc557ff59a7" name="PostMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="60615320-d369-4fa3-85ef-6fc557ff59a7" name="postMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="64e1174f-88c1-4586-ad04-6ef6f3e6494f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="22bd3d3c-48f4-4811-98fb-655be4e5a113" name="msg" direction="In" isUnique="false">
+                        <elementDefinition Id="ed3104e1-351f-46ff-b7a0-52ee52238756" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
-                <operation Id="905f01ca-d6e8-4e12-89fb-46e053b26b78" name="ProcessMsgs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="905f01ca-d6e8-4e12-89fb-46e053b26b78" name="processMsgs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="6de8e468-ff5f-45f9-8dc5-cfb5e218d399" />
+                </operation>
+                <operation Id="0aa22880-9afb-4bd9-9aa4-87341e4d09c1" name="register" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="bb088f71-55c4-414e-8fa4-7864892d7781" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="eb1c1b4c-a6e7-44f2-8b9f-83aff27901d0" name="plugin" direction="In" isUnique="false">
+                        <elementDefinition Id="65a757de-0f9b-42b0-b0df-aa423530fb49" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="af89454f-26ab-4233-a4cf-aa0ea7e23b94" name="unregister" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="7da776c9-d83b-4814-9771-c880f4f3b01f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9fcb0b51-4aa5-4a6e-a1ac-9f441cbd10f0" name="plugin" direction="In" isUnique="false">
+                        <elementDefinition Id="46878fc7-814f-4450-bcfa-b2a76704f187" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="ea2a21d5-9164-49d9-9151-43ab789f45cb" name="postAndProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="fd40dee4-0e3e-48da-ab4e-482de821107d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="fdeb3857-ba61-4267-9a56-d18791ad3d09" name="msg" direction="In" isUnique="false">
+                        <elementDefinition Id="3965aeb2-6754-4a2f-816b-81a29c642b06" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <enumeration Id="78fed4b4-e98c-46e4-a982-bdcd2d8873b2" name="Plugin" isAbstract="false" isLeaf="false">
+            <enumeration Id="78fed4b4-e98c-46e4-a982-bdcd2d8873b2" name="E_PLUGIN" isAbstract="false" isLeaf="false">
               <elementDefinition Id="4cf877d2-9483-43eb-b9b3-74d4b00c185c" />
               <ownedLiterals>
                 <enumerationLiteral Id="9c61df7e-057b-4fc7-9280-7a33af84eaac" name="System">
@@ -274,7 +316,7 @@
             </enumeration>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <enumeration Id="dfd6c27b-ff55-474c-aee9-633337d1e727" name="Messages" isAbstract="false" isLeaf="false">
+            <enumeration Id="dfd6c27b-ff55-474c-aee9-633337d1e727" name="E_MESSAGES" isAbstract="false" isLeaf="false">
               <elementDefinition Id="48ad42ba-5876-4a00-a120-56bac2643581" />
             </enumeration>
           </packageHasNamedElement>
@@ -291,7 +333,7 @@
           </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation Id="c6a43f9e-dc9d-4d13-a36a-846ee266fa3e" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="c6a43f9e-dc9d-4d13-a36a-846ee266fa3e" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="8b49aff1-094e-40e1-a80f-627bc9378007" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -304,7 +346,7 @@
           <operation Id="b26e8d10-d800-47d5-820f-17e7d4760d9c" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="b8cb9415-9574-4bed-9150-3886b52f9771" />
           </operation>
-          <operation Id="689a8cb6-9f9b-4177-8684-f7e2767043ef" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="689a8cb6-9f9b-4177-8684-f7e2767043ef" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="fb29598c-38a4-4eeb-aad2-c6fc9ae146da" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -327,7 +369,7 @@
           </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation Id="642ce13c-7864-4f20-9a97-287e06f0434e" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="642ce13c-7864-4f20-9a97-287e06f0434e" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="ded90df2-23d6-47d8-b577-8f8187c757fd" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -340,7 +382,7 @@
           <operation Id="4df11b70-3996-46eb-8224-8090694c05f4" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="50ce6f75-453c-46b0-a2c9-8a3409296192" />
           </operation>
-          <operation Id="080f04a6-40ad-419a-98ba-6e4ba7389c89" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="080f04a6-40ad-419a-98ba-6e4ba7389c89" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="0e916025-f546-4300-b6e1-7f1b7271e1c1" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -363,7 +405,7 @@
           </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation Id="264d8af6-a9b1-4876-a138-db522e14deff" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="264d8af6-a9b1-4876-a138-db522e14deff" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="84afa1f6-f0a4-465f-9a05-a5ae1cabcc30" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -376,7 +418,7 @@
           <operation Id="199c312e-5cdc-4584-8b2a-4a0a716c33e6" name="SetCurrentGUI" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="69c4108a-dbea-4de4-ac63-31c83f62beaf" />
           </operation>
-          <operation Id="74260df1-8397-4f61-bd45-cf859d06999b" name="OnGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="74260df1-8397-4f61-bd45-cf859d06999b" name="onGUIEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="3f45530c-113c-437e-96aa-b0eb665e5f1f" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -399,7 +441,7 @@
           </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation Id="6ab2fd00-8fbf-46ac-9f5d-8a096579138f" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="6ab2fd00-8fbf-46ac-9f5d-8a096579138f" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="67e5197c-d666-4827-b7a3-ca699eece529" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -409,7 +451,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="cd1f3763-bc53-4f07-988d-f1cf94537d60" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="cd1f3763-bc53-4f07-988d-f1cf94537d60" name="animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="6f0efd88-9a4a-45f1-a66c-9013450f3920" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -419,7 +461,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="8ca9ba9b-73b7-4d80-80d4-5993a79995e6" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="8ca9ba9b-73b7-4d80-80d4-5993a79995e6" name="render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="831a1863-3904-49b1-9fe4-8e928c17da70" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -442,7 +484,7 @@
           </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation Id="f0cf6361-e104-4a36-920e-e40c8245c3b9" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="f0cf6361-e104-4a36-920e-e40c8245c3b9" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="9f4f0990-1921-405e-a7f4-9e02bcb7e92c" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -452,7 +494,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="e75084d9-1e9b-44e1-96b6-d1f8faabae9e" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="e75084d9-1e9b-44e1-96b6-d1f8faabae9e" name="animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="3209a9f7-8d84-4d50-9973-30e442682366" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -462,7 +504,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="076dc343-12a7-4571-9ae2-68da8518e996" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="076dc343-12a7-4571-9ae2-68da8518e996" name="render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="debca23a-1af7-4f27-8804-03d96824eb82" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -485,7 +527,7 @@
           </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation Id="d42977ce-70a7-46d8-a334-6150478be9c7" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="d42977ce-70a7-46d8-a334-6150478be9c7" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="516264b7-a884-4a2d-a2b5-74ac18cdf94a" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -495,7 +537,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="fc3c62c6-aafc-453b-bacb-dca8025164a9" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="fc3c62c6-aafc-453b-bacb-dca8025164a9" name="animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="df837fa0-b28a-4118-b656-40c0b61f5aa0" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -505,7 +547,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="bf7b25d6-a4e0-491a-8d6f-29cef476b547" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="bf7b25d6-a4e0-491a-8d6f-29cef476b547" name="render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="055193bf-b938-4aa8-bff8-39d6487c2dc8" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -528,7 +570,7 @@
           </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation Id="02b10105-933a-4a28-999f-a0e6b991a351" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="02b10105-933a-4a28-999f-a0e6b991a351" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="5943870d-d46a-4a35-bbfa-9fde63bbf2e2" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -538,7 +580,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="da54d911-f574-40a6-889f-ed3cb9b0634f" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="da54d911-f574-40a6-889f-ed3cb9b0634f" name="animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="060631c0-3a90-474b-a36b-0fd1cef8c0df" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -548,7 +590,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="8e3e768f-5cf9-4d12-9b08-25da8171a374" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="8e3e768f-5cf9-4d12-9b08-25da8171a374" name="render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="7e8ac881-d97f-4597-8bc4-62e0ce7d49ef" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -571,7 +613,7 @@
           </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation Id="c1a6747c-0b40-4e51-8ad6-f8f68e3c8133" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="c1a6747c-0b40-4e51-8ad6-f8f68e3c8133" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="65a76e52-5ab7-4132-9e4a-57b29104f66d" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -581,7 +623,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="27d6986f-ea94-4971-ac6a-bae5740145ca" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="27d6986f-ea94-4971-ac6a-bae5740145ca" name="animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="4d9e8432-d145-4783-b60f-d779d13b069e" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -591,7 +633,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="3d79efe3-5158-4887-aa62-c723b525552b" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="3d79efe3-5158-4887-aa62-c723b525552b" name="render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="281cdb87-56ef-4e2b-a019-e56d78cad4d3" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -614,7 +656,7 @@
           </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation Id="2747eaec-6957-47af-a58f-746b540c0705" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="2747eaec-6957-47af-a58f-746b540c0705" name="processMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="de238504-36e8-4268-a829-43b78bf4d804" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -624,7 +666,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="0076d501-fbae-4327-9160-52132612c6c8" name="Animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="0076d501-fbae-4327-9160-52132612c6c8" name="animate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="28e2c2a2-cbd6-4010-a367-a9975dd6acfa" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -634,7 +676,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="f872652b-8229-4fd8-b21a-3b8de1996684" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="f872652b-8229-4fd8-b21a-3b8de1996684" name="render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="6b908b2a-cef1-4a12-a161-d3b322309d88" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -651,12 +693,12 @@
       <Interface Id="aff80710-0bc3-4197-bc53-09cee32f5e44" name="IPlugin" isAbstract="false" isLeaf="false">
         <elementDefinition Id="7511a273-b17c-4617-adff-e0b7c274ae7a" />
         <ownedOperations>
-          <operation Id="10b77aa9-fa61-46d7-b32d-22c57b6c7267" name="ProcessMsg" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+          <operation Id="10b77aa9-fa61-46d7-b32d-22c57b6c7267" name="processMsg" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="7df29b83-7c03-4b17-8ed7-e98059aef344" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="e946d9f4-6db0-4d42-b75a-7d478472a089" name="msg" direction="In" isUnique="false">
-                  <elementDefinition Id="a2c8c9e6-1d89-40be-a7b1-b84c234e3744" />
+                <parameter Id="f89a26ac-b6c3-4754-845f-551dca575692" name="msg" direction="In" isUnique="false">
+                  <elementDefinition Id="8a6e4a28-00e4-4e87-953e-0a5dce682012" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>

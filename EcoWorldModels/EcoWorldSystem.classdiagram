@@ -72,32 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="51bee829-bd90-4a83-9a79-2b55f4721eeb">
-      <profileInstance Id="3a7e6192-4d9b-43e7-ab7e-af4c885e762e" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="84b2abdb-bd12-42aa-99c9-a2518381a75a">
-      <profileInstance Id="4e28de1f-01d2-41ee-82da-e35c5e257c17" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="379e8419-7194-4460-8b71-5a84f374322c">
-      <profileInstance Id="f1d6b117-2775-45bf-a401-5725cf299ce3" name="CSharpProfile">
-        <elementDefinition Id="187512f4-2939-4a9e-9f81-18d06c986bf3" />
-      </profileInstance>
-      <elementDefinition Id="5cf654ca-0297-44a0-927f-6bf9bbdfa04a" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="41b3f31c-5357-4004-928c-36d7d655e512">
-      <profileInstance Id="40020c0c-7fb7-4108-8595-eb82a6afde88" name="TextTemplateBindings">
-        <elementDefinition Id="cec2143c-2c99-4c08-8569-9171fe37c319" />
-      </profileInstance>
-      <elementDefinition Id="b12236da-160b-466a-bc37-8a6daa3b1116" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="13c0ddd5-0eec-46c4-ae6f-0df940a17b2e" name="System">
@@ -106,6 +80,43 @@
           <packageHasNamedElement>
             <class Id="1cc2583c-82bc-4179-b54a-500774ce0afa" name="EcoWorldSystem" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="6d40c099-524f-426a-9362-2ae77c2dbeba" />
+              <ownedAttributesInternal>
+                <property Id="9f390012-3354-484d-95d0-03a35963e069" name="systemModifiers" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c268fea3-aece-489b-a1de-1a25e324c15c" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="4902178e-11cc-4010-8cfe-44cd93397433" name="register" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="cdc416ed-c72f-40be-87b9-b280ad9607a9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b7a53890-63d5-4693-9f9d-599a6137f235" name="systemModifier" direction="In" isUnique="false">
+                        <elementDefinition Id="12918057-daf2-411c-8bdc-a21d6ba187ad" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="ca0f3b1e-d96e-4377-b75c-90c4279e9eb9" name="unregister" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="722a0805-3b23-4999-ae5f-37f8818da4f9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ac9e524e-8838-451d-9f05-a62cb1aeec57" name="systemModifier" direction="In" isUnique="false">
+                        <elementDefinition Id="ff0e9280-d1b6-4b1d-ae8b-71cc45dc7b70" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="5faec732-5ed8-4536-b594-3d62d8da63cc" name="update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="382c9d56-932c-4df8-bdb6-45269f786bb3" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="45de1378-1cb5-40f6-a2e0-f278fd539401" name="systemTimeMs" direction="In" isUnique="false">
+                        <elementDefinition Id="9a735447-c1ba-458e-94e1-012d2f09952e" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
         </packagedElements>
@@ -114,5 +125,31 @@
   </packagedElements>
   <package Id="14f6517c-1a09-4e3f-8dc0-5599897da42d" name="EcoWorldModels">
     <elementDefinition Id="8afb82f3-dbcc-4311-8162-2c341419be93" />
+    <profileInstances>
+      <packageHasProfileInstances Id="51bee829-bd90-4a83-9a79-2b55f4721eeb">
+        <profileInstance Id="3a7e6192-4d9b-43e7-ab7e-af4c885e762e" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="84b2abdb-bd12-42aa-99c9-a2518381a75a">
+        <profileInstance Id="4e28de1f-01d2-41ee-82da-e35c5e257c17" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="379e8419-7194-4460-8b71-5a84f374322c">
+        <profileInstance Id="f1d6b117-2775-45bf-a401-5725cf299ce3" name="CSharpProfile">
+          <elementDefinition Id="187512f4-2939-4a9e-9f81-18d06c986bf3" />
+        </profileInstance>
+        <elementDefinition Id="5cf654ca-0297-44a0-927f-6bf9bbdfa04a" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="41b3f31c-5357-4004-928c-36d7d655e512">
+        <profileInstance Id="40020c0c-7fb7-4108-8595-eb82a6afde88" name="TextTemplateBindings">
+          <elementDefinition Id="cec2143c-2c99-4c08-8569-9171fe37c319" />
+        </profileInstance>
+        <elementDefinition Id="b12236da-160b-466a-bc37-8a6daa3b1116" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

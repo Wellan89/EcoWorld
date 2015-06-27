@@ -80,7 +80,7 @@
             <elementDefinition Id="4a2840bd-526f-496f-b5fe-00bcb77b1074" />
             <body>Animate according to plugin's animation priorities (higher is sooner)</body>
             <annotatedElements>
-              <behaviorExecutionSpecificationMoniker Id="8747b93e-bf83-4016-a41c-c6a59d0e07f1" LastKnownName="BehaviorExecutionSpecification2" />
+              <behaviorExecutionSpecificationMoniker Id="f2f32389-1cee-4324-a444-644bcea97b45" LastKnownName="BehaviorExecutionSpecification1" />
             </annotatedElements>
           </comment>
         </ownedCommentsInternal>
@@ -89,7 +89,7 @@
           <behaviorExecutionSpecification Id="f2f32389-1cee-4324-a444-644bcea97b45" name="BehaviorExecutionSpecification1">
             <elementDefinition Id="d76c2673-f72c-4768-aae5-7fdb64bd00e4" />
             <coveredLifelines>
-              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="pluginManager : PluginManager" />
+              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="For each rendered plugin" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="048d6d8a-458e-4fce-ad04-d25d440db271" LastKnownName="ExecutionOccurrenceSpecification2" />
@@ -99,8 +99,6 @@
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker Id="c626137d-540d-48be-894b-0368764387a0" LastKnownName="MessageOccurrenceSpecification2" />
-              <messageOccurrenceSpecificationMoniker Id="fcf5d492-2cba-4ba5-afec-fa5efee4a1e6" LastKnownName="MessageOccurrenceSpecification5" />
-              <messageOccurrenceSpecificationMoniker Id="273a47d9-e43f-49ea-b051-47e97a027e3d" LastKnownName="MessageOccurrenceSpecification8" />
               <messageOccurrenceSpecificationMoniker Id="e4c013b4-b7ef-4604-ac1e-2dd8bc76a604" LastKnownName="MessageOccurrenceSpecification3" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
@@ -112,7 +110,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="pluginManager : PluginManager" />
+              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="For each rendered plugin" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="10bc9ac7-b08d-40a9-9b7c-b16df221e71c" name="MessageOccurrenceSpecification1">
@@ -124,75 +122,13 @@
           <messageOccurrenceSpecification Id="c626137d-540d-48be-894b-0368764387a0" name="MessageOccurrenceSpecification2">
             <elementDefinition Id="996f71d0-f62d-4b22-8f90-6e56236cad70" />
             <covered>
-              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="pluginManager : PluginManager" />
+              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="For each rendered plugin" />
             </covered>
           </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification Id="8747b93e-bf83-4016-a41c-c6a59d0e07f1" name="BehaviorExecutionSpecification2">
-            <elementDefinition Id="020ffade-3855-4c0f-86aa-d11a0677d551" />
-            <coveredLifelines>
-              <lifelineMoniker Id="0d1981ce-85fb-40af-aa4a-4f23c8de8696" LastKnownName="For each Plugin" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker Id="387f1328-7b32-4e45-9a1c-7913db3a3ad9" LastKnownName="ExecutionOccurrenceSpecification4" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker Id="d913b6c0-041f-46b1-b55f-4a6d8fea37ba" LastKnownName="ExecutionOccurrenceSpecification3" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker Id="4ccf3895-0309-46de-ae50-2ec3f185272e" LastKnownName="MessageOccurrenceSpecification6" />
-              <messageOccurrenceSpecificationMoniker Id="90160556-962a-4356-b82a-1efb71a192f1" LastKnownName="MessageOccurrenceSpecification7" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification Id="d913b6c0-041f-46b1-b55f-4a6d8fea37ba" name="ExecutionOccurrenceSpecification3">
-            <elementDefinition Id="9e95dfaa-93b6-4715-bcb9-b5a016adf5d2" />
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="f5a3d6d6-ca5c-4c91-b42e-1be0c6d9b6a3" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker Id="0d1981ce-85fb-40af-aa4a-4f23c8de8696" LastKnownName="For each Plugin" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="fcf5d492-2cba-4ba5-afec-fa5efee4a1e6" name="MessageOccurrenceSpecification5">
-            <elementDefinition Id="600b4fd4-7e2f-41e7-bb61-09ce610f8463" />
-            <covered>
-              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="pluginManager : PluginManager" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="4ccf3895-0309-46de-ae50-2ec3f185272e" name="MessageOccurrenceSpecification6">
-            <elementDefinition Id="09e0d45b-60de-4469-933c-057cd69abdd0" />
-            <covered>
-              <lifelineMoniker Id="0d1981ce-85fb-40af-aa4a-4f23c8de8696" LastKnownName="For each Plugin" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="90160556-962a-4356-b82a-1efb71a192f1" name="MessageOccurrenceSpecification7">
-            <elementDefinition Id="037cc231-02aa-4898-b860-301d1670e09e" />
-            <covered>
-              <lifelineMoniker Id="0d1981ce-85fb-40af-aa4a-4f23c8de8696" LastKnownName="For each Plugin" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="273a47d9-e43f-49ea-b051-47e97a027e3d" name="MessageOccurrenceSpecification8">
-            <elementDefinition Id="f01da336-62bd-439b-bb85-7613a66cb644" />
-            <covered>
-              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="pluginManager : PluginManager" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification Id="387f1328-7b32-4e45-9a1c-7913db3a3ad9" name="ExecutionOccurrenceSpecification4">
-            <elementDefinition Id="ec65bd82-58e0-4fbd-828e-adef03dd9563" />
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="213e0a3b-eeb8-47a0-8aa0-0b3ca0588c14" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker Id="0d1981ce-85fb-40af-aa4a-4f23c8de8696" LastKnownName="For each Plugin" />
-            </covered>
-          </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="e4c013b4-b7ef-4604-ac1e-2dd8bc76a604" name="MessageOccurrenceSpecification3">
             <elementDefinition Id="5ed99021-6077-49f2-be62-cd66167daead" />
             <covered>
-              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="pluginManager : PluginManager" />
+              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="For each rendered plugin" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="0499291d-647a-4363-971f-752ff8b1587c" name="MessageOccurrenceSpecification4">
@@ -209,7 +145,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="pluginManager : PluginManager" />
+              <lifelineMoniker Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" LastKnownName="For each rendered plugin" />
             </covered>
           </executionOccurrenceSpecification>
         </fragments>
@@ -224,21 +160,11 @@
               <messageOccurrenceSpecificationMoniker Id="0499291d-647a-4363-971f-752ff8b1587c" LastKnownName="MessageOccurrenceSpecification4" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" name="pluginManager : PluginManager" isActor="false" lifelineDisplayName="pluginManager : PluginManager">
+          <lifeline Id="e5cee165-93e5-4df2-a6b6-f11f7bf5cba8" name="For each rendered plugin" isActor="false" lifelineDisplayName="For each rendered plugin">
             <elementDefinition Id="b6f7d1f3-2de2-4440-bc75-70b8f56b9524" />
-            <represents>
-              <propertyMoniker Id="536b5e8e-3afa-4a50-b1a0-ab11f2a24c02" />
-            </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="36feb125-1957-4813-892a-f356c11fec66" LastKnownName="ExecutionOccurrenceSpecification1" />
               <executionOccurrenceSpecificationMoniker Id="048d6d8a-458e-4fce-ad04-d25d440db271" LastKnownName="ExecutionOccurrenceSpecification2" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline Id="0d1981ce-85fb-40af-aa4a-4f23c8de8696" name="For each Plugin" isActor="false" lifelineDisplayName="For each Plugin">
-            <elementDefinition Id="13ea71a4-801c-4ee3-8e0b-60bb82c56295" />
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker Id="d913b6c0-041f-46b1-b55f-4a6d8fea37ba" LastKnownName="ExecutionOccurrenceSpecification3" />
-              <executionOccurrenceSpecificationMoniker Id="387f1328-7b32-4e45-9a1c-7913db3a3ad9" LastKnownName="ExecutionOccurrenceSpecification4" />
             </topLevelOccurrences>
           </lifeline>
         </lifelines>
@@ -250,24 +176,6 @@
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker Id="c626137d-540d-48be-894b-0368764387a0" LastKnownName="MessageOccurrenceSpecification2" />
-            </receiveEvent>
-          </message>
-          <message Id="ed461e7d-5c50-436f-b29f-c1a3434fa6ad" name="Animate(timeMs)" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
-            <elementDefinition Id="b725418f-62af-45d1-ba5f-b996ba7c9959" />
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker Id="fcf5d492-2cba-4ba5-afec-fa5efee4a1e6" LastKnownName="MessageOccurrenceSpecification5" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker Id="4ccf3895-0309-46de-ae50-2ec3f185272e" LastKnownName="MessageOccurrenceSpecification6" />
-            </receiveEvent>
-          </message>
-          <message Id="c72c8ce5-55ca-41d0-97f3-d8acb5e9c484" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
-            <elementDefinition Id="1afcdc12-fd5a-4fc6-97ed-74c9325ede05" />
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker Id="90160556-962a-4356-b82a-1efb71a192f1" LastKnownName="MessageOccurrenceSpecification7" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker Id="273a47d9-e43f-49ea-b051-47e97a027e3d" LastKnownName="MessageOccurrenceSpecification8" />
             </receiveEvent>
           </message>
           <message Id="f919b7ef-b1bd-4795-8782-eef939822ad7" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
@@ -287,23 +195,12 @@
               <referencedTypeMoniker Id="9275e0eb-bf0a-4001-b332-3035be2b2e8a" LastKnownName="GameCore" />
             </type_NamedElement>
           </property>
-          <property Id="536b5e8e-3afa-4a50-b1a0-ab11f2a24c02" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="0cf1802d-5b5b-4b47-8fa8-ee0d15810281" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="bef37449-a301-4e10-b138-e4e7a836c62f" LastKnownName="PluginManager" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
       </interaction>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <referencedType Id="9275e0eb-bf0a-4001-b332-3035be2b2e8a" name="GameCore" isAbstract="false" isLeaf="false" cachedFullName="EcoWorldModels::EcoWorld::Core::GameCore">
         <elementDefinition Id="2d7ee8d5-fa80-4546-ac3a-da1aaea817cc" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="bef37449-a301-4e10-b138-e4e7a836c62f" name="PluginManager" isAbstract="false" isLeaf="false" cachedFullName="EcoWorldModels::EcoWorld::Plugins::PluginManager">
-        <elementDefinition Id="7c13ca85-11b9-459f-a263-fbdfca66e251" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -314,16 +211,6 @@
     <packageHasNamedElement>
       <executionEvent Id="509e5e95-2ce1-4d7e-9bb7-cd4a93579d2f" name="ExecutionEvent">
         <elementDefinition Id="4dba47bb-e26a-4287-82c4-a992fe11ded9" />
-      </executionEvent>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent Id="f5a3d6d6-ca5c-4c91-b42e-1be0c6d9b6a3" name="ExecutionEvent">
-        <elementDefinition Id="63af9132-2202-42ba-9b29-91ecbcd0dabe" />
-      </executionEvent>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent Id="213e0a3b-eeb8-47a0-8aa0-0b3ca0588c14" name="ExecutionEvent">
-        <elementDefinition Id="0b9c9ee9-30ef-49d2-923a-fd99c20a5bc4" />
       </executionEvent>
     </packageHasNamedElement>
   </packagedElements>

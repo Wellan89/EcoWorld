@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="e98c4029-3209-4055-8cee-a47c403dd919" name="MainClasses" linkedPackageId="2e4afc62-c93d-481f-9f98-216275660224" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="e98c4029-3209-4055-8cee-a47c403dd919" name="MainClasses" linkedPackageId="2e4afc62-c93d-481f-9f98-216275660224" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="52b2db26-4443-4af2-87f2-a16da0609917" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="516ee810-d134-49ea-b9de-c5e9b897d3a9" />
@@ -92,6 +92,13 @@
                     <ownedOperationsInternal>
                       <operation Id="9876c7ad-1638-408d-bf8f-fe27b6cdd828" name="postMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                         <elementDefinition Id="64e1174f-88c1-4586-ad04-6ef6f3e6494f" />
+                        <ownedParameters>
+                          <operationHasOwnedParameters>
+                            <parameter Id="65183a63-9609-4f6a-bb95-75c680e30edb" name="msg" direction="In" isUnique="false">
+                              <elementDefinition Id="ed3104e1-351f-46ff-b7a0-52ee52238756" />
+                            </parameter>
+                          </operationHasOwnedParameters>
+                        </ownedParameters>
                       </operation>
                       <operation Id="0fdf740a-9955-42a9-bbc9-3ae7c987479d" name="processMsgs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                         <elementDefinition Id="6de8e468-ff5f-45f9-8dc5-cfb5e218d399" />
@@ -112,6 +119,16 @@
                           <operationHasOwnedParameters>
                             <parameter Id="db8e2dae-4a9b-427c-92b8-e47caeeef0e7" name="plugin" direction="In" isUnique="false">
                               <elementDefinition Id="46878fc7-814f-4450-bcfa-b2a76704f187" />
+                            </parameter>
+                          </operationHasOwnedParameters>
+                        </ownedParameters>
+                      </operation>
+                      <operation Id="900feccc-9fd5-45c8-b1e2-247596483bd7" name="postAndProcessMsg" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="fd40dee4-0e3e-48da-ab4e-482de821107d" />
+                        <ownedParameters>
+                          <operationHasOwnedParameters>
+                            <parameter Id="7c50d00b-aab1-4e33-afaa-0d54d1e83b46" name="msg" direction="In" isUnique="false">
+                              <elementDefinition Id="3965aeb2-6754-4a2f-816b-81a29c642b06" />
                             </parameter>
                           </operationHasOwnedParameters>
                         </ownedParameters>
@@ -322,6 +339,16 @@
                           <operationHasOwnedParameters>
                             <parameter Id="f01d0b99-f4f4-4855-a9be-eabbd7204e97" name="systemModifier" direction="In" isUnique="false">
                               <elementDefinition Id="ff0e9280-d1b6-4b1d-ae8b-71cc45dc7b70" />
+                            </parameter>
+                          </operationHasOwnedParameters>
+                        </ownedParameters>
+                      </operation>
+                      <operation Id="f75f5cc4-cc89-4be6-aac2-2419a4bb63a6" name="update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="382c9d56-932c-4df8-bdb6-45269f786bb3" />
+                        <ownedParameters>
+                          <operationHasOwnedParameters>
+                            <parameter Id="415c918e-7331-41d8-a7a4-a1c5af9d9e95" name="systemTimeMs" direction="In" isUnique="false">
+                              <elementDefinition Id="9a735447-c1ba-458e-94e1-012d2f09952e" />
                             </parameter>
                           </operationHasOwnedParameters>
                         </ownedParameters>
@@ -613,6 +640,65 @@
                       </operation>
                     </ownedOperations>
                   </Interface>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="2e6eb377-4df3-4ac8-8fd9-59c6085a37e2" name="Gameplay">
+              <elementDefinition Id="2e861591-0672-49d3-9516-937a002c1151" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="58876559-50a5-4ed0-bf65-538c220e9758" name="GameplayManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="a9b9a4b3-8567-4766-a64c-6610c575be92" />
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="f4416513-2f77-4b28-b16e-a98b4a877326" name="Global">
+              <elementDefinition Id="06fd3330-c71b-491a-88f3-5ae7ee62b0cf" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="735def2c-0b48-4471-a67a-36c0a28edc02" name="Logger" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="bf8f97a9-43ec-48b4-981d-4651d4db0ade" />
+                    <ownedOperationsInternal>
+                      <operation Id="8aacaf90-489a-49d0-bcf8-21fb560f5720" name="log" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="d31c4e1e-97b2-48e4-8b2d-eb44cffa184b" />
+                        <ownedParameters>
+                          <operationHasOwnedParameters>
+                            <parameter Id="294112a8-4554-419e-8e51-9f7e64f395cd" name="priority" direction="In" isUnique="false">
+                              <elementDefinition Id="cac6c9d4-a16e-422d-8011-aa41bd372815" />
+                            </parameter>
+                          </operationHasOwnedParameters>
+                          <operationHasOwnedParameters>
+                            <parameter Id="ae2b9c24-e07e-4e16-892e-9c1c4d22ce1b" name="file" direction="In" isUnique="false">
+                              <elementDefinition Id="f2837286-e033-41c1-8566-0c4a64ea4864" />
+                            </parameter>
+                          </operationHasOwnedParameters>
+                          <operationHasOwnedParameters>
+                            <parameter Id="2ef0df4c-c601-4e23-80c5-3c1da875f77f" name="msg" direction="In" isUnique="false">
+                              <elementDefinition Id="40565e41-cba8-430b-abde-72f9b5836ea8" />
+                            </parameter>
+                          </operationHasOwnedParameters>
+                        </ownedParameters>
+                      </operation>
+                    </ownedOperationsInternal>
+                  </class>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <class Id="43425d1e-fb5f-4034-97de-3ada897c2f57" name="MemoryManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="5c111421-b58a-46b6-b85f-348965d3a1ae" />
+                    <ownedOperationsInternal>
+                      <operation Id="4b72288c-f1a6-45d8-9884-a1501467f2d1" name="new" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="0b79c9d5-6841-4823-bad3-3a0d4ce71b3f" />
+                      </operation>
+                      <operation Id="c47526a4-4f0b-446b-9597-af0fbf6fbafb" name="delete" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="d6904a79-54d6-4fa4-a3cc-916ccb8e1f79" />
+                      </operation>
+                    </ownedOperationsInternal>
+                  </class>
                 </packageHasNamedElement>
               </packagedElements>
             </package>

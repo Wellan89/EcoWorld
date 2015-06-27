@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.125, 8.5" name="GameplayManager">
+  <logicalClassDesignerModelMoniker Id="0279dc5f-ccdf-4220-b505-77b1304b1e4f" />
+  <nestedChildShapes>
+    <packageShape Id="c91cf9a3-91d6-42b4-8336-fce1c00c0a05" absoluteBounds="0.5, 0.5, 12.375, 5.25" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="5cd1b611-eb62-470d-b49a-74b17a177b2f" LastKnownName="Gameplay" />
+      <nestedChildShapes>
+        <classShape Id="34c04f91-4607-43cd-b2e1-c1538f568e84" absoluteBounds="0.625, 0.875, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="e0019c2f-5fa2-4e36-8d4f-344fada0cbf2" LastKnownName="GameplayManager" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="33a01c93-e553-482c-b851-ef1cb4fa6e91" absoluteBounds="0.64000000000000012, 1.2650000000000001, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="fb3e0d35-f47d-4785-86e0-1e6dade193d1" absoluteBounds="0.64000000000000012, 1.4761718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+        <classShape Id="ff9ca725-b382-4dca-9f78-00975b3afebf" absoluteBounds="2.75, 2.75, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="2e70f7f6-2036-4cb3-a160-f06cd7217d36" LastKnownName="BatimentSelector" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="4eed7842-2376-4a02-8ba4-490a0fa66919" absoluteBounds="2.765, 3.1400000000000006, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="dc4845c3-d53d-4915-8801-531f2e09c0de" absoluteBounds="2.765, 3.3511718675494198, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+        <classShape Id="e3bf7e8c-d073-47cb-810a-c1c6e59febb9" absoluteBounds="4.75, 2.75, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="ce73ceb0-52bd-465d-99dd-90584f70aeb0" LastKnownName="RTSCamera" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="521c8816-b278-41fe-9abc-1723b93dc259" absoluteBounds="4.765, 3.14, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="703bf82f-ac7d-42ac-a312-5b717aadf98d" absoluteBounds="4.765, 3.3511718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+        <classShape Id="b2fa514d-49a5-4276-93d4-fa362b6dbdbc" absoluteBounds="6.625, 2.75, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="3620bcd3-9d2f-4781-b37f-44f383d90eb0" LastKnownName="FPSCamera" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="9d2242ce-b9ce-43e9-8ec4-a427140af3f7" absoluteBounds="6.6400000000000006, 3.14, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="87f08f86-85fb-470b-ab64-932968a064d9" absoluteBounds="6.6400000000000006, 3.3511718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+        <classShape Id="50046b69-2e81-4688-b2b9-6c9441908824" absoluteBounds="8.375, 2.75, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="0fc8af13-ed31-4c5b-8628-340b0632f582" LastKnownName="CameraAnimator" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="f6e326b4-3c3f-483d-ab04-185bb47c8ef8" absoluteBounds="8.39, 3.14, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="d631b56c-093e-45c4-9477-06c104fbea4d" absoluteBounds="8.39, 3.3511718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>
